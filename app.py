@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -240,13 +239,13 @@ if not data_loaded or df is None:
 tabs = st.tabs(["📊 Overview", "🎯 Classification", "🔍 Clustering", "🛒 Association Rules", "💰 Pricing"])
 
 with tabs[0]:
-    st.markdown("<h2 class="sub-header">Overview & Personas</h2>", unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Overview & Personas</h2>', unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Customers", f"{len(df):,}")
-    col2.metric("Avg Income", f"${df["Annual_Income"].mean():,.0f}" if "Annual_Income" in df.columns else "N/A")
-    col3.metric("Avg Spend", f"${df["Monthly_Luxury_Spend"].mean():,.0f}" if "Monthly_Luxury_Spend" in df.columns else "N/A")
-    col4.metric("Adoption", f"{(df["Likely_to_Use"].sum()/len(df)*100):.1f}%" if "Likely_to_Use" in df.columns else "N/A")
+    col2.metric("Avg Income", f"${df['Annual_Income'].mean():,.0f}" if "Annual_Income" in df.columns else "N/A")
+    col3.metric("Avg Spend", f"${df['Monthly_Luxury_Spend'].mean():,.0f}" if "Monthly_Luxury_Spend" in df.columns else "N/A")
+    col4.metric("Adoption", f"{(df['Likely_to_Use'].sum()/len(df)*100):.1f}%" if "Likely_to_Use" in df.columns else "N/A")
 
     st.markdown("---")
     st.subheader("🎭 K-Means Personas")
@@ -295,7 +294,7 @@ with tabs[0]:
         st.warning("⚠️ Insufficient numeric features")
 
 with tabs[1]:
-    st.markdown("<h2 class="sub-header">Classification</h2>", unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Classification</h2>', unsafe_allow_html=True)
 
     class_upload = st.file_uploader("Upload CSV (optional)", type=["csv"], key="class_upload")
 
@@ -357,7 +356,7 @@ with tabs[1]:
             best_name = results_df.loc[best_idx, "Model"]
             best_model = lr if best_name == "Logistic Regression" else rf
 
-            st.success(f"🏆 Best: {best_name} (AUC: {results_df.loc[best_idx, "ROC-AUC"]:.4f})")
+            st.success(f"🏆 Best: {best_name} (AUC: {results_df.loc[best_idx, 'ROC-AUC']:.4f})")
 
             st.markdown("#### ROC Curve")
             y_proba = best_model.predict_proba(X_test_s)[:, 1]
@@ -396,7 +395,7 @@ with tabs[1]:
         st.warning("⚠️ Target missing or no features")
 
 with tabs[2]:
-    st.markdown("<h2 class="sub-header">Clustering</h2>", unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Clustering</h2>', unsafe_allow_html=True)
 
     st.subheader("K-Means")
     k = st.slider("K", 2, 10, 5, key="kmeans_k")
@@ -449,7 +448,7 @@ with tabs[2]:
         st.info("ℹ️ K-Modes unavailable. Install: pip install kmodes")
 
 with tabs[3]:
-    st.markdown("<h2 class="sub-header">Association Rules</h2>", unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Association Rules</h2>', unsafe_allow_html=True)
 
     if not MLXTEND_AVAILABLE:
         st.error("❌ mlxtend unavailable. Install: pip install mlxtend")
@@ -513,7 +512,7 @@ with tabs[3]:
             st.warning("⚠️ Insufficient basket columns")
 
 with tabs[4]:
-    st.markdown("<h2 class="sub-header">Regression & Pricing</h2>", unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Regression & Pricing</h2>', unsafe_allow_html=True)
 
     if "Monthly_Luxury_Spend" not in df.columns:
         st.error("❌ Target missing")
@@ -589,17 +588,17 @@ with tabs[4]:
             df["Price_Adj_Pct"] = ((df["Personalized_Price"] - df["Base_Price"]) / df["Base_Price"]) * 100
 
             col1, col2, col3 = st.columns(3)
-            col1.metric("Avg Multiplier", f"{df["Price_Multiplier"].mean():.3f}x")
-            col2.metric("Premium %", f"{(df["Price_Adj_Pct"].sum() / len(df) * 100):.1f}%")
-            col3.metric("Revenue Lift", f"${(df["Personalized_Price"].sum() - df["Base_Price"].sum()):,.0f}")
+            col1.metric("Avg Multiplier", f"{df['Price_Multiplier'].mean():.3f}x")
+            col2.metric("Premium %", f"{(df['Price_Adj_Pct'].sum() / len(df)):.1f}%")
+            col3.metric("Revenue Lift", f"${(df['Personalized_Price'].sum() - df['Base_Price'].sum()):,.0f}")
 
             st.markdown("#### 📊 Charts")
 
             fig1, ax1 = plt.subplots(figsize=(8, 6))
             y_pred_test = best_model.predict(X_test_s)
-            ax1.scatter(y_test, y_pred_test, alpha=0.5, s=30)
             min_val = min(y_test.min(), y_pred_test.min())
             max_val = max(y_test.max(), y_pred_test.max())
+            ax1.scatter(y_test, y_pred_test, alpha=0.5, s=30)
             ax1.plot([min_val, max_val], [min_val, max_val], "r--", linewidth=2)
             ax1.set_xlabel("Actual", fontweight="bold")
             ax1.set_ylabel("Predicted", fontweight="bold")
@@ -676,5 +675,5 @@ with tabs[4]:
             st.warning("⚠️ No features available")
 
 st.markdown("---")
-st.markdown("<div style="text-align: center; color: gray;">Built with Streamlit • ML-powered pricing</div>",
-           unsafe_allow_html=True)
+st.markdown('<div style="text-align: center; color: gray;">Built with Streamlit • ML-powered pricing</div>',
+            unsafe_allow_html=True)
