@@ -1,6 +1,6 @@
 """
-Luxury Delivery ML Dashboard - Premium Edition
-A comprehensive machine learning analytics platform with luxury brand aesthetics
+LuxeDash
+A comprehensive machine learning analytics platform 
 """
 
 import streamlit as st
@@ -45,7 +45,7 @@ except ImportError:
 # PAGE CONFIGURATION
 # ============================================================================
 st.set_page_config(
-    page_title="Luxury Delivery Analytics",
+    page_title="LuxeDash",
     page_icon="💎",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -55,7 +55,7 @@ st.set_page_config(
 # SESSION STATE INITIALIZATION
 # ============================================================================
 if 'theme' not in st.session_state:
-    st.session_state.theme = 'dark'
+    st.session_state.theme = 'light'
 if 'last_refresh' not in st.session_state:
     st.session_state.last_refresh = datetime.now()
 
