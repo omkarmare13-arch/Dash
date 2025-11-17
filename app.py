@@ -229,7 +229,7 @@ if data_loaded and df is not None:
     st.sidebar.write(f"Rows: {len(df)}")
     st.sidebar.write(f"Columns: {len(df.columns)}")
 
-st.markdown("<h1 class="main-header">🚀 Luxury Delivery ML Dashboard</h1>", unsafe_allow_html=True)
+st.title("🚀 Luxury Delivery ML Dashboard")
 st.markdown("**Classification • Clustering • Association Rules • Dynamic Pricing**")
 st.markdown("---")
 
