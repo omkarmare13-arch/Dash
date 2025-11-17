@@ -8,14 +8,19 @@ import requests
 import warnings
 warnings.filterwarnings("ignore")
 
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingRegressor
+from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingRegressor, GradientBoostingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.cluster import KMeans
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
-    roc_auc_score, roc_curve, mean_absolute_error, mean_squared_error, r2_score
+    roc_auc_score, roc_curve, mean_absolute_error, mean_squared_error, r2_score,
+    confusion_matrix, classification_report, silhouette_score
 )
 
 try:
@@ -229,14 +234,14 @@ if data_loaded and df is not None:
     st.sidebar.write(f"Columns: {len(df.columns)}")
 
 st.title("🚀 Luxury Delivery ML Dashboard")
-st.markdown("**Classification • Clustering • Association Rules • Dynamic Pricing**")
+st.markdown("**Complete ML Analytics: Classification • Clustering • Association Rules • Regression**")
 st.markdown("---")
 
 if not data_loaded or df is None:
     st.info("👈 Select a data source from sidebar")
     st.stop()
 
-tabs = st.tabs(["📊 Overview", "🎯 Classification", "🔍 Clustering", "🛒 Association Rules", "💰 Pricing"])
+tabs = st.tabs(["📊 Overview", "🎯 Classification (All Algorithms)", "🔍 Clustering Analysis", "🛒 Association Rules", "📈 Regression (Linear, Ridge, Lasso)", "💰 Dynamic Pricing"])
 
 with tabs[0]:
     st.markdown('<h2 class="sub-header">Overview & Personas</h2>', unsafe_allow_html=True)
@@ -248,7 +253,7 @@ with tabs[0]:
     col4.metric("Adoption", f"{(df['Likely_to_Use'].sum()/len(df)*100):.1f}%" if "Likely_to_Use" in df.columns else "N/A")
 
     st.markdown("---")
-    st.subheader("🎭 K-Means Personas")
+    st.subheader("🎭 Quick K-Means Personas")
     k = st.slider("Number of Personas (K)", 2, 8, 4, key="persona_k")
 
     numeric = get_numeric_features(df)
@@ -294,7 +299,8 @@ with tabs[0]:
         st.warning("⚠️ Insufficient numeric features")
 
 with tabs[1]:
-    st.markdown('<h2 class="sub-header">Classification</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Classification - All Algorithms Comparison</h2>', unsafe_allow_html=True)
+    st.markdown("**Comparing: Logistic Regression, Random Forest, Decision Tree, SVM, Naive Bayes, KNN, Gradient Boosting**")
 
     class_upload = st.file_uploader("Upload CSV (optional)", type=["csv"], key="class_upload")
 
@@ -327,78 +333,177 @@ with tabs[1]:
             X_train_s = scaler.fit_transform(X_train)
             X_test_s = scaler.transform(X_test)
 
-            lr = LogisticRegression(random_state=42, max_iter=1000)
-            rf = RandomForestClassifier(n_estimators=100, random_state=42)
+            # Define all classification models
+            models = {
+                "Logistic Regression": LogisticRegression(random_state=42, max_iter=1000),
+                "Random Forest": RandomForestClassifier(n_estimators=100, random_state=42),
+                "Decision Tree": DecisionTreeClassifier(random_state=42, max_depth=10),
+                "SVM (RBF)": SVC(kernel='rbf', probability=True, random_state=42),
+                "Naive Bayes": GaussianNB(),
+                "KNN (K=5)": KNeighborsClassifier(n_neighbors=5),
+                "Gradient Boosting": GradientBoostingClassifier(n_estimators=100, random_state=42)
+            }
 
-            lr.fit(X_train_s, y_train)
-            rf.fit(X_train_s, y_train)
-
+            st.markdown("### 🔄 Training All Models...")
+            progress_bar = st.progress(0)
             results = []
-            for name, model in [("Logistic Regression", lr), ("Random Forest", rf)]:
-                y_pred = model.predict(X_test_s)
-                y_proba = model.predict_proba(X_test_s)[:, 1]
-
-                results.append({
-                    "Model": name,
-                    "Accuracy": accuracy_score(y_test, y_pred),
-                    "Precision": precision_score(y_test, y_pred, zero_division=0),
-                    "Recall": recall_score(y_test, y_pred, zero_division=0),
-                    "F1": f1_score(y_test, y_pred, zero_division=0),
-                    "ROC-AUC": roc_auc_score(y_test, y_proba)
-                })
+            
+            for idx, (name, model) in enumerate(models.items()):
+                with st.spinner(f"Training {name}..."):
+                    # Train model
+                    model.fit(X_train_s, y_train)
+                    
+                    # Predictions
+                    y_pred = model.predict(X_test_s)
+                    y_proba = model.predict_proba(X_test_s)[:, 1] if hasattr(model, 'predict_proba') else y_pred
+                    
+                    # Calculate metrics
+                    results.append({
+                        "Model": name,
+                        "Accuracy": accuracy_score(y_test, y_pred),
+                        "Precision": precision_score(y_test, y_pred, zero_division=0),
+                        "Recall": recall_score(y_test, y_pred, zero_division=0),
+                        "F1-Score": f1_score(y_test, y_pred, zero_division=0),
+                        "ROC-AUC": roc_auc_score(y_test, y_proba) if hasattr(model, 'predict_proba') else accuracy_score(y_test, y_pred)
+                    })
+                    
+                progress_bar.progress((idx + 1) / len(models))
 
             results_df = pd.DataFrame(results)
+            results_df = results_df.sort_values("ROC-AUC", ascending=False)
 
-            st.markdown("#### Model Performance")
-            st.dataframe(results_df, use_container_width=True)
+            st.markdown("### 📊 Performance Comparison - All Algorithms")
+            st.dataframe(results_df.style.highlight_max(axis=0, subset=["Accuracy", "Precision", "Recall", "F1-Score", "ROC-AUC"], color='lightgreen'), use_container_width=True)
 
+            # Download results
+            download_button(results_df, "classification_results.csv", "📥 Download Results")
+
+            # Best model
             best_idx = results_df["ROC-AUC"].idxmax()
             best_name = results_df.loc[best_idx, "Model"]
-            best_model = lr if best_name == "Logistic Regression" else rf
+            best_model = models[best_name]
+            best_model.fit(X_train_s, y_train)  # Retrain best model
+            
+            st.success(f"🏆 **Best Model: {best_name}** | ROC-AUC: {results_df.loc[best_idx, 'ROC-AUC']:.4f} | Accuracy: {results_df.loc[best_idx, 'Accuracy']:.4f}")
 
-            st.success(f"🏆 Best: {best_name} (AUC: {results_df.loc[best_idx, 'ROC-AUC']:.4f})")
+            # Visualization - Performance Comparison
+            st.markdown("### 📈 Visual Comparison")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                fig1, ax1 = plt.subplots(figsize=(10, 6))
+                metrics_to_plot = ["Accuracy", "Precision", "Recall", "F1-Score"]
+                x = np.arange(len(results_df))
+                width = 0.2
+                
+                for i, metric in enumerate(metrics_to_plot):
+                    ax1.bar(x + i*width, results_df[metric], width, label=metric)
+                
+                ax1.set_xlabel('Models', fontweight='bold')
+                ax1.set_ylabel('Score', fontweight='bold')
+                ax1.set_title('Classification Metrics Comparison', fontweight='bold', fontsize=14)
+                ax1.set_xticks(x + width * 1.5)
+                ax1.set_xticklabels(results_df['Model'], rotation=45, ha='right')
+                ax1.legend()
+                ax1.grid(True, alpha=0.3, axis='y')
+                plt.tight_layout()
+                st.pyplot(fig1)
+                st.download_button("📥 PNG", fig_to_bytes(fig1, "png"), "metrics_comparison.png", "image/png")
+                plt.close()
+            
+            with col2:
+                fig2, ax2 = plt.subplots(figsize=(10, 6))
+                ax2.barh(results_df['Model'], results_df['ROC-AUC'], color='steelblue')
+                ax2.set_xlabel('ROC-AUC Score', fontweight='bold')
+                ax2.set_title('ROC-AUC Comparison Across Models', fontweight='bold', fontsize=14)
+                ax2.grid(True, alpha=0.3, axis='x')
+                
+                # Add value labels
+                for i, v in enumerate(results_df['ROC-AUC']):
+                    ax2.text(v + 0.01, i, f'{v:.4f}', va='center')
+                
+                plt.tight_layout()
+                st.pyplot(fig2)
+                st.download_button("📥 PNG", fig_to_bytes(fig2, "png"), "roc_comparison.png", "image/png")
+                plt.close()
 
-            st.markdown("#### ROC Curve")
-            y_proba = best_model.predict_proba(X_test_s)[:, 1]
-            fpr, tpr, _ = roc_curve(y_test, y_proba)
-
-            fig, ax = plt.subplots(figsize=(8, 6))
-            ax.plot(fpr, tpr, linewidth=2, label=f"AUC={roc_auc_score(y_test, y_proba):.3f}")
-            ax.plot([0, 1], [0, 1], "k--", linewidth=1)
-            ax.set_xlabel("False Positive Rate", fontweight="bold")
-            ax.set_ylabel("True Positive Rate", fontweight="bold")
-            ax.set_title("ROC Curve", fontweight="bold")
-            ax.legend()
-            ax.grid(True, alpha=0.3)
+            # ROC Curves for all models
+            st.markdown("### 📉 ROC Curves - All Models")
+            fig3, ax3 = plt.subplots(figsize=(12, 8))
+            
+            for name, model in models.items():
+                if hasattr(model, 'predict_proba'):
+                    model.fit(X_train_s, y_train)
+                    y_proba = model.predict_proba(X_test_s)[:, 1]
+                    fpr, tpr, _ = roc_curve(y_test, y_proba)
+                    auc_score = roc_auc_score(y_test, y_proba)
+                    ax3.plot(fpr, tpr, linewidth=2, label=f'{name} (AUC={auc_score:.3f})')
+            
+            ax3.plot([0, 1], [0, 1], 'k--', linewidth=1, label='Random Classifier')
+            ax3.set_xlabel('False Positive Rate', fontweight='bold', fontsize=12)
+            ax3.set_ylabel('True Positive Rate', fontweight='bold', fontsize=12)
+            ax3.set_title('ROC Curves - All Classification Models', fontweight='bold', fontsize=14)
+            ax3.legend(loc='lower right')
+            ax3.grid(True, alpha=0.3)
             plt.tight_layout()
-
-            st.pyplot(fig)
-
+            
+            st.pyplot(fig3)
             col1, col2 = st.columns(2)
             with col1:
-                st.download_button("📥 PNG", fig_to_bytes(fig, "png"), "roc_curve.png", "image/png")
+                st.download_button("📥 PNG", fig_to_bytes(fig3, "png"), "all_roc_curves.png", "image/png")
             with col2:
-                st.download_button("📥 JPG", fig_to_bytes(fig, "jpg"), "roc_curve.jpg", "image/jpeg")
+                st.download_button("📥 JPG", fig_to_bytes(fig3, "jpg"), "all_roc_curves.jpg", "image/jpeg")
             plt.close()
 
+            # Confusion Matrix for Best Model
+            st.markdown(f"### 🎯 Confusion Matrix - {best_name}")
+            y_pred_best = best_model.predict(X_test_s)
+            cm = confusion_matrix(y_test, y_pred_best)
+            
+            fig4, ax4 = plt.subplots(figsize=(8, 6))
+            sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax4, cbar_kws={'label': 'Count'})
+            ax4.set_xlabel('Predicted Label', fontweight='bold')
+            ax4.set_ylabel('True Label', fontweight='bold')
+            ax4.set_title(f'Confusion Matrix - {best_name}', fontweight='bold', fontsize=14)
+            plt.tight_layout()
+            
+            st.pyplot(fig4)
+            st.download_button("📥 PNG", fig_to_bytes(fig4, "png"), "confusion_matrix.png", "image/png")
+            plt.close()
+
+            # Classification Report
+            st.markdown(f"### 📋 Detailed Classification Report - {best_name}")
+            report = classification_report(y_test, y_pred_best, output_dict=True)
+            report_df = pd.DataFrame(report).transpose()
+            st.dataframe(report_df, use_container_width=True)
+            download_button(report_df, "classification_report.csv", "📥 Download Report")
+
+            # Predictions export
             pred_df = pd.DataFrame({
                 "Customer_ID": df_class.loc[X_test.index, "Customer_ID"] if "Customer_ID" in df_class.columns else X_test.index,
                 "True_Label": y_test,
-                "Predicted": best_model.predict(X_test_s),
-                "Probability": y_proba
+                "Predicted": y_pred_best,
+                "Probability": best_model.predict_proba(X_test_s)[:, 1] if hasattr(best_model, 'predict_proba') else y_pred_best
             })
+            download_button(pred_df, "predictions_best_model.csv", "📥 Download Predictions")
 
-            download_button(pred_df, "predictions.csv", "📥 Download Predictions")
         else:
-            st.warning("⚠️ Insufficient data")
+            st.warning("⚠️ Insufficient data or target not binary")
     else:
-        st.warning("⚠️ Target missing or no features")
+        st.warning("⚠️ Target 'Likely_to_Use' missing or no features available")
 
 with tabs[2]:
-    st.markdown('<h2 class="sub-header">Clustering</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Clustering Analysis with Interpretation</h2>', unsafe_allow_html=True)
 
-    st.subheader("K-Means")
-    k = st.slider("K", 2, 10, 5, key="kmeans_k")
+    # K-Means Clustering
+    st.markdown("### 🔵 K-Means Clustering")
+    
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        k = st.slider("Number of Clusters (K)", 2, 10, 5, key="kmeans_k_main")
+    with col2:
+        st.info("📊 Optimal K will be analyzed using Elbow & Silhouette methods")
 
     numeric = get_numeric_features(df)
 
@@ -407,51 +512,184 @@ with tabs[2]:
         scaler = StandardScaler()
         X_scaled = scaler.fit_transform(X)
 
+        # Elbow Method
+        st.markdown("#### 📉 Elbow Method (Finding Optimal K)")
+        inertias = []
+        silhouette_scores = []
+        K_range = range(2, min(11, len(df)//10))
+        
+        for k_test in K_range:
+            kmeans_test = KMeans(n_clusters=k_test, random_state=42, n_init=20)
+            kmeans_test.fit(X_scaled)
+            inertias.append(kmeans_test.inertia_)
+            silhouette_scores.append(silhouette_score(X_scaled, kmeans_test.labels_))
+
+        fig1, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
+        
+        # Elbow plot
+        ax1.plot(K_range, inertias, 'bo-', linewidth=2, markersize=8)
+        ax1.set_xlabel('Number of Clusters (K)', fontweight='bold')
+        ax1.set_ylabel('Inertia (Within-Cluster Sum of Squares)', fontweight='bold')
+        ax1.set_title('Elbow Method', fontweight='bold', fontsize=14)
+        ax1.grid(True, alpha=0.3)
+        
+        # Silhouette plot
+        ax2.plot(K_range, silhouette_scores, 'ro-', linewidth=2, markersize=8)
+        ax2.set_xlabel('Number of Clusters (K)', fontweight='bold')
+        ax2.set_ylabel('Silhouette Score', fontweight='bold')
+        ax2.set_title('Silhouette Score Analysis', fontweight='bold', fontsize=14)
+        ax2.grid(True, alpha=0.3)
+        
+        plt.tight_layout()
+        st.pyplot(fig1)
+        st.download_button("📥 Download Chart", fig_to_bytes(fig1, "png"), "elbow_silhouette.png", "image/png")
+        plt.close()
+
+        # Perform K-Means with selected K
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=20)
         df["KMeans_Cluster"] = kmeans.fit_predict(X_scaled)
+        
+        silhouette_avg = silhouette_score(X_scaled, df["KMeans_Cluster"])
+        st.success(f"✅ Silhouette Score for K={k}: **{silhouette_avg:.4f}** (Higher is better, >0.5 is good)")
 
+        # Cluster Profiles
+        st.markdown("#### 📊 Cluster Profiles & Characteristics")
         profile = df.groupby("KMeans_Cluster")[numeric].mean().round(2)
         profile["Count"] = df.groupby("KMeans_Cluster").size()
         profile["Percentage"] = (profile["Count"] / len(df) * 100).round(1)
 
-        st.dataframe(profile, use_container_width=True)
-        download_button(profile, "kmeans_profiles.csv", "📥 Download")
-    else:
-        st.warning("⚠️ Insufficient features")
+        st.dataframe(profile.style.highlight_max(axis=0, color='lightgreen').highlight_min(axis=0, color='lightcoral'), 
+                     use_container_width=True)
 
+        # Cluster Interpretation
+        st.markdown("#### 🔍 Cluster Interpretation & Business Insights")
+        
+        for cluster_id in range(k):
+            cluster_data = df[df["KMeans_Cluster"] == cluster_id]
+            
+            with st.expander(f"**Cluster {cluster_id}** ({len(cluster_data)} customers, {len(cluster_data)/len(df)*100:.1f}%)"):
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    st.metric("Avg Income", f"${cluster_data['Annual_Income'].mean():,.0f}" if "Annual_Income" in cluster_data.columns else "N/A")
+                    st.metric("Avg Age", f"{cluster_data['Age'].mean():.1f}" if "Age" in cluster_data.columns else "N/A")
+                
+                with col2:
+                    st.metric("Monthly Spend", f"${cluster_data['Monthly_Luxury_Spend'].mean():,.0f}" if "Monthly_Luxury_Spend" in cluster_data.columns else "N/A")
+                    st.metric("Loyalty Score", f"{cluster_data['Brand_Loyalty_Score'].mean():.1f}/10" if "Brand_Loyalty_Score" in cluster_data.columns else "N/A")
+                
+                with col3:
+                    st.metric("Purchase Freq/Yr", f"{cluster_data['Luxury_Purchases_Per_Year'].mean():.1f}" if "Luxury_Purchases_Per_Year" in cluster_data.columns else "N/A")
+                    st.metric("Adoption Rate", f"{cluster_data['Likely_to_Use'].mean()*100:.1f}%" if "Likely_to_Use" in cluster_data.columns else "N/A")
+                
+                # Interpretation
+                avg_income = cluster_data['Annual_Income'].mean() if 'Annual_Income' in cluster_data.columns else 0
+                avg_spend = cluster_data['Monthly_Luxury_Spend'].mean() if 'Monthly_Luxury_Spend' in cluster_data.columns else 0
+                
+                if avg_income > 300000 and avg_spend > 8000:
+                    interpretation = "🌟 **Ultra-High-Value Segment**: Premium customers with high income and spending. Focus on exclusive experiences and concierge services."
+                elif avg_income > 150000 and avg_spend > 4000:
+                    interpretation = "💎 **Affluent Shoppers**: Regular luxury purchasers. Target with loyalty programs and personalized offers."
+                elif avg_spend > 2000:
+                    interpretation = "🎯 **Aspirational Buyers**: Moderate-to-high spenders. Upsell opportunities through flexible payment options."
+                else:
+                    interpretation = "📊 **Price-Conscious Segment**: Value-oriented customers. Emphasize convenience and competitive pricing."
+                
+                st.info(interpretation)
+
+        # Visualization
+        st.markdown("#### 📈 Cluster Visualization")
+        
+        if "Annual_Income" in df.columns and "Monthly_Luxury_Spend" in df.columns:
+            fig2, ax = plt.subplots(figsize=(12, 8))
+            scatter = ax.scatter(df["Annual_Income"], df["Monthly_Luxury_Spend"], 
+                               c=df["KMeans_Cluster"], cmap='viridis', s=100, alpha=0.6, edgecolors='black')
+            
+            # Plot centroids
+            centroids = scaler.inverse_transform(kmeans.cluster_centers_)
+            income_idx = numeric.index("Annual_Income")
+            spend_idx = numeric.index("Monthly_Luxury_Spend")
+            
+            ax.scatter(centroids[:, income_idx], centroids[:, spend_idx], 
+                      c='red', marker='X', s=300, edgecolors='black', linewidths=2, label='Centroids')
+            
+            ax.set_xlabel('Annual Income ($)', fontweight='bold', fontsize=12)
+            ax.set_ylabel('Monthly Luxury Spend ($)', fontweight='bold', fontsize=12)
+            ax.set_title('K-Means Clustering: Income vs Spending', fontweight='bold', fontsize=14)
+            ax.legend()
+            ax.grid(True, alpha=0.3)
+            plt.colorbar(scatter, ax=ax, label='Cluster')
+            plt.tight_layout()
+            
+            st.pyplot(fig2)
+            st.download_button("📥 Download Visualization", fig_to_bytes(fig2, "png"), "cluster_visualization.png", "image/png")
+            plt.close()
+
+        download_button(profile, "kmeans_cluster_profiles.csv", "📥 Download Cluster Profiles")
+        
+        # Export cluster labels
+        cluster_export = df[["Customer_ID"] + numeric + ["KMeans_Cluster"]] if "Customer_ID" in df.columns else df[numeric + ["KMeans_Cluster"]]
+        download_button(cluster_export, "cluster_labels.csv", "📥 Download Cluster Labels")
+
+    else:
+        st.warning("⚠️ Insufficient numeric features for clustering")
+
+    # K-Modes for Categorical Data
     st.markdown("---")
-    st.subheader("K-Modes")
+    st.markdown("### 🟠 K-Modes Clustering (Categorical Data)")
 
     if KMODES_AVAILABLE:
         cats = [c for c in df.columns if ("Interested_" in c or "Feat_" in c) and df[c].dtype in ["int64", "object"]]
 
         if len(cats) >= 3:
-            k = st.slider("K", 2, 8, 4, key="kmodes_k")
+            k_modes = st.slider("Number of Modes (K)", 2, 8, 4, key="kmodes_k_main")
 
-            X = df[cats].fillna(0).astype(int)
+            X_cat = df[cats].fillna(0).astype(int)
 
             try:
-                km = KModes(n_clusters=k, random_state=42, n_init=10)
-                df["KModes_Cluster"] = km.fit_predict(X)
+                km = KModes(n_clusters=k_modes, random_state=42, n_init=10)
+                df["KModes_Cluster"] = km.fit_predict(X_cat)
 
+                st.success(f"✅ K-Modes clustering completed with {k_modes} clusters")
+
+                # Mode profiles
                 modes = pd.DataFrame(km.cluster_centroids_, columns=cats).T
-                modes.columns = [f"Mode {i+1}" for i in range(k)]
-                modes["Sizes"] = df.groupby("KModes_Cluster").size().values
+                modes.columns = [f"Mode {i+1}" for i in range(k_modes)]
+                
+                sizes = df.groupby("KModes_Cluster").size()
+                modes["Cluster_Sizes"] = sizes.values
 
+                st.markdown("#### 📊 Categorical Modes (Most Common Values)")
                 st.dataframe(modes, use_container_width=True)
-                download_button(modes, "kmodes_modes.csv", "📥 Download")
+
+                # Interpretation
+                st.markdown("#### 💡 Categorical Cluster Insights")
+                for mode_id in range(k_modes):
+                    mode_data = df[df["KModes_Cluster"] == mode_id]
+                    
+                    interested_cols = [c for c in cats if "Interested_" in c]
+                    top_interests = mode_data[interested_cols].sum().sort_values(ascending=False).head(3)
+                    
+                    with st.expander(f"**Mode {mode_id}** ({len(mode_data)} customers)"):
+                        st.write("**Top Product Interests:**")
+                        for interest, count in top_interests.items():
+                            pct = (count / len(mode_data)) * 100
+                            st.write(f"- {interest.replace('Interested_', '')}: {pct:.1f}%")
+
+                download_button(modes, "kmodes_profiles.csv", "📥 Download Modes")
             except Exception as e:
-                st.error(f"❌ Error: {str(e)}")
+                st.error(f"❌ Error in K-Modes: {str(e)}")
         else:
-            st.info("ℹ️ Insufficient categorical columns")
+            st.info("ℹ️ Insufficient categorical columns for K-Modes clustering")
     else:
-        st.info("ℹ️ K-Modes unavailable. Install: pip install kmodes")
+        st.info("ℹ️ K-Modes unavailable. Install with: `pip install kmodes`")
 
 with tabs[3]:
-    st.markdown('<h2 class="sub-header">Association Rules</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Association Rule Mining</h2>', unsafe_allow_html=True)
+    st.markdown("**Discover patterns in customer product interests and feature preferences**")
 
     if not MLXTEND_AVAILABLE:
-        st.error("❌ mlxtend unavailable. Install: pip install mlxtend")
+        st.error("❌ mlxtend library not available. Install with: `pip install mlxtend`")
     else:
         apriori_upload = st.file_uploader("Upload CSV (optional)", type=["csv"], key="apriori_upload")
 
@@ -459,7 +697,7 @@ with tabs[3]:
             df_apriori, error = load_from_upload(apriori_upload)
             if df_apriori is not None:
                 df_apriori = engineer_features(df_apriori)
-                st.success(f"✅ Using uploaded ({len(df_apriori)} records)")
+                st.success(f"✅ Using uploaded data ({len(df_apriori)} records)")
             else:
                 st.error(f"❌ {error}")
                 df_apriori = df
@@ -467,55 +705,346 @@ with tabs[3]:
             df_apriori = df
 
         if len(df_apriori) > 10000:
-            st.warning(f"⚠️ Large dataset ({len(df_apriori)} rows) may be slow")
+            st.warning(f"⚠️ Large dataset ({len(df_apriori)} rows) - computation may take time")
 
         basket_cols = [c for c in df_apriori.columns if ("Interested_" in c or "Feat_" in c) and df_apriori[c].dtype in ["int64", "float64"]]
 
         if len(basket_cols) >= 2:
-            col1, col2 = st.columns(2)
+            st.markdown("#### ⚙️ Configuration")
+            col1, col2, col3 = st.columns(3)
+            
             with col1:
-                min_sup = st.slider("Min Support (%)", 1, 50, 10) / 100
+                min_sup = st.slider("Minimum Support (%)", 1, 50, 10, help="How frequently items appear together") / 100
             with col2:
-                min_conf = st.slider("Min Confidence (%)", 10, 90, 50) / 100
+                min_conf = st.slider("Minimum Confidence (%)", 10, 90, 50, help="Strength of the rule") / 100
+            with col3:
+                top_n = st.slider("Top N Rules to Display", 5, 50, 15)
 
-            top_n = st.slider("Top N Rules", 5, 50, 10)
-
-            if st.button("🔍 Generate Rules", type="primary"):
-                with st.spinner("Mining..."):
+            if st.button("🔍 Mine Association Rules", type="primary"):
+                with st.spinner("Mining frequent patterns and generating rules..."):
                     try:
+                        # Convert to boolean basket
                         basket = df_apriori[basket_cols].astype(bool)
+                        
+                        # Find frequent itemsets
                         freq = apriori(basket, min_support=min_sup, use_colnames=True)
 
                         if len(freq) > 0:
+                            st.success(f"✅ Found {len(freq)} frequent itemsets")
+                            
+                            # Generate association rules
                             rules = association_rules(freq, metric="confidence", min_threshold=min_conf)
 
                             if len(rules) > 0:
-                                rules["antecedent_str"] = rules["antecedents"].apply(lambda x: ", ".join(list(x)))
-                                rules["consequent_str"] = rules["consequents"].apply(lambda x: ", ".join(list(x)))
-                                rules = rules.sort_values("lift", ascending=False).head(top_n)
+                                # Process rules
+                                rules["antecedent_str"] = rules["antecedents"].apply(lambda x: ", ".join(list(x)).replace("Interested_", "").replace("Feat_", ""))
+                                rules["consequent_str"] = rules["consequents"].apply(lambda x: ", ".join(list(x)).replace("Interested_", "").replace("Feat_", ""))
+                                
+                                # Sort by lift
+                                rules = rules.sort_values("lift", ascending=False)
+                                
+                                # Display top rules
+                                display = rules[["antecedent_str", "consequent_str", "support", "confidence", "lift"]].head(top_n).copy()
+                                display.columns = ["If Customer Likes", "Then Likely Likes", "Support", "Confidence", "Lift"]
+                                display["Support"] = display["Support"].round(4)
+                                display["Confidence"] = display["Confidence"].round(4)
+                                display["Lift"] = display["Lift"].round(4)
 
-                                display = rules[["antecedent_str", "consequent_str", "support", "confidence", "lift"]].copy()
-                                display.columns = ["If", "Then", "Support", "Confidence", "Lift"]
+                                st.markdown(f"### 📋 Top {len(display)} Association Rules")
+                                st.dataframe(display.style.highlight_max(subset=["Lift"], color='lightgreen'), use_container_width=True)
 
-                                st.markdown(f"#### Top {len(display)} Rules")
-                                st.dataframe(display, use_container_width=True)
+                                # Interpretation guide
+                                st.markdown("#### 📖 How to Read These Rules:")
+                                st.info("""
+                                - **Support**: How frequently the items appear together (higher = more common)
+                                - **Confidence**: How often the rule is correct (higher = more reliable)
+                                - **Lift**: How much more likely items appear together vs. independently (>1 = positive correlation)
+                                """)
 
-                                download_button(display, "association_rules.csv", "📥 Download")
-                                st.success(f"✅ Found {len(rules)} rules")
+                                # Key insights
+                                st.markdown("#### 💡 Key Business Insights")
+                                top_rule = display.iloc[0]
+                                st.success(f"""
+                                **Strongest Association** (Lift: {top_rule['Lift']:.2f}):  
+                                Customers interested in **{top_rule['If Customer Likes']}** are {top_rule['Lift']:.1f}x more likely to be interested in **{top_rule['Then Likely Likes']}**
+                                """)
+
+                                # Visualization
+                                st.markdown("#### 📊 Rule Visualization")
+                                
+                                fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+                                
+                                # Support vs Confidence scatter
+                                scatter1 = ax1.scatter(rules['support'], rules['confidence'], 
+                                                     c=rules['lift'], s=100, cmap='viridis', alpha=0.6, edgecolors='black')
+                                ax1.set_xlabel('Support', fontweight='bold')
+                                ax1.set_ylabel('Confidence', fontweight='bold')
+                                ax1.set_title('Support vs Confidence (colored by Lift)', fontweight='bold')
+                                ax1.grid(True, alpha=0.3)
+                                plt.colorbar(scatter1, ax=ax1, label='Lift')
+                                
+                                # Top rules by lift
+                                top_10 = rules.head(10)
+                                ax2.barh(range(len(top_10)), top_10['lift'], color='steelblue')
+                                ax2.set_yticks(range(len(top_10)))
+                                ax2.set_yticklabels([f"{row['antecedent_str'][:20]}... → {row['consequent_str'][:20]}..." 
+                                                     for _, row in top_10.iterrows()], fontsize=8)
+                                ax2.set_xlabel('Lift', fontweight='bold')
+                                ax2.set_title('Top 10 Rules by Lift', fontweight='bold')
+                                ax2.grid(True, alpha=0.3, axis='x')
+                                
+                                plt.tight_layout()
+                                st.pyplot(fig)
+                                st.download_button("📥 Download Chart", fig_to_bytes(fig, "png"), "association_rules_viz.png", "image/png")
+                                plt.close()
+
+                                # Download options
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    download_button(display, "association_rules_top.csv", "📥 Download Top Rules")
+                                with col2:
+                                    full_export = rules[["antecedent_str", "consequent_str", "support", "confidence", "lift"]]
+                                    full_export.columns = ["Antecedent", "Consequent", "Support", "Confidence", "Lift"]
+                                    download_button(full_export, "association_rules_all.csv", "📥 Download All Rules")
+
+                                st.success(f"✅ Generated {len(rules)} total association rules")
                             else:
-                                st.warning("⚠️ No rules found. Lower confidence.")
+                                st.warning("⚠️ No rules meet the confidence threshold. Try lowering the minimum confidence.")
                         else:
-                            st.warning("⚠️ No frequent itemsets. Lower support.")
+                            st.warning("⚠️ No frequent itemsets found. Try lowering the minimum support.")
                     except Exception as e:
-                        st.error(f"❌ Error: {str(e)}")
+                        st.error(f"❌ Error during mining: {str(e)}")
         else:
-            st.warning("⚠️ Insufficient basket columns")
+            st.warning("⚠️ Insufficient categorical/binary columns for association rule mining")
 
 with tabs[4]:
-    st.markdown('<h2 class="sub-header">Regression & Pricing</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="sub-header">Regression Analysis: Linear, Ridge & Lasso</h2>', unsafe_allow_html=True)
+    st.markdown("**Predicting Monthly Luxury Spend using three regression techniques**")
 
     if "Monthly_Luxury_Spend" not in df.columns:
-        st.error("❌ Target missing")
+        st.error("❌ Target variable 'Monthly_Luxury_Spend' not found in dataset")
+    else:
+        numeric = [c for c in get_numeric_features(df) if c != "Monthly_Luxury_Spend"]
+        cats = [c for c in df.columns if "Interested_" in c]
+        feats = [c for c in df.columns if "Feat_" in c]
+
+        X_cols = numeric + cats + feats + ["n_categories_interested", "n_features_valued"]
+        X_cols = [c for c in X_cols if c in df.columns]
+
+        if len(X_cols) > 0:
+            X = df[X_cols].fillna(df[X_cols].median())
+            y = df["Monthly_Luxury_Spend"]
+
+            # Train-test split
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            # Scaling
+            scaler = StandardScaler()
+            X_train_s = scaler.fit_transform(X_train)
+            X_test_s = scaler.transform(X_test)
+
+            # Ridge and Lasso parameters
+            st.markdown("### ⚙️ Regularization Parameters")
+            col1, col2 = st.columns(2)
+            with col1:
+                ridge_alpha = st.slider("Ridge Alpha (L2 penalty)", 0.01, 10.0, 1.0, 0.1)
+            with col2:
+                lasso_alpha = st.slider("Lasso Alpha (L1 penalty)", 0.01, 10.0, 1.0, 0.1)
+
+            st.info("💡 **Alpha** controls regularization strength. Higher values = more penalty on coefficients.")
+
+            # Train all three models
+            models = {
+                "Linear Regression": LinearRegression(),
+                "Ridge Regression": Ridge(alpha=ridge_alpha),
+                "Lasso Regression": Lasso(alpha=lasso_alpha, max_iter=10000)
+            }
+
+            results = []
+            trained_models = {}
+
+            st.markdown("### 🔄 Training Models...")
+            progress_bar = st.progress(0)
+
+            for idx, (name, model) in enumerate(models.items()):
+                with st.spinner(f"Training {name}..."):
+                    model.fit(X_train_s, y_train)
+                    trained_models[name] = model
+                    
+                    y_pred = model.predict(X_test_s)
+                    
+                    results.append({
+                        "Model": name,
+                        "MAE": mean_absolute_error(y_test, y_pred),
+                        "RMSE": np.sqrt(mean_squared_error(y_test, y_pred)),
+                        "R² Score": r2_score(y_test, y_pred),
+                        "Explained Variance": r2_score(y_test, y_pred) * 100
+                    })
+                    
+                progress_bar.progress((idx + 1) / len(models))
+
+            results_df = pd.DataFrame(results)
+            results_df = results_df.sort_values("R² Score", ascending=False)
+
+            st.markdown("### 📊 Model Performance Comparison")
+            st.dataframe(results_df.style.highlight_max(subset=["R² Score"], color='lightgreen')
+                        .highlight_min(subset=["MAE", "RMSE"], color='lightgreen'), 
+                        use_container_width=True)
+
+            best_model_name = results_df.iloc[0]["Model"]
+            best_r2 = results_df.iloc[0]["R² Score"]
+            best_model = trained_models[best_model_name]
+
+            st.success(f"🏆 **Best Model: {best_model_name}** | R² Score: {best_r2:.4f} | RMSE: ${results_df.iloc[0]['RMSE']:,.2f}")
+
+            download_button(results_df, "regression_comparison.csv", "📥 Download Results")
+
+            # Metric explanations
+            with st.expander("📖 Understanding the Metrics"):
+                st.markdown("""
+                - **MAE (Mean Absolute Error)**: Average prediction error in dollars. Lower is better.
+                - **RMSE (Root Mean Squared Error)**: Penalizes large errors more. Lower is better.
+                - **R² Score**: % of variance explained by model (0-1). Higher is better.
+                - **Explained Variance**: How much of the target variation is captured (%).
+                """)
+
+            # Visualizations
+            st.markdown("### 📈 Performance Visualizations")
+
+            # 1. Metrics comparison bar chart
+            fig1, ax1 = plt.subplots(figsize=(12, 6))
+            x = np.arange(len(results_df))
+            width = 0.25
+            
+            ax1.bar(x - width, results_df['MAE'], width, label='MAE', alpha=0.8)
+            ax1.bar(x, results_df['RMSE'], width, label='RMSE', alpha=0.8)
+            ax1_twin = ax1.twinx()
+            ax1_twin.bar(x + width, results_df['R² Score'], width, label='R² Score', color='green', alpha=0.8)
+            
+            ax1.set_xlabel('Models', fontweight='bold')
+            ax1.set_ylabel('Error Metrics (MAE, RMSE)', fontweight='bold')
+            ax1_twin.set_ylabel('R² Score', fontweight='bold', color='green')
+            ax1.set_title('Regression Model Comparison', fontweight='bold', fontsize=14)
+            ax1.set_xticks(x)
+            ax1.set_xticklabels(results_df['Model'])
+            ax1.legend(loc='upper left')
+            ax1_twin.legend(loc='upper right')
+            ax1.grid(True, alpha=0.3, axis='y')
+            plt.tight_layout()
+            
+            st.pyplot(fig1)
+            st.download_button("📥 PNG", fig_to_bytes(fig1, "png"), "regression_comparison.png", "image/png")
+            plt.close()
+
+            # 2. Predicted vs Actual for all models
+            st.markdown("#### 🎯 Predicted vs Actual - All Models")
+            
+            fig2, axes = plt.subplots(1, 3, figsize=(18, 5))
+            
+            for idx, (name, model) in enumerate(trained_models.items()):
+                y_pred = model.predict(X_test_s)
+                r2 = r2_score(y_test, y_pred)
+                
+                min_val = min(y_test.min(), y_pred.min())
+                max_val = max(y_test.max(), y_pred.max())
+                
+                axes[idx].scatter(y_test, y_pred, alpha=0.6, s=30, edgecolors='black', linewidths=0.5)
+                axes[idx].plot([min_val, max_val], [min_val, max_val], 'r--', linewidth=2, label='Perfect Prediction')
+                axes[idx].set_xlabel('Actual Spend ($)', fontweight='bold')
+                axes[idx].set_ylabel('Predicted Spend ($)', fontweight='bold')
+                axes[idx].set_title(f'{name}\nR² = {r2:.4f}', fontweight='bold')
+                axes[idx].legend()
+                axes[idx].grid(True, alpha=0.3)
+            
+            plt.tight_layout()
+            st.pyplot(fig2)
+            st.download_button("📥 Download Chart", fig_to_bytes(fig2, "png"), "pred_vs_actual_all.png", "image/png")
+            plt.close()
+
+            # 3. Residual plots
+            st.markdown("#### 📉 Residual Analysis")
+            
+            fig3, axes = plt.subplots(1, 3, figsize=(18, 5))
+            
+            for idx, (name, model) in enumerate(trained_models.items()):
+                y_pred = model.predict(X_test_s)
+                residuals = y_test - y_pred
+                
+                axes[idx].scatter(y_pred, residuals, alpha=0.6, s=30, edgecolors='black', linewidths=0.5)
+                axes[idx].axhline(y=0, color='r', linestyle='--', linewidth=2)
+                axes[idx].set_xlabel('Predicted Spend ($)', fontweight='bold')
+                axes[idx].set_ylabel('Residuals ($)', fontweight='bold')
+                axes[idx].set_title(f'{name} - Residuals', fontweight='bold')
+                axes[idx].grid(True, alpha=0.3)
+            
+            plt.tight_layout()
+            st.pyplot(fig3)
+            st.download_button("📥 Download Residuals", fig_to_bytes(fig3, "png"), "residual_plots.png", "image/png")
+            plt.close()
+
+            # 4. Feature importance (coefficients)
+            st.markdown("#### 🔍 Feature Coefficients Comparison")
+            
+            coef_df = pd.DataFrame({
+                "Feature": X_cols,
+                "Linear": trained_models["Linear Regression"].coef_,
+                "Ridge": trained_models["Ridge Regression"].coef_,
+                "Lasso": trained_models["Lasso Regression"].coef_
+            })
+            
+            coef_df["Abs_Linear"] = np.abs(coef_df["Linear"])
+            coef_df = coef_df.sort_values("Abs_Linear", ascending=False).head(15)
+            
+            fig4, ax4 = plt.subplots(figsize=(12, 8))
+            x_pos = np.arange(len(coef_df))
+            width = 0.25
+            
+            ax4.barh(x_pos - width, coef_df["Linear"], width, label="Linear", alpha=0.8)
+            ax4.barh(x_pos, coef_df["Ridge"], width, label="Ridge", alpha=0.8)
+            ax4.barh(x_pos + width, coef_df["Lasso"], width, label="Lasso", alpha=0.8)
+            
+            ax4.set_yticks(x_pos)
+            ax4.set_yticklabels(coef_df["Feature"])
+            ax4.set_xlabel('Coefficient Value', fontweight='bold')
+            ax4.set_title('Top 15 Feature Coefficients Comparison', fontweight='bold', fontsize=14)
+            ax4.legend()
+            ax4.grid(True, alpha=0.3, axis='x')
+            plt.tight_layout()
+            
+            st.pyplot(fig4)
+            st.download_button("📥 Download Coefficients", fig_to_bytes(fig4, "png"), "feature_coefficients.png", "image/png")
+            plt.close()
+
+            # Feature coefficient table
+            st.dataframe(coef_df[["Feature", "Linear", "Ridge", "Lasso"]].round(4), use_container_width=True)
+            download_button(coef_df, "feature_coefficients.csv", "📥 Download Coefficient Table")
+
+            # Predictions export
+            st.markdown("### 💾 Export Predictions")
+            
+            pred_export = pd.DataFrame({
+                "Customer_ID": df.loc[X_test.index, "Customer_ID"] if "Customer_ID" in df.columns else X_test.index,
+                "Actual_Spend": y_test,
+                "Linear_Pred": trained_models["Linear Regression"].predict(X_test_s),
+                "Ridge_Pred": trained_models["Ridge Regression"].predict(X_test_s),
+                "Lasso_Pred": trained_models["Lasso Regression"].predict(X_test_s)
+            })
+            
+            pred_export["Best_Model_Pred"] = best_model.predict(X_test_s)
+            pred_export["Error"] = pred_export["Actual_Spend"] - pred_export["Best_Model_Pred"]
+            
+            st.dataframe(pred_export.head(10).round(2), use_container_width=True)
+            download_button(pred_export, "regression_predictions.csv", "📥 Download All Predictions")
+
+        else:
+            st.warning("⚠️ No features available for regression analysis")
+
+with tabs[5]:
+    st.markdown('<h2 class="sub-header">Dynamic Pricing Strategy</h2>', unsafe_allow_html=True)
+    st.markdown("**Using best regression model to implement personalized pricing**")
+
+    if "Monthly_Luxury_Spend" not in df.columns:
+        st.error("❌ Cannot implement pricing without spend data")
     else:
         numeric = [c for c in get_numeric_features(df) if c != "Monthly_Luxury_Spend"]
         cats = [c for c in df.columns if "Interested_" in c]
@@ -534,40 +1063,15 @@ with tabs[4]:
             X_train_s = scaler.fit_transform(X_train)
             X_test_s = scaler.transform(X_test)
 
-            lr = LinearRegression()
             gb = GradientBoostingRegressor(n_estimators=100, random_state=42)
-
-            lr.fit(X_train_s, y_train)
             gb.fit(X_train_s, y_train)
 
-            results = []
-            for name, model in [("Linear Regression", lr), ("Gradient Boosting", gb)]:
-                y_pred = model.predict(X_test_s)
-                results.append({
-                    "Model": name,
-                    "MAE": mean_absolute_error(y_test, y_pred),
-                    "RMSE": np.sqrt(mean_squared_error(y_test, y_pred)),
-                    "R²": r2_score(y_test, y_pred)
-                })
-
-            results_df = pd.DataFrame(results).sort_values("RMSE")
-
-            st.markdown("#### Model Performance")
-            st.dataframe(results_df, use_container_width=True)
-
-            best_name = results_df.iloc[0]["Model"]
-            best_model = lr if best_name == "Linear Regression" else gb
-            best_r2 = results_df.iloc[0]["R²"]
-
-            st.success(f"🏆 Best: {best_name} (R²: {best_r2:.4f})")
-
             X_all_s = scaler.transform(X)
-            df["Predicted_Spend"] = best_model.predict(X_all_s)
+            df["Predicted_Spend"] = gb.predict(X_all_s)
 
-            st.markdown("---")
-            st.markdown("### 💎 Dynamic Pricing")
+            st.markdown("### 💎 Pricing Configuration")
 
-            with st.expander("⚙️ Pricing Config"):
+            with st.expander("⚙️ Adjust Pricing Parameters"):
                 col1, col2 = st.columns(2)
                 with col1:
                     cap_w = st.slider("Capacity Weight", 0.0, 1.0, 0.30, 0.05)
@@ -587,81 +1091,56 @@ with tabs[4]:
             df["Personalized_Price"] = df["Base_Price"] * df["Price_Multiplier"]
             df["Price_Adj_Pct"] = ((df["Personalized_Price"] - df["Base_Price"]) / df["Base_Price"]) * 100
 
-            col1, col2, col3 = st.columns(3)
+            col1, col2, col3, col4 = st.columns(4)
             col1.metric("Avg Multiplier", f"{df['Price_Multiplier'].mean():.3f}x")
-            col2.metric("Premium %", f"{(df['Price_Adj_Pct'].sum() / len(df)):.1f}%")
+            col2.metric("Price Adjustment", f"{df['Price_Adj_Pct'].mean():.1f}%")
             col3.metric("Revenue Lift", f"${(df['Personalized_Price'].sum() - df['Base_Price'].sum()):,.0f}")
+            col4.metric("Customers Impacted", f"{len(df):,}")
 
-            st.markdown("#### 📊 Charts")
-
-            fig1, ax1 = plt.subplots(figsize=(8, 6))
-            y_pred_test = best_model.predict(X_test_s)
-            min_val = min(y_test.min(), y_pred_test.min())
-            max_val = max(y_test.max(), y_pred_test.max())
-            ax1.scatter(y_test, y_pred_test, alpha=0.5, s=30)
-            ax1.plot([min_val, max_val], [min_val, max_val], "r--", linewidth=2)
-            ax1.set_xlabel("Actual", fontweight="bold")
-            ax1.set_ylabel("Predicted", fontweight="bold")
-            ax1.set_title(f"Predicted vs Actual (R²={best_r2:.3f})", fontweight="bold")
-            ax1.grid(True, alpha=0.3)
-            plt.tight_layout()
-
-            st.pyplot(fig1)
+            st.markdown("### 📊 Pricing Analysis Charts")
 
             col1, col2 = st.columns(2)
+            
             with col1:
-                st.download_button("📥 PNG", fig_to_bytes(fig1, "png"), "pred_actual.png", "image/png")
+                fig1, ax1 = plt.subplots(figsize=(8, 6))
+                scatter = ax1.scatter(df["Base_Price"], df["Personalized_Price"],
+                                     c=df["Price_Multiplier"], cmap="RdYlGn", alpha=0.6, s=50, edgecolors='black', linewidths=0.5)
+                min_p = min(df["Base_Price"].min(), df["Personalized_Price"].min())
+                max_p = max(df["Base_Price"].max(), df["Personalized_Price"].max())
+                ax1.plot([min_p, max_p], [min_p, max_p], "k--", linewidth=2, label='No Change')
+                ax1.set_xlabel("Base Price ($)", fontweight="bold")
+                ax1.set_ylabel("Personalized Price ($)", fontweight="bold")
+                ax1.set_title("Base vs Personalized Pricing", fontweight="bold")
+                ax1.legend()
+                ax1.grid(True, alpha=0.3)
+                plt.colorbar(scatter, ax=ax1, label="Multiplier")
+                plt.tight_layout()
+                st.pyplot(fig1)
+                st.download_button("📥 PNG", fig_to_bytes(fig1, "png"), "pricing_scatter.png", "image/png", key="price1")
+                plt.close()
+            
             with col2:
-                st.download_button("📥 JPG", fig_to_bytes(fig1, "jpg"), "pred_actual.jpg", "image/jpeg")
-            plt.close()
+                if "Brand_Loyalty_Score" in df.columns:
+                    fig2, ax2 = plt.subplots(figsize=(8, 6))
+                    bins = pd.cut(df["Brand_Loyalty_Score"], bins=[0, 3, 6, 8, 10], labels=["Low", "Medium", "High", "Very High"])
+                    mult_loy = df.groupby(bins, observed=True)["Price_Multiplier"].mean()
 
-            fig2, ax2 = plt.subplots(figsize=(8, 6))
-            scatter = ax2.scatter(df["Base_Price"], df["Personalized_Price"],
-                                 c=df["Price_Multiplier"], cmap="RdYlGn", alpha=0.6, s=30)
-            min_p = min(df["Base_Price"].min(), df["Personalized_Price"].min())
-            max_p = max(df["Base_Price"].max(), df["Personalized_Price"].max())
-            ax2.plot([min_p, max_p], [min_p, max_p], "k--", linewidth=2)
-            ax2.set_xlabel("Base Price", fontweight="bold")
-            ax2.set_ylabel("Personalized Price", fontweight="bold")
-            ax2.set_title("Personalized vs Base", fontweight="bold")
-            ax2.grid(True, alpha=0.3)
-            plt.colorbar(scatter, ax=ax2, label="Multiplier")
-            plt.tight_layout()
+                    if len(mult_loy) > 0:
+                        ax2.bar(range(len(mult_loy)), mult_loy.values, color=["#e74c3c", "#f39c12", "#3498db", "#2ecc71"], alpha=0.8)
+                        ax2.axhline(y=1.0, color="black", linestyle="--", linewidth=2, label='Base (1.0x)')
+                        ax2.set_xticks(range(len(mult_loy)))
+                        ax2.set_xticklabels(mult_loy.index)
+                        ax2.set_ylabel("Avg Price Multiplier", fontweight="bold")
+                        ax2.set_xlabel("Loyalty Segment", fontweight="bold")
+                        ax2.set_title("Pricing by Customer Loyalty", fontweight="bold")
+                        ax2.legend()
+                        ax2.grid(True, alpha=0.3, axis="y")
+                        plt.tight_layout()
+                        st.pyplot(fig2)
+                        st.download_button("📥 PNG", fig_to_bytes(fig2, "png"), "loyalty_pricing.png", "image/png", key="price2")
+                        plt.close()
 
-            st.pyplot(fig2)
-
-            col1, col2 = st.columns(2)
-            with col1:
-                st.download_button("📥 PNG", fig_to_bytes(fig2, "png"), "price_comp.png", "image/png")
-            with col2:
-                st.download_button("📥 JPG", fig_to_bytes(fig2, "jpg"), "price_comp.jpg", "image/jpeg")
-            plt.close()
-
-            if "Brand_Loyalty_Score" in df.columns:
-                fig3, ax3 = plt.subplots(figsize=(8, 6))
-                bins = pd.cut(df["Brand_Loyalty_Score"], bins=[0, 3, 6, 8, 10], labels=["Low", "Med", "High", "V.High"])
-                mult_loy = df.groupby(bins, observed=True)["Price_Multiplier"].mean()
-
-                if len(mult_loy) > 0:
-                    ax3.bar(range(len(mult_loy)), mult_loy.values, color="#3498db", alpha=0.8)
-                    ax3.axhline(y=1.0, color="r", linestyle="--", linewidth=2)
-                    ax3.set_xticks(range(len(mult_loy)))
-                    ax3.set_xticklabels(mult_loy.index)
-                    ax3.set_ylabel("Avg Multiplier", fontweight="bold")
-                    ax3.set_title("Multiplier by Loyalty", fontweight="bold")
-                    ax3.grid(True, alpha=0.3, axis="y")
-                    plt.tight_layout()
-
-                    st.pyplot(fig3)
-
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.download_button("📥 PNG", fig_to_bytes(fig3, "png"), "mult_loyalty.png", "image/png")
-                    with col2:
-                        st.download_button("📥 JPG", fig_to_bytes(fig3, "jpg"), "mult_loyalty.jpg", "image/jpeg")
-                    plt.close()
-
-            st.markdown("#### 📋 Digital Price Chart")
+            st.markdown("### 📋 Digital Price Chart (Sample)")
 
             chart_cols = ["Customer_ID", "Monthly_Luxury_Spend", "Predicted_Spend",
                          "Base_Price", "Price_Multiplier", "Personalized_Price", "Price_Adj_Pct"]
@@ -670,10 +1149,10 @@ with tabs[4]:
             price_chart = df[chart_cols].round(2)
             st.dataframe(price_chart.head(20), use_container_width=True)
 
-            download_button(price_chart, "digital_price_chart.csv", "📥 Download Price Chart")
+            download_button(price_chart, "complete_price_chart.csv", "📥 Download Full Price Chart")
         else:
-            st.warning("⚠️ No features available")
+            st.warning("⚠️ No features available for pricing model")
 
 st.markdown("---")
-st.markdown('<div style="text-align: center; color: gray;">Built with Streamlit • ML-powered pricing</div>',
+st.markdown('<div style="text-align: center; color: gray; font-size: 14px;">🚀 Complete ML Analytics Dashboard | Built with Streamlit | Powered by scikit-learn</div>',
             unsafe_allow_html=True)
