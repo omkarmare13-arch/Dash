@@ -1,0 +1,701 @@
+Response_ID,Survey_Date,Age_Group,Gender,City_Tier,Location,Annual_Income,Occupation,Purchase_Frequency,Annual_Luxury_Spending,Brand_Loyalty_Score,Interest_Handbags,Interest_Watches,Interest_Jewelry,Interest_Fashion,Interest_Shoes,Interest_Cosmetics,Interest_Fragrances,Total_Categories_Interest,Urgency_Frequency,Online_Shopping_Pct,Gratification_Score,WTP_1Hour_Premium,WTP_Percentage,Service_Interest_Score,Likelihood_to_Use,Predicted_Premium_Spend,Customer_Segment
+R0001,2025-11-05,35-44,Female,Tier 2 (Large City),Chicago,$200K-$300K,Healthcare,2-3x/month,$30K-$50K,6,0,1,0,0,1,1,1,4,Every 2-3mo,60,1,64,6.4,7,Very Likely,1920,Aspirational
+R0002,2025-10-17,18-24,Other,Tier 1 (Metro),Singapore,$300K-$500K,Finance,Every 2-3mo,$15K-$30K,4,1,0,1,1,0,0,0,3,Every 2-3mo,69,6,64,6.4,6,Likely,384,Aspirational
+R0003,2025-10-18,55-64,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Tech,Every 2-3mo,$15K-$30K,5,0,1,0,0,0,1,0,2,2-4x/year,45,5,74,7.4,7,Very Likely,444,Aspirational
+R0004,2025-10-22,35-44,Male,Tier 2 (Large City),Chicago,Under $75K,Healthcare,2-4x/year,<$5K,5,0,0,0,0,1,1,1,3,Yearly,22,6,17,1.7,2,Unlikely,51,Gifter
+R0005,2025-10-31,45-54,Female,Tier 1 (Metro),London,$200K-$300K,Finance,2-4x/year,$5K-$15K,4,1,1,0,1,0,1,0,4,2-4x/year,56,8,78,7.8,6,Likely,234,Aspirational
+R0006,2025-10-26,45-54,Male,Tier 1 (Metro),London,$300K-$500K,Consulting,Every 2-3mo,$30K-$50K,5,0,0,0,1,0,0,0,1,Yearly,34,5,59,5.9,4,Possibly,354,Affluent Pro
+R0007,2025-11-14,35-44,Male,Tier 1 (Metro),London,$200K-$300K,Tech,2-3x/month,$30K-$50K,5,0,1,1,1,1,0,0,4,Monthly,36,4,80,8.0,7,Very Likely,2400,Aspirational
+R0008,2025-11-11,25-34,Male,Tier 1 (Metro),Singapore,$125K-$200K,Real Estate,Yearly,$15K-$30K,5,1,0,0,0,1,0,0,2,Monthly,94,6,53,5.3,7,Very Likely,53,Gifter
+R0009,2025-10-27,18-24,Female,Tier 1 (Metro),Dubai,$500K-$1M,Healthcare,Monthly,$30K-$50K,8,1,0,0,1,1,0,0,3,Monthly,78,9,127,12.7,8,Definitely,1524,Affluent Pro
+R0010,2025-10-22,45-54,Female,Tier 3 (Mid-size City),Geneva,$500K-$1M,Entrepreneur,2-4x/year,$50K-$100K,5,1,0,0,0,0,1,1,3,Every 2-3mo,47,5,60,6.0,6,Likely,180,Affluent Pro
+R0011,2025-10-25,45-54,Female,Tier 2 (Large City),Chicago,$125K-$200K,Legal,2-4x/year,$5K-$15K,7,1,0,0,0,0,1,0,2,Every 2-3mo,41,5,32,3.2,5,Likely,96,Gifter
+R0012,2025-11-04,45-54,Other,Tier 1 (Metro),Hong Kong,$200K-$300K,Entrepreneur,Monthly,$15K-$30K,7,0,0,0,0,1,0,0,1,Monthly,60,5,88,8.8,8,Definitely,1056,Aspirational
+R0013,2025-11-10,45-54,Female,Tier 1 (Metro),Los Angeles,$500K-$1M,Entrepreneur,2-4x/year,$50K-$100K,6,0,1,0,1,0,1,1,4,Rarely,43,6,82,8.2,7,Very Likely,245,Affluent Pro
+R0014,2025-10-25,35-44,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Entrepreneur,Monthly,$15K-$30K,3,1,0,0,0,0,1,0,2,Every 2-3mo,33,4,72,7.2,7,Very Likely,864,Aspirational
+R0015,2025-10-30,25-34,Female,Tier 1 (Metro),Singapore,$75K-$125K,Finance,Rarely,<$5K,8,1,1,0,0,1,1,1,5,Multiple/mo,80,7,71,7.1,6,Likely,35,Gifter
+R0016,2025-11-14,55-64,Male,Tier 1 (Metro),Hong Kong,$125K-$200K,Real Estate,2-4x/year,$5K-$15K,6,1,1,0,0,0,0,0,2,Rarely,62,5,46,4.6,7,Very Likely,138,Gifter
+R0017,2025-11-05,35-44,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Real Estate,Monthly,$15K-$30K,5,1,0,1,0,1,1,0,4,2-4x/year,48,6,58,5.8,5,Likely,696,Aspirational
+R0018,2025-11-03,35-44,Female,Tier 2 (Large City),Toronto,$125K-$200K,Tech,Yearly,$15K-$30K,7,0,0,0,0,0,1,0,1,2-4x/year,37,6,16,1.6,4,Possibly,16,Gifter
+R0019,2025-10-29,65+,Female,Tier 1 (Metro),Dubai,$1M+,Luxury Retail,Monthly,$250K+,8,1,0,0,1,0,0,0,2,Multiple/mo,77,6,145,14.5,10,Definitely,1739,Ultra-HNW
+R0020,2025-10-19,25-34,Male,Tier 2 (Large City),Miami,$125K-$200K,Consulting,Monthly,<$5K,6,1,0,0,1,0,0,0,2,Yearly,54,6,24,2.4,4,Possibly,288,Digital-First
+R0021,2025-10-25,25-34,Male,Tier 1 (Metro),Hong Kong,Under $75K,Healthcare,Monthly,<$5K,6,0,1,0,1,1,0,0,3,Yearly,75,6,40,4.0,5,Likely,480,Digital-First
+R0022,2025-10-20,65+,Male,Tier 2 (Large City),Sydney,Under $75K,Finance,Every 2-3mo,<$5K,5,0,1,0,0,1,1,0,3,Yearly,77,3,7,0.7,2,Unlikely,41,Digital-First
+R0023,2025-10-28,35-44,Male,Tier 1 (Metro),Hong Kong,$1M+,Other,Every 2-3mo,$50K-$100K,6,0,1,1,1,0,0,0,3,Yearly,20,3,97,9.7,9,Definitely,581,Affluent Pro
+R0024,2025-11-01,65+,Male,Tier 2 (Large City),Toronto,$125K-$200K,Entrepreneur,2-4x/year,<$5K,5,0,1,1,1,0,0,0,3,Rarely,67,5,15,1.5,1,Unlikely,45,Gifter
+R0025,2025-10-18,35-44,Male,Tier 1 (Metro),New York,$300K-$500K,Real Estate,Monthly,$50K-$100K,7,0,1,0,0,0,0,0,1,Monthly,75,8,123,12.3,6,Likely,1476,Affluent Pro
+R0026,2025-11-04,65+,Female,Tier 2 (Large City),Toronto,$125K-$200K,Consulting,Every 2-3mo,$5K-$15K,5,1,0,1,0,0,0,0,2,Yearly,46,4,2,0.2,2,Unlikely,12,Digital-First
+R0027,2025-11-01,25-34,Male,Tier 1 (Metro),London,$75K-$125K,Real Estate,Every 2-3mo,<$5K,5,0,1,1,1,1,1,1,6,Monthly,79,6,44,4.4,4,Possibly,264,Digital-First
+R0028,2025-10-19,35-44,Male,Tier 1 (Metro),New York,$300K-$500K,Legal,Monthly,$15K-$30K,4,1,0,1,0,0,0,0,2,Every 2-3mo,47,8,96,9.6,7,Very Likely,1152,Aspirational
+R0029,2025-10-31,35-44,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Finance,2-4x/year,$15K-$30K,3,1,1,1,1,1,1,1,7,Yearly,48,8,68,6.8,6,Likely,204,Aspirational
+R0030,2025-10-31,45-54,Female,Tier 2 (Large City),Sydney,$125K-$200K,Finance,Every 2-3mo,$5K-$15K,8,0,0,1,0,1,0,1,3,Every 2-3mo,41,1,46,4.6,7,Very Likely,276,Digital-First
+R0031,2025-11-14,55-64,Male,Tier 1 (Metro),London,$300K-$500K,Media,Every 2-3mo,$30K-$50K,8,1,1,0,0,1,1,0,4,Every 2-3mo,33,3,84,8.4,10,Definitely,504,Affluent Pro
+R0032,2025-11-14,35-44,Male,Tier 2 (Large City),Miami,$1M+,Tech,Every 2-3mo,$50K-$100K,4,1,1,1,1,0,0,1,5,2-4x/year,36,8,92,9.2,6,Likely,552,Affluent Pro
+R0033,2025-10-21,45-54,Female,Tier 2 (Large City),Sydney,$300K-$500K,Entrepreneur,2-4x/year,$50K-$100K,7,1,0,0,0,1,0,0,2,Every 2-3mo,38,2,59,5.9,6,Likely,177,Affluent Pro
+R0034,2025-11-13,35-44,Male,Tier 2 (Large City),Chicago,$500K-$1M,Real Estate,2-3x/month,$50K-$100K,9,1,0,0,1,0,0,0,2,Every 2-3mo,59,7,74,7.4,7,Very Likely,2220,Affluent Pro
+R0035,2025-11-03,45-54,Female,Tier 1 (Metro),Singapore,$300K-$500K,Tech,Every 2-3mo,$50K-$100K,6,1,0,0,0,0,1,1,3,Every 2-3mo,50,2,102,10.2,8,Definitely,612,Affluent Pro
+R0036,2025-10-25,55-64,Male,Tier 1 (Metro),New York,Under $75K,Consulting,Rarely,<$5K,5,0,0,1,0,0,0,0,1,Rarely,43,6,73,7.3,7,Very Likely,36,Gifter
+R0037,2025-10-28,35-44,Female,Tier 1 (Metro),New York,Under $75K,Tech,2-4x/year,<$5K,3,0,0,1,0,1,1,1,4,Multiple/mo,10,6,49,4.9,4,Possibly,147,Gifter
+R0038,2025-10-27,45-54,Male,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Entrepreneur,Every 2-3mo,$5K-$15K,5,1,1,0,1,0,1,0,4,2-4x/year,61,4,10,1.0,3,Unlikely,60,Aspirational
+R0039,2025-11-07,35-44,Female,Tier 1 (Metro),Los Angeles,$200K-$300K,Entrepreneur,2-3x/month,$5K-$15K,6,1,0,0,0,0,0,0,1,Every 2-3mo,42,2,70,7.0,6,Likely,2100,Aspirational
+R0040,2025-10-28,25-34,Female,Tier 1 (Metro),New York,$200K-$300K,Media,2-4x/year,$15K-$30K,4,1,0,0,0,1,1,0,3,Monthly,85,7,79,7.9,7,Very Likely,237,Aspirational
+R0041,2025-11-06,55-64,Female,Tier 1 (Metro),Los Angeles,$300K-$500K,Tech,2-3x/month,$15K-$30K,8,1,0,1,0,0,1,0,3,Rarely,34,3,63,6.3,10,Definitely,1890,Aspirational
+R0042,2025-11-03,35-44,Female,Tier 1 (Metro),Singapore,$300K-$500K,Healthcare,Monthly,$15K-$30K,2,1,1,1,0,1,1,1,6,2-4x/year,60,6,68,6.8,7,Very Likely,816,Aspirational
+R0043,2025-11-10,45-54,Female,Tier 2 (Large City),Chicago,$125K-$200K,Healthcare,2-4x/year,$5K-$15K,6,1,0,1,1,1,1,0,5,Every 2-3mo,34,3,74,7.4,7,Very Likely,222,Gifter
+R0044,2025-10-19,35-44,Male,Tier 2 (Large City),Toronto,$200K-$300K,Finance,Every 2-3mo,$5K-$15K,6,1,1,0,1,1,0,0,4,2-4x/year,33,4,30,3.0,4,Possibly,180,Aspirational
+R0045,2025-10-28,55-64,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Finance,Rarely,$15K-$30K,7,0,0,0,1,0,1,0,2,Rarely,54,6,22,2.2,3,Unlikely,11,Gifter
+R0046,2025-11-02,35-44,Female,Tier 2 (Large City),Sydney,$300K-$500K,Tech,2-4x/year,$15K-$30K,6,1,1,0,0,0,1,0,3,Every 2-3mo,65,6,95,9.5,8,Definitely,285,Aspirational
+R0047,2025-10-16,45-54,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Rarely,$15K-$30K,6,0,0,0,1,0,1,0,2,2-4x/year,60,4,41,4.1,7,Very Likely,20,Gifter
+R0048,2025-10-16,18-24,Male,Tier 1 (Metro),Los Angeles,$75K-$125K,Tech,2-3x/month,<$5K,5,0,1,1,1,1,0,0,4,Every 2-3mo,69,6,53,5.3,7,Very Likely,1590,Digital-First
+R0049,2025-10-22,45-54,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Entrepreneur,Every 2-3mo,$15K-$30K,3,1,1,1,0,1,1,0,5,Yearly,46,4,2,0.2,3,Unlikely,12,Digital-First
+R0050,2025-11-09,55-64,Male,Tier 2 (Large City),Chicago,$125K-$200K,Legal,2-4x/year,$5K-$15K,7,0,1,1,1,1,0,1,5,Every 2-3mo,46,5,20,2.0,1,Unlikely,60,Gifter
+R0051,2025-10-21,35-44,Female,Tier 1 (Metro),Singapore,$1M+,Finance,2-4x/year,$50K-$100K,7,1,0,0,1,0,1,1,4,2-4x/year,62,7,111,11.1,8,Definitely,333,Affluent Pro
+R0052,2025-11-06,55-64,Male,Tier 2 (Large City),Sydney,$75K-$125K,Consulting,Yearly,$5K-$15K,6,0,1,0,1,0,1,0,3,Yearly,33,3,16,1.6,2,Unlikely,16,Gifter
+R0053,2025-10-20,45-54,Male,Tier 2 (Large City),Sydney,$300K-$500K,Finance,Monthly,$50K-$100K,7,1,1,0,1,0,0,1,4,Every 2-3mo,45,5,67,6.7,4,Possibly,804,Affluent Pro
+R0054,2025-11-04,25-34,Female,Tier 3 (Mid-size City),San Francisco,$1M+,Media,2-3x/month,$50K-$100K,8,1,1,0,1,0,1,1,5,Monthly,75,7,124,12.4,9,Definitely,3720,Affluent Pro
+R0055,2025-10-30,25-34,Male,Tier 2 (Large City),Miami,$75K-$125K,Entrepreneur,Rarely,<$5K,5,0,1,1,0,1,0,1,4,Every 2-3mo,74,6,31,3.1,6,Likely,15,Gifter
+R0056,2025-10-21,35-44,Male,Tier 1 (Metro),Hong Kong,$500K-$1M,Entrepreneur,Every 2-3mo,$100K-$250K,6,0,1,1,0,0,0,0,2,Multiple/mo,50,4,84,8.4,7,Very Likely,504,Ultra-HNW
+R0057,2025-10-26,25-34,Female,Tier 1 (Metro),Los Angeles,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,6,1,0,1,0,0,0,1,3,2-4x/year,54,7,58,5.8,9,Definitely,348,Aspirational
+R0058,2025-11-06,35-44,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Finance,2-4x/year,<$5K,6,0,1,1,0,1,0,0,3,Multiple/mo,50,5,70,7.0,8,Definitely,210,Gifter
+R0059,2025-10-27,45-54,Female,Tier 2 (Large City),Miami,$300K-$500K,Real Estate,Every 2-3mo,$50K-$100K,6,0,0,0,0,0,1,1,2,Every 2-3mo,59,4,57,5.7,7,Very Likely,342,Affluent Pro
+R0060,2025-10-18,25-34,Male,Tier 2 (Large City),Chicago,$1M+,Luxury Retail,Every 2-3mo,$100K-$250K,8,1,1,0,1,0,1,0,4,Monthly,70,9,138,13.8,9,Definitely,828,Ultra-HNW
+R0061,2025-11-01,18-24,Female,Tier 2 (Large City),Sydney,Under $75K,Healthcare,2-4x/year,<$5K,5,1,0,0,1,0,0,0,2,Monthly,78,7,48,4.8,4,Possibly,144,Gifter
+R0062,2025-11-04,35-44,Male,Tier 1 (Metro),New York,$125K-$200K,Consulting,2-4x/year,$15K-$30K,5,1,1,1,1,0,1,0,5,Every 2-3mo,37,5,49,4.9,6,Likely,147,Gifter
+R0063,2025-11-10,55-64,Male,Tier 1 (Metro),Hong Kong,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,4,0,1,0,0,0,0,0,1,2-4x/year,22,4,35,3.5,4,Possibly,105,Gifter
+R0064,2025-10-28,55-64,Male,Tier 2 (Large City),Miami,$200K-$300K,Healthcare,Every 2-3mo,$30K-$50K,7,1,0,0,0,0,0,0,1,2-4x/year,61,3,44,4.4,4,Possibly,264,Aspirational
+R0065,2025-11-06,25-34,Female,Tier 1 (Metro),Singapore,$500K-$1M,Finance,Every 2-3mo,$100K-$250K,6,1,1,0,0,0,1,0,3,Yearly,67,8,102,10.2,8,Definitely,612,Ultra-HNW
+R0066,2025-10-22,25-34,Female,Tier 3 (Mid-size City),Geneva,$125K-$200K,Entrepreneur,Rarely,<$5K,7,0,0,0,0,1,1,0,2,Yearly,75,7,39,3.9,5,Likely,19,Gifter
+R0067,2025-10-20,35-44,Female,Tier 1 (Metro),New York,$200K-$300K,Healthcare,2-4x/year,$5K-$15K,4,1,1,1,0,0,1,0,4,Every 2-3mo,40,5,81,8.1,6,Likely,243,Aspirational
+R0068,2025-10-27,25-34,Male,Tier 2 (Large City),Toronto,$200K-$300K,Real Estate,2-4x/year,$15K-$30K,6,0,0,0,0,0,0,1,1,Rarely,47,9,53,5.3,4,Possibly,159,Aspirational
+R0069,2025-11-14,25-34,Female,Tier 1 (Metro),Dubai,$200K-$300K,Consulting,Every 2-3mo,$15K-$30K,8,1,0,1,1,0,1,0,4,2-4x/year,76,6,35,3.5,8,Very Likely,210,Aspirational
+R0070,2025-10-21,35-44,Female,Tier 1 (Metro),Hong Kong,$300K-$500K,Entrepreneur,Yearly,$15K-$30K,6,0,0,1,1,0,0,0,2,Every 2-3mo,61,4,86,8.6,8,Definitely,86,Aspirational
+R0071,2025-10-29,25-34,Female,Tier 1 (Metro),Los Angeles,$75K-$125K,Tech,Yearly,<$5K,5,1,0,0,0,1,1,0,3,2-4x/year,63,5,59,5.9,8,Definitely,59,Gifter
+R0072,2025-11-07,18-24,Male,Tier 2 (Large City),Sydney,$200K-$300K,Legal,Monthly,$15K-$30K,5,1,1,0,1,1,1,0,5,Every 2-3mo,72,8,72,7.2,5,Likely,864,Aspirational
+R0073,2025-10-16,55-64,Female,Tier 2 (Large City),Chicago,$125K-$200K,Finance,Monthly,$5K-$15K,3,1,1,0,0,0,1,0,3,Every 2-3mo,35,1,27,2.7,2,Unlikely,324,Digital-First
+R0074,2025-11-12,35-44,Female,Tier 1 (Metro),New York,$300K-$500K,Legal,Monthly,$15K-$30K,7,1,1,1,1,1,0,0,5,Every 2-3mo,28,2,85,8.5,10,Definitely,1020,Aspirational
+R0075,2025-11-14,45-54,Female,Tier 2 (Large City),Sydney,$75K-$125K,Consulting,Monthly,<$5K,8,1,0,1,1,0,1,1,5,Monthly,61,6,46,4.6,6,Likely,552,Digital-First
+R0076,2025-10-18,55-64,Female,Tier 2 (Large City),Miami,$300K-$500K,Tech,Yearly,$30K-$50K,10,1,1,1,1,1,0,0,5,Rarely,17,4,6,0.6,4,Possibly,6,Affluent Pro
+R0077,2025-11-11,55-64,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Finance,2-3x/month,$30K-$50K,5,0,0,0,1,0,1,1,3,Yearly,35,3,41,4.1,6,Likely,1229,Aspirational
+R0078,2025-11-08,65+,Female,Tier 2 (Large City),Sydney,$75K-$125K,Real Estate,Yearly,<$5K,8,1,0,0,1,1,1,0,4,2-4x/year,36,1,11,1.1,4,Possibly,11,Gifter
+R0079,2025-11-02,45-54,Male,Tier 2 (Large City),Chicago,$1M+,Entrepreneur,Yearly,$50K-$100K,7,0,0,1,0,1,1,0,3,Every 2-3mo,30,3,70,7.0,8,Definitely,70,Affluent Pro
+R0080,2025-11-07,25-34,Male,Tier 2 (Large City),Chicago,$200K-$300K,Healthcare,Monthly,$15K-$30K,6,0,1,0,0,0,0,0,1,Every 2-3mo,63,8,69,6.9,6,Likely,828,Aspirational
+R0081,2025-10-29,18-24,Male,Tier 2 (Large City),Chicago,$300K-$500K,Finance,2-3x/month,$15K-$30K,5,0,0,0,0,1,0,0,1,Yearly,30,7,39,3.9,5,Likely,1170,Aspirational
+R0082,2025-11-13,35-44,Female,Tier 2 (Large City),Miami,$200K-$300K,Finance,Monthly,$15K-$30K,5,1,0,0,0,1,1,0,3,Monthly,57,4,95,9.5,8,Definitely,1140,Aspirational
+R0083,2025-11-07,25-34,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Tech,2-4x/year,<$5K,6,1,1,1,0,0,1,0,4,Yearly,67,8,27,2.7,4,Possibly,81,Gifter
+R0084,2025-10-27,45-54,Male,Tier 1 (Metro),Singapore,$500K-$1M,Tech,Monthly,$30K-$50K,6,1,1,0,0,1,0,0,3,Every 2-3mo,79,7,66,6.6,6,Likely,792,Affluent Pro
+R0085,2025-11-05,25-34,Male,Tier 2 (Large City),Chicago,$300K-$500K,Finance,Every 2-3mo,$15K-$30K,7,1,1,0,0,1,0,0,3,2-4x/year,70,5,72,7.2,8,Definitely,432,Aspirational
+R0086,2025-10-29,45-54,Male,Tier 2 (Large City),Miami,$200K-$300K,Entrepreneur,Every 2-3mo,$30K-$50K,10,0,1,0,1,1,0,0,3,Every 2-3mo,50,3,43,4.3,5,Likely,258,Aspirational
+R0087,2025-10-16,45-54,Female,Tier 2 (Large City),Sydney,$75K-$125K,Tech,Yearly,<$5K,9,1,1,1,0,1,0,0,4,Rarely,39,5,12,1.2,1,Unlikely,12,Gifter
+R0088,2025-10-17,35-44,Male,Tier 1 (Metro),Dubai,$75K-$125K,Entrepreneur,Yearly,<$5K,6,0,1,0,0,0,1,0,2,Yearly,62,1,16,1.6,3,Unlikely,16,Gifter
+R0089,2025-10-25,65+,Male,Tier 2 (Large City),Miami,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,6,1,1,0,1,0,0,0,3,Multiple/mo,52,5,60,6.0,6,Likely,360,Aspirational
+R0090,2025-10-28,25-34,Male,Tier 1 (Metro),Dubai,$125K-$200K,Tech,Yearly,$5K-$15K,7,1,0,0,0,1,0,1,3,Monthly,28,8,91,9.1,7,Very Likely,91,Gifter
+R0091,2025-10-22,45-54,Female,Tier 1 (Metro),Hong Kong,$75K-$125K,Healthcare,Every 2-3mo,<$5K,6,1,0,1,1,1,0,0,4,Monthly,44,3,57,5.7,7,Very Likely,342,Digital-First
+R0092,2025-10-18,25-34,Female,Tier 2 (Large City),Chicago,$300K-$500K,Legal,Every 2-3mo,$30K-$50K,9,1,0,1,0,0,0,0,2,Every 2-3mo,74,10,85,8.5,8,Definitely,510,Affluent Pro
+R0093,2025-11-03,35-44,Other,Tier 2 (Large City),Chicago,$75K-$125K,Tech,Every 2-3mo,$5K-$15K,6,1,1,0,1,1,0,0,4,Yearly,57,8,70,7.0,6,Likely,420,Digital-First
+R0094,2025-10-26,35-44,Female,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,2-3x/month,$5K-$15K,5,0,1,0,1,0,1,0,3,Yearly,56,4,31,3.1,5,Likely,930,Aspirational
+R0095,2025-10-25,45-54,Male,Tier 2 (Large City),Chicago,$500K-$1M,Tech,Rarely,$30K-$50K,6,1,0,0,1,0,0,0,2,Multiple/mo,46,4,107,10.7,7,Very Likely,53,Affluent Pro
+R0096,2025-11-04,45-54,Female,Tier 1 (Metro),Singapore,$1M+,Real Estate,2-3x/month,$50K-$100K,7,1,0,0,0,1,0,1,3,2-4x/year,47,8,99,9.9,8,Definitely,2970,Affluent Pro
+R0097,2025-10-22,55-64,Female,Tier 1 (Metro),Los Angeles,$300K-$500K,Consulting,Every 2-3mo,$15K-$30K,5,0,0,1,0,0,1,0,2,Yearly,69,5,74,7.4,6,Likely,444,Aspirational
+R0098,2025-10-28,25-34,Male,Tier 3 (Mid-size City),Geneva,$1M+,Finance,Weekly,$250K+,6,0,1,1,1,1,1,0,5,Yearly,70,8,109,10.9,8,Definitely,5668,Ultra-HNW
+R0099,2025-10-26,45-54,Female,Tier 1 (Metro),London,$125K-$200K,Healthcare,2-4x/year,<$5K,2,0,1,0,1,0,0,1,3,Yearly,57,5,31,3.1,6,Likely,93,Gifter
+R0100,2025-10-24,65+,Female,Tier 2 (Large City),Sydney,$300K-$500K,Tech,2-4x/year,$30K-$50K,7,1,1,1,1,1,1,1,7,Yearly,54,8,64,6.4,7,Very Likely,192,Affluent Pro
+R0101,2025-11-03,55-64,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Every 2-3mo,$50K-$100K,5,0,1,1,1,0,0,0,3,Yearly,45,7,105,10.5,5,Likely,630,Affluent Pro
+R0102,2025-11-09,35-44,Male,Tier 1 (Metro),Dubai,$200K-$300K,Real Estate,Every 2-3mo,$5K-$15K,5,0,1,0,1,1,0,0,3,Rarely,67,6,84,8.4,7,Very Likely,504,Aspirational
+R0103,2025-10-25,55-64,Male,Tier 1 (Metro),Singapore,Under $75K,Finance,Every 2-3mo,<$5K,3,0,1,0,1,0,0,0,2,Multiple/mo,10,5,64,6.4,6,Likely,384,Digital-First
+R0104,2025-11-07,45-54,Female,Tier 1 (Metro),Singapore,$200K-$300K,Entrepreneur,Monthly,$5K-$15K,3,1,1,0,0,0,0,0,2,Monthly,34,2,47,4.7,3,Unlikely,564,Aspirational
+R0105,2025-10-20,45-54,Male,Tier 2 (Large City),Chicago,$300K-$500K,Luxury Retail,2-4x/year,$15K-$30K,5,1,1,0,0,1,0,0,3,Every 2-3mo,47,5,50,5.0,6,Likely,150,Aspirational
+R0106,2025-10-23,35-44,Female,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Every 2-3mo,$30K-$50K,6,1,1,1,1,1,0,0,5,2-4x/year,53,7,28,2.8,4,Possibly,167,Affluent Pro
+R0107,2025-10-21,45-54,Male,Tier 1 (Metro),New York,$125K-$200K,Healthcare,Yearly,$5K-$15K,6,1,0,1,1,0,0,0,3,Yearly,57,1,24,2.4,1,Unlikely,24,Gifter
+R0108,2025-10-26,18-24,Male,Tier 2 (Large City),Miami,$75K-$125K,Healthcare,Monthly,<$5K,7,1,1,1,0,0,1,1,5,Every 2-3mo,81,4,10,1.0,4,Possibly,120,Digital-First
+R0109,2025-11-12,45-54,Female,Tier 1 (Metro),New York,$125K-$200K,Healthcare,2-3x/month,$15K-$30K,4,1,1,0,1,1,1,1,6,2-4x/year,46,5,34,3.4,3,Unlikely,1020,Digital-First
+R0110,2025-10-29,55-64,Female,Tier 2 (Large City),Chicago,Under $75K,Real Estate,Every 2-3mo,<$5K,3,1,1,0,1,0,1,0,4,Yearly,17,4,8,0.8,2,Unlikely,48,Digital-First
+R0111,2025-10-27,35-44,Female,Tier 1 (Metro),London,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,9,1,0,0,0,0,1,0,2,Every 2-3mo,31,5,78,7.8,10,Definitely,468,Aspirational
+R0112,2025-11-11,25-34,Female,Tier 2 (Large City),Miami,$200K-$300K,Entrepreneur,Monthly,$30K-$50K,4,1,1,0,1,1,0,0,4,2-4x/year,68,5,6,0.6,2,Unlikely,72,Aspirational
+R0113,2025-10-23,35-44,Male,Tier 2 (Large City),Toronto,$200K-$300K,Consulting,Monthly,$5K-$15K,8,0,1,0,1,1,0,0,3,Yearly,39,4,50,5.0,10,Definitely,600,Aspirational
+R0114,2025-11-10,18-24,Female,Tier 2 (Large City),Toronto,$500K-$1M,Legal,Monthly,$30K-$50K,7,1,0,1,1,0,1,0,4,Every 2-3mo,56,9,107,10.7,8,Definitely,1284,Affluent Pro
+R0115,2025-10-23,18-24,Female,Tier 2 (Large City),Chicago,$300K-$500K,Entrepreneur,Every 2-3mo,$50K-$100K,5,1,0,1,1,1,0,0,4,Monthly,64,7,84,8.4,6,Likely,504,Affluent Pro
+R0116,2025-10-21,55-64,Male,Tier 1 (Metro),Los Angeles,Under $75K,Healthcare,Every 2-3mo,<$5K,5,1,0,0,1,0,1,0,3,Every 2-3mo,46,5,25,2.5,4,Possibly,150,Digital-First
+R0117,2025-11-03,45-54,Male,Tier 2 (Large City),Sydney,$125K-$200K,Legal,2-4x/year,$5K-$15K,7,0,0,0,0,1,0,1,2,2-4x/year,30,3,13,1.3,2,Unlikely,39,Gifter
+R0118,2025-10-27,35-44,Male,Tier 1 (Metro),Hong Kong,$75K-$125K,Tech,Yearly,$5K-$15K,6,0,1,1,0,1,0,0,3,Monthly,61,5,72,7.2,6,Likely,72,Gifter
+R0119,2025-11-03,35-44,Female,Tier 1 (Metro),Dubai,$300K-$500K,Finance,2-3x/month,$15K-$30K,9,0,1,1,0,0,0,0,2,Rarely,25,4,80,8.0,9,Definitely,2400,Aspirational
+R0120,2025-10-23,65+,Male,Tier 1 (Metro),Dubai,$300K-$500K,Healthcare,2-3x/month,$30K-$50K,6,0,1,0,1,0,0,0,2,Every 2-3mo,50,7,97,9.7,8,Definitely,2909,Affluent Pro
+R0121,2025-11-12,45-54,Male,Tier 1 (Metro),Dubai,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,6,0,1,1,0,0,0,0,2,Monthly,74,4,101,10.1,7,Very Likely,606,Aspirational
+R0122,2025-10-20,35-44,Male,Tier 2 (Large City),Miami,$75K-$125K,Media,Yearly,<$5K,5,0,0,1,0,0,0,0,1,Monthly,41,5,59,5.9,5,Likely,59,Gifter
+R0123,2025-11-11,25-34,Female,Tier 2 (Large City),Sydney,$125K-$200K,Real Estate,Rarely,$15K-$30K,6,0,0,1,1,1,0,0,3,Rarely,94,5,56,5.6,6,Likely,27,Gifter
+R0124,2025-11-04,65+,Female,Tier 2 (Large City),Sydney,$200K-$300K,Real Estate,Every 2-3mo,$15K-$30K,5,1,1,1,1,0,0,0,4,Monthly,52,7,83,8.3,6,Likely,498,Aspirational
+R0125,2025-10-16,55-64,Female,Tier 1 (Metro),Singapore,$125K-$200K,Consulting,Yearly,$5K-$15K,6,1,1,1,1,1,0,0,5,Rarely,47,5,41,4.1,3,Unlikely,40,Gifter
+R0126,2025-10-23,45-54,Female,Tier 1 (Metro),Hong Kong,$75K-$125K,Entrepreneur,Rarely,<$5K,6,1,1,0,1,0,1,0,4,Rarely,22,5,47,4.7,5,Likely,23,Gifter
+R0127,2025-11-06,25-34,Female,Tier 3 (Mid-size City),Geneva,$300K-$500K,Media,Monthly,$15K-$30K,6,0,0,1,1,0,1,0,3,2-4x/year,73,7,31,3.1,5,Likely,372,Aspirational
+R0128,2025-11-12,55-64,Female,Tier 1 (Metro),Dubai,$75K-$125K,Real Estate,Every 2-3mo,<$5K,8,1,0,1,1,1,0,1,5,Yearly,44,6,0,0.0,6,Likely,0,Digital-First
+R0129,2025-10-27,35-44,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Tech,2-4x/year,<$5K,6,1,0,1,1,0,1,0,4,Every 2-3mo,21,5,32,3.2,3,Unlikely,96,Gifter
+R0130,2025-11-12,35-44,Male,Tier 2 (Large City),Chicago,$125K-$200K,Consulting,Rarely,<$5K,9,1,0,0,0,1,0,1,3,Every 2-3mo,39,5,35,3.5,7,Very Likely,17,Gifter
+R0131,2025-10-25,25-34,Female,Tier 1 (Metro),Dubai,$200K-$300K,Entrepreneur,Every 2-3mo,$30K-$50K,2,1,1,0,1,0,1,0,4,Monthly,83,8,82,8.2,6,Likely,491,Aspirational
+R0132,2025-11-07,35-44,Male,Tier 1 (Metro),Dubai,$1M+,Tech,Every 2-3mo,$250K+,6,1,0,0,0,0,1,1,3,Multiple/mo,24,5,123,12.3,9,Definitely,738,Ultra-HNW
+R0133,2025-11-14,45-54,Male,Tier 2 (Large City),Miami,Under $75K,Tech,2-4x/year,<$5K,6,1,0,0,1,0,0,0,2,Rarely,22,5,33,3.3,5,Likely,99,Gifter
+R0134,2025-11-11,25-34,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Entrepreneur,Every 2-3mo,<$5K,8,1,0,1,1,0,0,0,3,2-4x/year,62,2,0,0.0,4,Possibly,0,Digital-First
+R0135,2025-11-05,35-44,Male,Tier 2 (Large City),Sydney,$300K-$500K,Real Estate,2-4x/year,$50K-$100K,7,0,1,0,1,0,0,0,2,Monthly,29,6,95,9.5,6,Likely,285,Affluent Pro
+R0136,2025-11-09,55-64,Female,Tier 2 (Large City),Miami,$500K-$1M,Real Estate,Every 2-3mo,$100K-$250K,6,1,0,0,0,0,1,1,3,Monthly,44,5,84,8.4,5,Likely,504,Ultra-HNW
+R0137,2025-11-05,35-44,Female,Tier 1 (Metro),Singapore,$125K-$200K,Tech,Monthly,<$5K,4,1,1,0,0,0,0,1,3,Every 2-3mo,63,4,53,5.3,5,Likely,636,Digital-First
+R0138,2025-10-20,55-64,Male,Tier 1 (Metro),Los Angeles,$75K-$125K,Luxury Retail,Monthly,<$5K,4,0,1,0,1,0,1,0,3,2-4x/year,56,7,63,6.3,7,Very Likely,756,Digital-First
+R0139,2025-10-24,45-54,Male,Tier 1 (Metro),Singapore,$75K-$125K,Healthcare,2-4x/year,$5K-$15K,8,1,1,0,1,0,0,0,3,Every 2-3mo,63,6,26,2.6,4,Possibly,78,Gifter
+R0140,2025-10-18,45-54,Male,Tier 1 (Metro),New York,Under $75K,Legal,Every 2-3mo,<$5K,5,0,1,0,1,0,0,1,3,Multiple/mo,32,4,64,6.4,6,Likely,384,Digital-First
+R0141,2025-10-30,55-64,Female,Tier 2 (Large City),Toronto,Under $75K,Legal,2-4x/year,<$5K,7,1,0,0,1,0,1,0,3,Multiple/mo,60,3,16,1.6,3,Unlikely,48,Gifter
+R0142,2025-10-20,25-34,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Every 2-3mo,$5K-$15K,4,1,0,1,0,1,0,0,3,Every 2-3mo,56,8,48,4.8,7,Very Likely,288,Digital-First
+R0143,2025-11-09,25-34,Female,Tier 1 (Metro),Dubai,$200K-$300K,Finance,2-4x/year,$15K-$30K,5,1,1,1,0,1,1,0,5,Monthly,77,5,96,9.6,5,Likely,288,Aspirational
+R0144,2025-11-10,25-34,Female,Tier 2 (Large City),Sydney,$200K-$300K,Consulting,2-4x/year,$30K-$50K,7,1,1,1,1,0,1,0,5,Every 2-3mo,72,7,58,5.8,6,Likely,174,Aspirational
+R0145,2025-10-31,35-44,Male,Tier 2 (Large City),Toronto,$75K-$125K,Tech,Rarely,<$5K,6,1,0,0,0,0,0,0,1,2-4x/year,80,5,6,0.6,3,Unlikely,3,Gifter
+R0146,2025-10-31,35-44,Male,Tier 2 (Large City),Chicago,$200K-$300K,Media,Every 2-3mo,$15K-$30K,5,0,1,0,0,0,1,0,2,2-4x/year,41,4,21,2.1,2,Unlikely,126,Aspirational
+R0147,2025-10-22,35-44,Male,Tier 1 (Metro),Dubai,$300K-$500K,Other,Every 2-3mo,$15K-$30K,8,0,0,1,0,1,0,0,2,2-4x/year,10,6,51,5.1,7,Very Likely,306,Aspirational
+R0148,2025-10-27,45-54,Male,Tier 1 (Metro),New York,$300K-$500K,Entrepreneur,Yearly,$15K-$30K,5,1,0,1,1,0,0,0,3,Every 2-3mo,63,6,85,8.5,7,Very Likely,85,Aspirational
+R0149,2025-11-02,25-34,Male,Tier 2 (Large City),Chicago,$75K-$125K,Entrepreneur,Yearly,$5K-$15K,5,0,1,1,1,1,0,1,5,2-4x/year,62,6,37,3.7,5,Likely,37,Gifter
+R0150,2025-10-18,55-64,Male,Tier 3 (Mid-size City),San Francisco,Under $75K,Healthcare,Monthly,<$5K,6,1,1,0,1,0,0,0,3,Multiple/mo,54,2,41,4.1,5,Likely,491,Digital-First
+R0151,2025-10-20,25-34,Male,Tier 1 (Metro),Dubai,$300K-$500K,Legal,2-4x/year,$15K-$30K,8,0,1,1,0,1,0,0,3,Every 2-3mo,48,6,69,6.9,6,Likely,207,Aspirational
+R0152,2025-10-29,55-64,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Yearly,$15K-$30K,9,1,0,0,0,0,0,0,1,2-4x/year,42,3,28,2.8,4,Possibly,27,Gifter
+R0153,2025-10-24,35-44,Female,Tier 1 (Metro),Singapore,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,5,1,1,0,0,0,0,1,3,Monthly,55,4,111,11.1,6,Likely,666,Aspirational
+R0154,2025-10-17,18-24,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Entrepreneur,2-4x/year,$5K-$15K,6,0,0,1,0,0,0,0,1,Every 2-3mo,54,6,82,8.2,6,Likely,245,Aspirational
+R0155,2025-10-25,55-64,Other,Tier 1 (Metro),Hong Kong,$125K-$200K,Luxury Retail,Yearly,<$5K,6,1,0,1,1,0,0,0,3,Multiple/mo,66,5,76,7.6,8,Definitely,76,Gifter
+R0156,2025-11-09,35-44,Male,Tier 1 (Metro),Hong Kong,$500K-$1M,Healthcare,Every 2-3mo,$100K-$250K,8,0,1,0,1,1,0,0,3,Every 2-3mo,40,1,93,9.3,10,Definitely,558,Ultra-HNW
+R0157,2025-11-01,45-54,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Entrepreneur,2-3x/month,$30K-$50K,6,0,0,0,1,1,0,0,2,Monthly,25,4,102,10.2,8,Definitely,3060,Aspirational
+R0158,2025-10-17,25-34,Female,Tier 1 (Metro),London,$200K-$300K,Entrepreneur,2-4x/year,$15K-$30K,7,0,0,0,0,0,0,0,0,Monthly,58,6,99,9.9,8,Definitely,297,Aspirational
+R0159,2025-11-03,35-44,Male,Tier 2 (Large City),Sydney,$75K-$125K,Media,2-4x/year,<$5K,7,0,1,1,1,0,0,0,3,Rarely,37,4,24,2.4,2,Unlikely,72,Gifter
+R0160,2025-11-01,55-64,Female,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Entrepreneur,Every 2-3mo,$15K-$30K,3,1,0,1,1,1,1,0,5,Yearly,44,5,48,4.8,4,Possibly,288,Aspirational
+R0161,2025-10-25,45-54,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Tech,Every 2-3mo,$5K-$15K,7,1,1,0,1,1,1,1,6,Yearly,67,5,49,4.9,7,Very Likely,294,Aspirational
+R0162,2025-11-08,35-44,Male,Tier 2 (Large City),Sydney,$125K-$200K,Other,2-4x/year,$5K-$15K,4,1,1,0,0,0,1,1,4,2-4x/year,44,8,58,5.8,6,Likely,174,Gifter
+R0163,2025-11-13,25-34,Female,Tier 1 (Metro),Dubai,$125K-$200K,Legal,Rarely,<$5K,8,1,0,1,0,1,0,1,4,2-4x/year,89,5,22,2.2,3,Unlikely,11,Gifter
+R0164,2025-11-11,55-64,Female,Tier 2 (Large City),Toronto,$200K-$300K,Finance,Monthly,$30K-$50K,5,0,0,1,0,0,1,0,2,Multiple/mo,47,1,97,9.7,8,Definitely,1163,Aspirational
+R0165,2025-10-28,18-24,Female,Tier 2 (Large City),Sydney,$125K-$200K,Tech,Every 2-3mo,<$5K,5,1,0,1,1,1,1,0,5,2-4x/year,61,9,36,3.6,5,Likely,216,Digital-First
+R0166,2025-10-31,35-44,Female,Tier 3 (Mid-size City),Geneva,$125K-$200K,Entrepreneur,Every 2-3mo,<$5K,4,0,1,0,1,0,1,0,3,Monthly,23,6,33,3.3,6,Likely,198,Digital-First
+R0167,2025-10-29,35-44,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Finance,2-4x/year,<$5K,7,1,0,1,0,0,0,0,2,Monthly,35,7,47,4.7,4,Possibly,141,Gifter
+R0168,2025-10-18,35-44,Male,Tier 1 (Metro),Dubai,$300K-$500K,Real Estate,Monthly,$30K-$50K,4,0,1,0,1,0,1,0,3,2-4x/year,14,7,85,8.5,7,Very Likely,1020,Affluent Pro
+R0169,2025-10-30,35-44,Male,Tier 1 (Metro),New York,$75K-$125K,Other,2-4x/year,<$5K,4,0,1,0,1,0,0,0,2,Yearly,49,6,37,3.7,6,Likely,111,Gifter
+R0170,2025-10-17,45-54,Male,Tier 3 (Mid-size City),Geneva,$125K-$200K,Healthcare,Yearly,$15K-$30K,7,1,1,1,1,0,0,0,4,Yearly,38,5,4,0.4,2,Unlikely,4,Gifter
+R0171,2025-10-23,35-44,Male,Tier 2 (Large City),Miami,$200K-$300K,Legal,Every 2-3mo,$15K-$30K,5,0,0,0,0,0,0,0,0,Every 2-3mo,55,5,57,5.7,6,Likely,342,Aspirational
+R0172,2025-10-26,35-44,Male,Tier 2 (Large City),Chicago,Under $75K,Legal,Yearly,<$5K,4,0,1,1,1,0,1,0,4,Yearly,44,5,13,1.3,2,Unlikely,13,Gifter
+R0173,2025-11-07,18-24,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Tech,Every 2-3mo,$15K-$30K,6,1,0,0,1,1,1,1,5,Yearly,71,7,46,4.6,3,Unlikely,276,Aspirational
+R0174,2025-11-03,55-64,Female,Tier 1 (Metro),New York,$75K-$125K,Tech,2-3x/month,<$5K,6,0,0,0,1,0,1,1,3,2-4x/year,45,5,29,2.9,3,Unlikely,869,Digital-First
+R0175,2025-10-19,25-34,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Real Estate,Monthly,$30K-$50K,8,0,0,0,1,1,1,0,3,2-4x/year,59,5,38,3.8,5,Likely,456,Aspirational
+R0176,2025-10-28,18-24,Female,Tier 1 (Metro),Los Angeles,$75K-$125K,Consulting,2-4x/year,<$5K,5,1,0,1,1,0,1,0,4,Every 2-3mo,47,4,45,4.5,4,Possibly,135,Gifter
+R0177,2025-11-11,45-54,Male,Tier 2 (Large City),Toronto,$500K-$1M,Real Estate,Weekly,$50K-$100K,6,0,1,0,1,0,1,0,3,Monthly,41,6,104,10.4,8,Definitely,5408,Affluent Pro
+R0178,2025-10-16,35-44,Male,Tier 1 (Metro),Singapore,$500K-$1M,Healthcare,2-3x/month,$50K-$100K,8,0,1,0,1,0,0,0,2,Multiple/mo,25,7,111,11.1,6,Likely,3330,Affluent Pro
+R0179,2025-11-12,45-54,Male,Tier 2 (Large City),Toronto,$300K-$500K,Consulting,2-3x/month,$30K-$50K,8,1,1,1,1,1,0,0,5,Every 2-3mo,36,4,50,5.0,7,Very Likely,1500,Affluent Pro
+R0180,2025-11-11,18-24,Female,Tier 1 (Metro),Dubai,$125K-$200K,Tech,2-4x/year,<$5K,6,1,1,1,0,0,0,1,4,2-4x/year,47,5,24,2.4,1,Unlikely,72,Gifter
+R0181,2025-11-09,55-64,Female,Tier 1 (Metro),Dubai,Under $75K,Real Estate,Every 2-3mo,<$5K,6,1,0,0,1,1,1,1,5,2-4x/year,33,6,45,4.5,5,Likely,270,Digital-First
+R0182,2025-11-11,35-44,Male,Tier 1 (Metro),Los Angeles,$75K-$125K,Finance,2-4x/year,$5K-$15K,5,0,1,0,1,1,1,1,5,Monthly,57,5,53,5.3,6,Likely,159,Gifter
+R0183,2025-10-22,25-34,Male,Tier 2 (Large City),Toronto,$125K-$200K,Real Estate,Every 2-3mo,$5K-$15K,6,0,1,1,1,0,0,0,3,Rarely,58,5,42,4.2,8,Very Likely,252,Digital-First
+R0184,2025-11-03,45-54,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Tech,2-3x/month,$5K-$15K,4,0,1,0,1,0,0,1,3,Every 2-3mo,33,6,78,7.8,7,Very Likely,2340,Aspirational
+R0185,2025-10-20,25-34,Female,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Legal,Every 2-3mo,$15K-$30K,7,1,0,0,1,0,1,1,4,2-4x/year,64,7,16,1.6,1,Unlikely,96,Aspirational
+R0186,2025-10-22,18-24,Male,Tier 1 (Metro),Dubai,$125K-$200K,Entrepreneur,2-4x/year,$5K-$15K,5,1,0,0,1,0,0,0,2,2-4x/year,39,8,52,5.2,7,Very Likely,156,Gifter
+R0187,2025-11-10,55-64,Other,Tier 2 (Large City),Toronto,$200K-$300K,Consulting,2-4x/year,$5K-$15K,6,0,1,0,1,0,1,1,4,Every 2-3mo,61,5,46,4.6,5,Likely,138,Aspirational
+R0188,2025-10-18,25-34,Male,Tier 2 (Large City),Toronto,$125K-$200K,Consulting,2-3x/month,$15K-$30K,1,1,1,1,0,0,0,0,3,2-4x/year,66,4,41,4.1,3,Unlikely,1229,Digital-First
+R0189,2025-10-19,25-34,Male,Tier 1 (Metro),Dubai,$75K-$125K,Finance,Rarely,$5K-$15K,7,0,1,0,1,1,0,0,3,2-4x/year,66,5,29,2.9,1,Unlikely,14,Gifter
+R0190,2025-10-27,25-34,Female,Tier 1 (Metro),Dubai,$125K-$200K,Other,Monthly,$15K-$30K,6,1,1,1,1,0,0,1,5,Monthly,95,5,47,4.7,5,Likely,564,Digital-First
+R0191,2025-11-01,55-64,Other,Tier 1 (Metro),Singapore,Under $75K,Tech,Rarely,<$5K,8,1,1,0,0,0,0,0,2,Every 2-3mo,44,4,82,8.2,9,Definitely,40,Gifter
+R0192,2025-10-21,35-44,Female,Tier 2 (Large City),Chicago,$125K-$200K,Finance,Yearly,$5K-$15K,4,1,0,0,0,0,1,0,2,2-4x/year,35,6,0,0.0,4,Possibly,0,Gifter
+R0193,2025-11-08,25-34,Male,Tier 2 (Large City),Miami,$75K-$125K,Healthcare,Monthly,<$5K,4,1,0,0,1,0,0,0,2,Monthly,39,7,46,4.6,5,Likely,552,Digital-First
+R0194,2025-10-21,35-44,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Healthcare,Every 2-3mo,<$5K,4,0,0,1,1,1,1,1,5,Every 2-3mo,49,1,48,4.8,7,Very Likely,288,Digital-First
+R0195,2025-10-21,35-44,Male,Tier 1 (Metro),London,$200K-$300K,Legal,2-3x/month,$15K-$30K,7,0,1,0,0,0,0,1,2,Rarely,67,5,12,1.2,3,Unlikely,360,Aspirational
+R0196,2025-10-19,55-64,Male,Tier 2 (Large City),Miami,Under $75K,Other,Monthly,<$5K,5,1,1,0,0,1,1,1,5,Monthly,69,4,41,4.1,3,Unlikely,491,Digital-First
+R0197,2025-11-08,45-54,Male,Tier 2 (Large City),Miami,$75K-$125K,Consulting,2-4x/year,$5K-$15K,3,0,1,0,1,0,0,1,3,Monthly,71,7,53,5.3,4,Possibly,159,Gifter
+R0198,2025-11-06,35-44,Female,Tier 1 (Metro),London,$125K-$200K,Tech,2-4x/year,$5K-$15K,6,1,0,0,0,1,1,0,3,Multiple/mo,45,4,63,6.3,6,Likely,189,Gifter
+R0199,2025-10-21,45-54,Female,Tier 1 (Metro),Singapore,$500K-$1M,Consulting,Monthly,$30K-$50K,8,1,0,0,0,0,0,0,1,Monthly,18,6,99,9.9,10,Definitely,1188,Affluent Pro
+R0200,2025-11-02,25-34,Male,Tier 2 (Large City),Chicago,$125K-$200K,Finance,Every 2-3mo,$5K-$15K,4,0,1,0,0,0,1,0,2,Monthly,67,5,51,5.1,4,Possibly,306,Digital-First
+R0201,2025-10-19,35-44,Female,Tier 1 (Metro),Los Angeles,$300K-$500K,Real Estate,2-4x/year,$50K-$100K,7,0,1,0,1,0,1,0,3,Every 2-3mo,39,5,103,10.3,8,Definitely,309,Affluent Pro
+R0202,2025-11-09,25-34,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Healthcare,2-4x/year,<$5K,6,0,1,1,0,0,0,1,3,2-4x/year,39,9,36,3.6,4,Possibly,108,Gifter
+R0203,2025-10-30,35-44,Female,Tier 1 (Metro),Singapore,$1M+,Tech,2-3x/month,$50K-$100K,10,1,1,0,1,1,0,0,4,Monthly,24,7,146,14.6,9,Definitely,4380,Affluent Pro
+R0204,2025-11-12,25-34,Male,Tier 1 (Metro),Singapore,$125K-$200K,Legal,2-4x/year,<$5K,7,1,1,0,1,1,1,1,6,Monthly,54,6,46,4.6,5,Likely,138,Gifter
+R0205,2025-10-30,55-64,Male,Tier 1 (Metro),Dubai,$75K-$125K,Legal,Every 2-3mo,<$5K,5,0,0,0,1,1,1,1,4,Every 2-3mo,64,8,89,8.9,9,Definitely,534,Digital-First
+R0206,2025-10-17,25-34,Female,Tier 2 (Large City),Chicago,$125K-$200K,Tech,2-4x/year,<$5K,4,1,1,0,1,1,1,0,5,2-4x/year,79,8,42,4.2,5,Likely,126,Gifter
+R0207,2025-10-21,55-64,Other,Tier 2 (Large City),Toronto,$75K-$125K,Real Estate,Every 2-3mo,<$5K,5,1,0,1,0,0,0,0,2,Yearly,24,4,8,0.8,4,Possibly,48,Digital-First
+R0208,2025-10-31,25-34,Male,Tier 1 (Metro),Hong Kong,$200K-$300K,Media,Every 2-3mo,$15K-$30K,5,0,1,1,1,1,0,0,4,Multiple/mo,77,6,81,8.1,8,Definitely,486,Aspirational
+R0209,2025-10-17,45-54,Female,Tier 2 (Large City),Chicago,$200K-$300K,Real Estate,Weekly,$5K-$15K,6,1,1,1,0,0,1,0,4,Yearly,34,3,41,4.1,5,Likely,2131,Aspirational
+R0210,2025-10-24,35-44,Male,Tier 2 (Large City),Toronto,$125K-$200K,Finance,Every 2-3mo,$15K-$30K,6,1,1,0,1,0,1,0,4,Yearly,59,3,8,0.8,3,Unlikely,48,Digital-First
+R0211,2025-10-17,35-44,Female,Tier 1 (Metro),London,$1M+,Tech,Weekly,$250K+,7,1,1,0,0,0,1,0,3,2-4x/year,39,4,99,9.9,8,Definitely,5148,Ultra-HNW
+R0212,2025-10-17,55-64,Male,Tier 1 (Metro),Dubai,$75K-$125K,Healthcare,Yearly,$5K-$15K,7,1,1,0,1,0,0,0,3,Monthly,45,5,62,6.2,4,Possibly,62,Gifter
+R0213,2025-10-25,35-44,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Healthcare,Monthly,$5K-$15K,5,0,1,0,1,0,1,0,3,2-4x/year,43,2,0,0.0,4,Possibly,0,Digital-First
+R0214,2025-11-14,45-54,Female,Tier 1 (Metro),New York,$200K-$300K,Consulting,Monthly,$5K-$15K,5,1,0,0,1,0,1,1,4,Yearly,57,6,55,5.5,7,Very Likely,660,Aspirational
+R0215,2025-10-24,45-54,Male,Tier 1 (Metro),London,$200K-$300K,Real Estate,2-4x/year,$5K-$15K,6,1,1,0,1,0,1,0,4,2-4x/year,47,6,58,5.8,6,Likely,174,Aspirational
+R0216,2025-10-22,18-24,Female,Tier 1 (Metro),London,$300K-$500K,Tech,Every 2-3mo,$30K-$50K,7,1,0,0,0,1,0,0,2,Multiple/mo,43,6,82,8.2,8,Definitely,491,Affluent Pro
+R0217,2025-10-21,25-34,Other,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Finance,Every 2-3mo,$15K-$30K,4,0,0,0,0,0,1,0,1,Rarely,34,8,22,2.2,1,Unlikely,132,Digital-First
+R0218,2025-11-01,25-34,Female,Tier 1 (Metro),Dubai,$500K-$1M,Finance,2-3x/month,$30K-$50K,8,1,0,1,0,1,1,0,4,Yearly,62,7,65,6.5,6,Likely,1950,Affluent Pro
+R0219,2025-10-20,65+,Female,Tier 1 (Metro),London,$200K-$300K,Finance,Every 2-3mo,$15K-$30K,4,1,1,0,0,1,1,0,4,Every 2-3mo,71,6,80,8.0,7,Very Likely,480,Aspirational
+R0220,2025-11-13,25-34,Other,Tier 1 (Metro),Singapore,$200K-$300K,Entrepreneur,Every 2-3mo,$5K-$15K,9,1,0,0,0,0,0,1,2,Every 2-3mo,80,3,50,5.0,7,Very Likely,300,Aspirational
+R0221,2025-10-21,45-54,Female,Tier 1 (Metro),New York,$125K-$200K,Tech,Every 2-3mo,<$5K,8,0,1,0,1,1,1,0,4,Monthly,47,3,57,5.7,9,Definitely,342,Digital-First
+R0222,2025-11-05,45-54,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,7,0,1,1,0,1,1,0,4,2-4x/year,30,7,39,3.9,4,Possibly,234,Aspirational
+R0223,2025-10-28,35-44,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Yearly,$15K-$30K,7,0,1,0,1,1,0,1,4,2-4x/year,42,5,76,7.6,6,Likely,76,Aspirational
+R0224,2025-11-07,55-64,Male,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Entrepreneur,2-4x/year,$30K-$50K,6,0,0,0,0,0,0,0,0,2-4x/year,39,4,32,3.2,4,Possibly,96,Aspirational
+R0225,2025-10-20,45-54,Male,Tier 2 (Large City),Sydney,$200K-$300K,Tech,2-3x/month,$15K-$30K,7,0,1,0,0,0,0,0,1,Yearly,32,8,58,5.8,6,Likely,1739,Aspirational
+R0226,2025-11-11,35-44,Male,Tier 1 (Metro),Los Angeles,$1M+,Tech,Every 2-3mo,$100K-$250K,4,1,0,0,0,0,0,0,1,Monthly,51,5,110,11.0,10,Definitely,660,Ultra-HNW
+R0227,2025-11-07,25-34,Male,Tier 2 (Large City),Miami,$125K-$200K,Finance,2-4x/year,$15K-$30K,7,1,0,0,1,0,1,0,3,2-4x/year,59,4,27,2.7,3,Unlikely,81,Gifter
+R0228,2025-11-13,55-64,Female,Tier 1 (Metro),Singapore,$200K-$300K,Finance,2-3x/month,$15K-$30K,3,1,0,1,1,0,1,0,4,Monthly,66,2,76,7.6,6,Likely,2280,Aspirational
+R0229,2025-11-09,25-34,Male,Tier 1 (Metro),New York,$200K-$300K,Healthcare,Every 2-3mo,$30K-$50K,7,0,1,0,1,0,0,0,2,Yearly,55,6,62,6.2,7,Very Likely,372,Aspirational
+R0230,2025-11-05,18-24,Female,Tier 1 (Metro),Singapore,Under $75K,Legal,Yearly,<$5K,4,1,0,0,0,1,1,0,3,Monthly,54,5,83,8.3,7,Very Likely,83,Gifter
+R0231,2025-11-04,45-54,Male,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,2-4x/year,$30K-$50K,8,1,1,1,1,0,0,0,4,Every 2-3mo,41,4,52,5.2,8,Definitely,156,Aspirational
+R0232,2025-11-12,55-64,Female,Tier 2 (Large City),Chicago,$200K-$300K,Tech,Every 2-3mo,$5K-$15K,5,1,1,1,1,1,1,1,7,Monthly,26,5,57,5.7,5,Likely,342,Aspirational
+R0233,2025-10-28,55-64,Female,Tier 2 (Large City),Sydney,$500K-$1M,Media,Monthly,$30K-$50K,5,1,0,0,1,0,0,0,2,2-4x/year,47,7,69,6.9,5,Likely,828,Affluent Pro
+R0234,2025-11-11,55-64,Female,Tier 2 (Large City),Sydney,$200K-$300K,Tech,Monthly,$5K-$15K,6,1,1,0,0,0,1,1,4,Every 2-3mo,39,5,47,4.7,5,Likely,564,Aspirational
+R0235,2025-11-07,55-64,Female,Tier 1 (Metro),Dubai,$125K-$200K,Entrepreneur,Yearly,<$5K,7,1,0,1,0,0,0,0,2,Every 2-3mo,46,4,53,5.3,7,Very Likely,53,Gifter
+R0236,2025-11-11,55-64,Other,Tier 1 (Metro),Singapore,$125K-$200K,Healthcare,Every 2-3mo,$5K-$15K,4,1,0,0,0,0,1,0,2,Every 2-3mo,41,5,67,6.7,5,Likely,402,Digital-First
+R0237,2025-10-29,35-44,Male,Tier 1 (Metro),Dubai,$125K-$200K,Finance,Every 2-3mo,$5K-$15K,8,1,0,0,0,0,1,0,2,Yearly,27,4,28,2.8,2,Unlikely,167,Digital-First
+R0238,2025-11-03,45-54,Female,Tier 1 (Metro),London,$300K-$500K,Entrepreneur,Every 2-3mo,$30K-$50K,7,1,0,0,1,0,1,0,3,2-4x/year,33,5,32,3.2,7,Very Likely,192,Affluent Pro
+R0239,2025-11-10,25-34,Female,Tier 2 (Large City),Toronto,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,8,1,1,1,1,0,1,1,6,Monthly,63,8,92,9.2,7,Very Likely,552,Aspirational
+R0240,2025-11-05,35-44,Male,Tier 1 (Metro),London,$300K-$500K,Finance,Rarely,$30K-$50K,6,1,1,1,0,1,0,0,4,Every 2-3mo,42,7,54,5.4,9,Definitely,27,Affluent Pro
+R0241,2025-11-02,35-44,Female,Tier 2 (Large City),Toronto,$200K-$300K,Consulting,Rarely,$30K-$50K,6,0,1,0,1,0,0,0,2,2-4x/year,35,4,52,5.2,8,Definitely,26,Aspirational
+R0242,2025-10-29,35-44,Male,Tier 1 (Metro),Hong Kong,$500K-$1M,Healthcare,Every 2-3mo,$50K-$100K,6,1,1,0,1,0,0,1,4,Monthly,45,7,132,13.2,6,Likely,792,Affluent Pro
+R0243,2025-11-02,25-34,Female,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Healthcare,Monthly,$15K-$30K,5,1,1,0,1,0,0,1,4,Yearly,60,6,32,3.2,7,Very Likely,384,Aspirational
+R0244,2025-11-09,55-64,Male,Tier 1 (Metro),New York,$75K-$125K,Finance,Every 2-3mo,$5K-$15K,5,0,1,0,0,0,1,0,2,Yearly,69,6,23,2.3,2,Unlikely,138,Digital-First
+R0245,2025-11-09,35-44,Female,Tier 2 (Large City),Sydney,$1M+,Luxury Retail,2-3x/month,$100K-$250K,4,1,0,1,0,1,1,0,4,Monthly,36,5,75,7.5,5,Likely,2250,Ultra-HNW
+R0246,2025-11-12,45-54,Female,Tier 2 (Large City),Toronto,$200K-$300K,Other,Monthly,$15K-$30K,5,1,0,0,0,1,1,0,3,Every 2-3mo,69,3,45,4.5,7,Very Likely,540,Aspirational
+R0247,2025-11-11,55-64,Female,Tier 1 (Metro),Hong Kong,$75K-$125K,Tech,2-4x/year,<$5K,5,1,1,0,0,1,1,0,4,Rarely,34,2,21,2.1,4,Possibly,63,Gifter
+R0248,2025-10-21,45-54,Male,Tier 2 (Large City),Sydney,$125K-$200K,Finance,Yearly,<$5K,6,0,1,1,0,0,1,0,3,Yearly,47,3,0,0.0,5,Likely,0,Gifter
+R0249,2025-10-19,45-54,Female,Tier 1 (Metro),London,$200K-$300K,Legal,2-4x/year,$5K-$15K,9,1,1,1,0,1,1,0,5,Every 2-3mo,60,4,39,3.9,7,Very Likely,117,Aspirational
+R0250,2025-11-09,45-54,Male,Tier 3 (Mid-size City),Geneva,$75K-$125K,Real Estate,Yearly,<$5K,6,0,1,0,1,0,1,0,3,2-4x/year,29,3,15,1.5,2,Unlikely,15,Gifter
+R0251,2025-11-06,25-34,Female,Tier 2 (Large City),Chicago,$125K-$200K,Consulting,2-4x/year,$15K-$30K,6,1,1,1,1,1,1,0,6,Rarely,81,8,45,4.5,4,Possibly,135,Gifter
+R0252,2025-11-08,55-64,Female,Tier 1 (Metro),Dubai,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,6,1,0,0,0,0,0,1,2,Yearly,64,7,40,4.0,4,Possibly,120,Gifter
+R0253,2025-11-09,45-54,Female,Tier 2 (Large City),Toronto,$125K-$200K,Entrepreneur,Yearly,$5K-$15K,5,1,0,0,1,0,1,0,3,Every 2-3mo,35,1,29,2.9,4,Possibly,28,Gifter
+R0254,2025-10-21,35-44,Male,Tier 1 (Metro),London,$125K-$200K,Finance,Monthly,$15K-$30K,7,0,1,0,1,0,0,1,3,Every 2-3mo,49,2,46,4.6,6,Likely,552,Digital-First
+R0255,2025-10-17,35-44,Female,Tier 2 (Large City),Miami,$200K-$300K,Finance,Monthly,$15K-$30K,7,1,1,0,1,1,0,0,4,Every 2-3mo,43,2,43,4.3,6,Likely,516,Aspirational
+R0256,2025-11-14,45-54,Male,Tier 1 (Metro),London,$300K-$500K,Tech,2-4x/year,$50K-$100K,7,0,1,1,1,0,0,0,3,Yearly,57,6,58,5.8,7,Very Likely,174,Affluent Pro
+R0257,2025-11-14,18-24,Male,Tier 1 (Metro),Hong Kong,$200K-$300K,Finance,2-4x/year,$30K-$50K,7,1,1,1,0,0,1,1,5,Yearly,45,7,45,4.5,3,Unlikely,135,Aspirational
+R0258,2025-11-14,45-54,Male,Tier 1 (Metro),London,$125K-$200K,Finance,Rarely,<$5K,7,1,1,1,0,1,0,1,5,2-4x/year,44,5,37,3.7,5,Likely,18,Gifter
+R0259,2025-10-18,35-44,Male,Tier 2 (Large City),Sydney,$75K-$125K,Finance,2-4x/year,<$5K,5,0,0,0,0,1,1,1,3,Monthly,31,2,35,3.5,5,Likely,105,Gifter
+R0260,2025-10-29,45-54,Female,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Finance,2-4x/year,<$5K,3,0,0,1,0,1,0,0,2,Every 2-3mo,29,8,27,2.7,2,Unlikely,81,Gifter
+R0261,2025-10-16,25-34,Male,Tier 3 (Mid-size City),San Francisco,$500K-$1M,Media,2-3x/month,$50K-$100K,7,0,0,1,0,1,1,0,3,Multiple/mo,61,6,99,9.9,6,Likely,2970,Affluent Pro
+R0262,2025-10-28,25-34,Male,Tier 2 (Large City),Miami,$125K-$200K,Entrepreneur,Rarely,$5K-$15K,8,1,1,0,1,1,0,0,4,Rarely,57,6,22,2.2,6,Likely,11,Gifter
+R0263,2025-10-22,35-44,Female,Tier 1 (Metro),Singapore,$75K-$125K,Healthcare,2-4x/year,<$5K,6,1,1,1,1,0,0,0,4,Every 2-3mo,49,4,20,2.0,3,Unlikely,60,Gifter
+R0264,2025-10-17,25-34,Male,Tier 2 (Large City),Toronto,$75K-$125K,Legal,Every 2-3mo,$5K-$15K,4,0,0,0,0,0,0,0,0,2-4x/year,47,9,29,2.9,2,Unlikely,174,Digital-First
+R0265,2025-10-20,35-44,Female,Tier 1 (Metro),New York,$125K-$200K,Media,2-4x/year,$15K-$30K,5,1,1,0,1,0,1,0,4,2-4x/year,51,8,48,4.8,6,Likely,144,Gifter
+R0266,2025-10-28,25-34,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Healthcare,Monthly,$15K-$30K,5,1,1,1,0,1,0,0,4,2-4x/year,49,7,75,7.5,6,Likely,900,Aspirational
+R0267,2025-11-13,35-44,Female,Tier 2 (Large City),Sydney,$200K-$300K,Finance,Monthly,$15K-$30K,6,0,0,0,0,1,1,1,3,2-4x/year,54,7,30,3.0,4,Possibly,360,Aspirational
+R0268,2025-11-10,55-64,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Finance,Rarely,$5K-$15K,5,1,0,0,1,1,0,0,3,Every 2-3mo,52,4,35,3.5,4,Possibly,17,Gifter
+R0269,2025-11-09,25-34,Other,Tier 1 (Metro),Dubai,$1M+,Entrepreneur,Every 2-3mo,$100K-$250K,6,1,0,1,1,0,0,0,3,Rarely,74,9,126,12.6,8,Definitely,756,Ultra-HNW
+R0270,2025-11-08,45-54,Female,Tier 1 (Metro),Los Angeles,$125K-$200K,Legal,2-3x/month,<$5K,6,1,0,1,1,0,1,0,4,Rarely,49,2,40,4.0,5,Likely,1200,Digital-First
+R0271,2025-10-27,45-54,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Tech,Yearly,$15K-$30K,6,0,1,0,1,0,1,0,3,2-4x/year,52,4,43,4.3,5,Likely,43,Gifter
+R0272,2025-11-02,55-64,Male,Tier 2 (Large City),Chicago,$1M+,Legal,Weekly,$100K-$250K,5,1,1,1,0,0,1,0,4,2-4x/year,75,6,71,7.1,7,Very Likely,3691,Ultra-HNW
+R0273,2025-10-17,55-64,Female,Tier 1 (Metro),Singapore,$75K-$125K,Consulting,Monthly,<$5K,5,0,0,0,1,1,1,0,3,Yearly,43,2,7,0.7,1,Unlikely,83,Digital-First
+R0274,2025-10-19,45-54,Male,Tier 2 (Large City),Chicago,$75K-$125K,Healthcare,2-4x/year,<$5K,5,0,1,0,0,0,0,0,1,Yearly,19,3,61,6.1,6,Likely,183,Gifter
+R0275,2025-10-19,55-64,Female,Tier 2 (Large City),Chicago,$75K-$125K,Tech,Rarely,$5K-$15K,4,1,1,0,0,1,1,1,5,2-4x/year,52,2,6,0.6,2,Unlikely,3,Gifter
+R0276,2025-10-20,45-54,Male,Tier 2 (Large City),Chicago,$75K-$125K,Healthcare,Every 2-3mo,$5K-$15K,3,0,1,0,1,0,1,0,3,Every 2-3mo,30,7,34,3.4,3,Unlikely,204,Digital-First
+R0277,2025-11-04,25-34,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Finance,Monthly,<$5K,7,0,1,0,1,1,1,0,4,Yearly,84,6,42,4.2,4,Possibly,504,Digital-First
+R0278,2025-11-12,35-44,Female,Tier 2 (Large City),Miami,$125K-$200K,Real Estate,2-4x/year,$5K-$15K,5,0,0,0,1,1,1,0,3,Yearly,45,2,55,5.5,6,Likely,165,Gifter
+R0279,2025-10-24,25-34,Female,Tier 1 (Metro),Singapore,$200K-$300K,Real Estate,Monthly,$15K-$30K,5,0,1,1,1,1,1,0,5,Every 2-3mo,71,5,67,6.7,6,Likely,804,Aspirational
+R0280,2025-10-28,18-24,Female,Tier 2 (Large City),Miami,$125K-$200K,Legal,Every 2-3mo,$15K-$30K,7,1,1,1,1,1,1,1,7,Monthly,64,6,30,3.0,5,Likely,180,Digital-First
+R0281,2025-11-13,55-64,Male,Tier 1 (Metro),Dubai,Under $75K,Consulting,2-4x/year,<$5K,4,1,1,0,1,1,1,0,5,Yearly,26,4,19,1.9,1,Unlikely,57,Gifter
+R0282,2025-10-30,35-44,Male,Tier 2 (Large City),Toronto,$75K-$125K,Real Estate,Monthly,<$5K,5,0,1,0,0,0,1,0,2,Yearly,65,7,44,4.4,5,Likely,528,Digital-First
+R0283,2025-11-03,35-44,Male,Tier 1 (Metro),New York,$300K-$500K,Finance,Every 2-3mo,$50K-$100K,5,1,1,1,0,0,0,0,3,2-4x/year,26,3,66,6.6,7,Very Likely,396,Affluent Pro
+R0284,2025-11-07,65+,Male,Tier 1 (Metro),Hong Kong,$500K-$1M,Real Estate,Every 2-3mo,$30K-$50K,6,0,1,0,1,1,0,1,4,2-4x/year,67,6,66,6.6,7,Very Likely,396,Affluent Pro
+R0285,2025-11-14,25-34,Male,Tier 2 (Large City),Miami,$200K-$300K,Finance,Every 2-3mo,$30K-$50K,4,0,0,0,1,0,1,0,2,Monthly,80,6,102,10.2,8,Definitely,612,Aspirational
+R0286,2025-10-29,35-44,Female,Tier 1 (Metro),New York,$200K-$300K,Finance,Every 2-3mo,$15K-$30K,6,1,1,0,0,0,1,1,4,Monthly,43,6,65,6.5,6,Likely,390,Aspirational
+R0287,2025-10-19,65+,Male,Tier 1 (Metro),Hong Kong,$75K-$125K,Media,Every 2-3mo,<$5K,3,1,1,0,0,1,1,1,5,Rarely,40,7,46,4.6,5,Likely,276,Digital-First
+R0288,2025-11-07,45-54,Female,Tier 3 (Mid-size City),Geneva,$1M+,Consulting,2-3x/month,$250K+,6,1,0,1,1,0,1,0,4,Monthly,64,6,86,8.6,9,Definitely,2580,Ultra-HNW
+R0289,2025-11-01,45-54,Female,Tier 2 (Large City),Toronto,$200K-$300K,Entrepreneur,Rarely,$30K-$50K,7,0,0,0,0,1,0,0,1,2-4x/year,65,6,55,5.5,6,Likely,27,Aspirational
+R0290,2025-11-05,35-44,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Legal,2-4x/year,$15K-$30K,4,0,1,0,1,1,0,0,3,Multiple/mo,59,4,55,5.5,5,Likely,165,Aspirational
+R0291,2025-10-23,55-64,Female,Tier 2 (Large City),Toronto,$125K-$200K,Other,2-4x/year,$15K-$30K,7,1,0,0,0,0,1,0,2,Every 2-3mo,18,3,34,3.4,7,Very Likely,102,Gifter
+R0292,2025-11-09,25-34,Male,Tier 2 (Large City),Miami,$300K-$500K,Tech,Every 2-3mo,$30K-$50K,8,0,1,0,0,1,0,0,2,Rarely,37,6,29,2.9,6,Likely,174,Affluent Pro
+R0293,2025-11-07,45-54,Other,Tier 2 (Large City),Miami,$500K-$1M,Tech,Every 2-3mo,$50K-$100K,6,1,0,0,1,0,0,0,2,Every 2-3mo,59,7,100,10.0,9,Definitely,600,Affluent Pro
+R0294,2025-10-16,45-54,Female,Tier 2 (Large City),Toronto,$1M+,Finance,2-3x/month,$250K+,7,1,0,0,1,1,1,0,4,Multiple/mo,41,5,115,11.5,6,Likely,3450,Ultra-HNW
+R0295,2025-10-17,45-54,Other,Tier 2 (Large City),Chicago,Under $75K,Entrepreneur,Yearly,<$5K,4,0,1,0,1,1,0,0,3,2-4x/year,25,5,0,0.0,3,Unlikely,0,Gifter
+R0296,2025-10-21,45-54,Male,Tier 1 (Metro),New York,$300K-$500K,Media,2-3x/month,$15K-$30K,8,0,1,1,1,1,0,0,4,2-4x/year,47,5,69,6.9,8,Definitely,2070,Aspirational
+R0297,2025-11-11,65+,Male,Tier 1 (Metro),New York,$200K-$300K,Real Estate,Monthly,$15K-$30K,3,0,1,1,0,0,1,1,4,Yearly,34,3,41,4.1,4,Possibly,491,Aspirational
+R0298,2025-10-24,55-64,Male,Tier 2 (Large City),Toronto,$125K-$200K,Legal,Weekly,$5K-$15K,6,1,1,0,0,1,1,0,4,2-4x/year,54,5,20,2.0,4,Possibly,1040,Digital-First
+R0299,2025-11-04,35-44,Female,Tier 1 (Metro),Los Angeles,$125K-$200K,Tech,Every 2-3mo,$15K-$30K,7,0,1,1,1,0,1,0,4,2-4x/year,39,7,27,2.7,1,Unlikely,162,Digital-First
+R0300,2025-11-03,55-64,Female,Tier 2 (Large City),Toronto,$300K-$500K,Entrepreneur,Monthly,$30K-$50K,6,1,0,0,0,0,1,1,3,2-4x/year,62,7,44,4.4,5,Likely,528,Affluent Pro
+R0301,2025-11-07,45-54,Female,Tier 1 (Metro),Dubai,$300K-$500K,Consulting,Yearly,$15K-$30K,6,1,0,0,0,0,0,1,2,Every 2-3mo,57,7,86,8.6,6,Likely,86,Aspirational
+R0302,2025-10-30,45-54,Female,Tier 1 (Metro),Singapore,$125K-$200K,Tech,2-4x/year,<$5K,5,0,1,0,1,1,0,0,3,Yearly,58,2,38,3.8,6,Likely,114,Gifter
+R0303,2025-10-22,45-54,Male,Tier 2 (Large City),Sydney,$75K-$125K,Consulting,Yearly,$5K-$15K,7,1,1,0,0,1,0,1,4,2-4x/year,28,5,40,4.0,6,Likely,40,Gifter
+R0304,2025-11-08,45-54,Male,Tier 1 (Metro),Dubai,$125K-$200K,Healthcare,Yearly,<$5K,7,0,1,0,0,1,1,0,3,Yearly,41,6,33,3.3,4,Possibly,33,Gifter
+R0305,2025-11-06,35-44,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Healthcare,Every 2-3mo,$30K-$50K,8,1,1,1,1,1,0,0,5,Monthly,47,5,89,8.9,9,Definitely,534,Affluent Pro
+R0306,2025-11-13,45-54,Female,Tier 1 (Metro),New York,$500K-$1M,Healthcare,Every 2-3mo,$100K-$250K,6,1,1,0,1,1,1,0,5,2-4x/year,29,4,75,7.5,6,Likely,450,Ultra-HNW
+R0307,2025-11-05,45-54,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Tech,Monthly,$5K-$15K,6,1,0,1,0,0,0,1,3,Every 2-3mo,58,6,0,0.0,4,Possibly,0,Aspirational
+R0308,2025-10-29,45-54,Female,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Entrepreneur,Monthly,$5K-$15K,5,1,0,1,1,0,1,1,5,Monthly,72,7,68,6.8,3,Unlikely,816,Aspirational
+R0309,2025-10-25,45-54,Male,Tier 1 (Metro),London,$125K-$200K,Finance,Monthly,$15K-$30K,5,1,1,0,0,0,0,0,2,Rarely,66,4,43,4.3,6,Likely,516,Digital-First
+R0310,2025-11-09,35-44,Female,Tier 1 (Metro),Dubai,$1M+,Consulting,2-3x/month,$250K+,5,1,0,1,0,0,0,0,2,Every 2-3mo,59,5,111,11.1,5,Likely,3330,Ultra-HNW
+R0311,2025-11-12,25-34,Male,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Real Estate,2-3x/month,$5K-$15K,4,0,1,1,0,0,1,0,3,Every 2-3mo,77,4,44,4.4,6,Likely,1320,Aspirational
+R0312,2025-10-17,35-44,Female,Tier 1 (Metro),Los Angeles,$500K-$1M,Healthcare,2-3x/month,$50K-$100K,7,0,1,0,1,1,1,0,4,Yearly,36,3,80,8.0,6,Likely,2400,Affluent Pro
+R0313,2025-10-26,35-44,Female,Tier 2 (Large City),Miami,$125K-$200K,Consulting,Yearly,$5K-$15K,6,1,0,0,0,0,0,0,1,Every 2-3mo,66,4,53,5.3,5,Likely,53,Gifter
+R0314,2025-10-24,35-44,Female,Tier 2 (Large City),Toronto,$300K-$500K,Entrepreneur,Monthly,$50K-$100K,8,1,0,0,0,0,1,1,3,Every 2-3mo,15,5,64,6.4,9,Definitely,768,Affluent Pro
+R0315,2025-10-24,35-44,Female,Tier 2 (Large City),Sydney,Under $75K,Legal,Yearly,<$5K,6,0,0,1,0,1,1,0,3,2-4x/year,33,2,9,0.9,3,Unlikely,9,Gifter
+R0316,2025-11-07,35-44,Female,Tier 2 (Large City),Toronto,$125K-$200K,Media,Rarely,<$5K,2,1,0,1,0,1,1,0,4,Every 2-3mo,55,5,37,3.7,3,Unlikely,18,Gifter
+R0317,2025-11-12,35-44,Male,Tier 1 (Metro),Hong Kong,$200K-$300K,Healthcare,Monthly,$5K-$15K,6,0,1,0,0,1,0,1,3,Monthly,42,5,84,8.4,6,Likely,1008,Aspirational
+R0318,2025-10-31,55-64,Male,Tier 2 (Large City),Chicago,$75K-$125K,Entrepreneur,Every 2-3mo,<$5K,3,0,1,1,0,1,0,1,4,2-4x/year,57,4,8,0.8,4,Possibly,48,Digital-First
+R0319,2025-11-10,18-24,Other,Tier 1 (Metro),Dubai,Under $75K,Entrepreneur,Every 2-3mo,<$5K,3,0,1,0,0,0,0,0,1,2-4x/year,95,9,43,4.3,6,Likely,258,Digital-First
+R0320,2025-11-07,35-44,Male,Tier 1 (Metro),Singapore,$125K-$200K,Entrepreneur,Every 2-3mo,<$5K,6,1,1,1,1,0,0,0,4,Every 2-3mo,24,3,50,5.0,7,Very Likely,300,Digital-First
+R0321,2025-11-03,35-44,Female,Tier 1 (Metro),Los Angeles,$500K-$1M,Finance,2-4x/year,$30K-$50K,9,1,0,0,0,0,1,0,2,Every 2-3mo,50,5,91,9.1,8,Definitely,273,Affluent Pro
+R0322,2025-10-25,35-44,Male,Tier 2 (Large City),Toronto,$75K-$125K,Consulting,Weekly,<$5K,6,0,0,1,1,0,0,0,2,Rarely,31,6,24,2.4,2,Unlikely,1248,Digital-First
+R0323,2025-11-05,35-44,Female,Tier 2 (Large City),Chicago,Under $75K,Media,Monthly,<$5K,5,0,0,0,1,1,1,0,3,Every 2-3mo,29,8,48,4.8,5,Likely,576,Digital-First
+R0324,2025-10-31,55-64,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Consulting,Monthly,$5K-$15K,3,1,0,0,0,1,0,0,2,Yearly,40,5,21,2.1,4,Possibly,252,Digital-First
+R0325,2025-11-11,45-54,Male,Tier 2 (Large City),Miami,$125K-$200K,Real Estate,2-4x/year,<$5K,8,1,0,1,0,0,1,0,3,Every 2-3mo,65,3,65,6.5,6,Likely,195,Gifter
+R0326,2025-11-05,35-44,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Every 2-3mo,<$5K,4,1,0,0,0,0,1,0,2,2-4x/year,50,4,5,0.5,2,Unlikely,30,Digital-First
+R0327,2025-11-04,25-34,Female,Tier 1 (Metro),Hong Kong,$125K-$200K,Healthcare,2-4x/year,$5K-$15K,6,1,1,1,1,0,0,0,4,2-4x/year,72,6,51,5.1,4,Possibly,153,Gifter
+R0328,2025-10-22,18-24,Male,Tier 1 (Metro),New York,$500K-$1M,Tech,2-3x/month,$50K-$100K,8,0,0,0,0,0,1,0,1,Monthly,66,6,102,10.2,9,Definitely,3060,Affluent Pro
+R0329,2025-11-02,35-44,Male,Tier 2 (Large City),Miami,$500K-$1M,Tech,Monthly,$100K-$250K,6,0,1,1,0,1,1,0,4,Monthly,61,4,118,11.8,7,Very Likely,1416,Ultra-HNW
+R0330,2025-11-01,25-34,Female,Tier 1 (Metro),Singapore,$500K-$1M,Consulting,2-4x/year,$30K-$50K,7,1,0,0,1,0,1,0,3,Every 2-3mo,69,7,102,10.2,8,Definitely,306,Affluent Pro
+R0331,2025-10-19,35-44,Female,Tier 1 (Metro),Dubai,$200K-$300K,Media,Every 2-3mo,$5K-$15K,3,1,1,0,1,0,1,0,4,Every 2-3mo,48,2,107,10.7,7,Very Likely,642,Aspirational
+R0332,2025-11-04,45-54,Female,Tier 1 (Metro),Dubai,$300K-$500K,Tech,2-4x/year,$15K-$30K,6,1,1,0,0,0,1,0,3,Monthly,64,6,75,7.5,4,Possibly,225,Aspirational
+R0333,2025-10-17,35-44,Male,Tier 1 (Metro),London,$500K-$1M,Legal,Monthly,$100K-$250K,10,1,0,0,0,1,0,0,2,Every 2-3mo,41,8,117,11.7,6,Likely,1404,Ultra-HNW
+R0334,2025-11-14,55-64,Female,Tier 1 (Metro),London,$200K-$300K,Real Estate,2-3x/month,$15K-$30K,5,1,1,1,1,1,0,0,5,2-4x/year,53,5,77,7.7,7,Very Likely,2310,Aspirational
+R0335,2025-10-25,55-64,Male,Tier 1 (Metro),Hong Kong,$75K-$125K,Legal,2-4x/year,<$5K,6,1,1,0,0,1,1,1,5,2-4x/year,54,2,62,6.2,4,Possibly,186,Gifter
+R0336,2025-10-19,35-44,Female,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Finance,Yearly,$5K-$15K,5,1,1,0,1,1,1,1,6,2-4x/year,26,6,0,0.0,2,Unlikely,0,Gifter
+R0337,2025-10-27,18-24,Female,Tier 1 (Metro),Hong Kong,Under $75K,Finance,Rarely,<$5K,3,0,0,1,0,1,1,0,3,Every 2-3mo,83,8,74,7.4,4,Possibly,37,Gifter
+R0338,2025-11-02,65+,Female,Tier 2 (Large City),Toronto,$125K-$200K,Tech,2-4x/year,<$5K,5,0,0,0,1,1,1,1,4,2-4x/year,56,5,22,2.2,1,Unlikely,66,Gifter
+R0339,2025-11-14,35-44,Male,Tier 1 (Metro),Dubai,$75K-$125K,Media,Every 2-3mo,<$5K,6,0,0,1,1,1,0,0,3,Monthly,43,6,43,4.3,7,Very Likely,258,Digital-First
+R0340,2025-11-05,35-44,Female,Tier 1 (Metro),New York,$200K-$300K,Tech,Every 2-3mo,$5K-$15K,6,1,1,0,0,0,1,0,3,2-4x/year,56,6,67,6.7,5,Likely,402,Aspirational
+R0341,2025-11-05,45-54,Female,Tier 1 (Metro),London,$300K-$500K,Tech,2-4x/year,$30K-$50K,6,1,1,0,0,0,0,0,2,Every 2-3mo,41,3,73,7.3,6,Likely,219,Affluent Pro
+R0342,2025-11-08,45-54,Female,Tier 1 (Metro),New York,$200K-$300K,Entrepreneur,2-4x/year,$30K-$50K,5,1,0,0,0,1,0,0,2,Every 2-3mo,63,5,66,6.6,6,Likely,198,Aspirational
+R0343,2025-11-07,45-54,Female,Tier 3 (Mid-size City),Geneva,$300K-$500K,Tech,2-4x/year,$30K-$50K,7,1,0,1,1,0,0,0,3,2-4x/year,12,4,74,7.4,8,Definitely,222,Affluent Pro
+R0344,2025-10-31,25-34,Female,Tier 2 (Large City),Sydney,$75K-$125K,Entrepreneur,Yearly,<$5K,6,0,0,0,1,1,0,1,3,Monthly,54,8,71,7.1,7,Very Likely,71,Gifter
+R0345,2025-11-11,35-44,Male,Tier 1 (Metro),New York,$500K-$1M,Healthcare,Weekly,$30K-$50K,8,0,1,0,0,1,0,0,2,Every 2-3mo,32,5,109,10.9,9,Definitely,5668,Affluent Pro
+R0346,2025-10-22,18-24,Female,Tier 3 (Mid-size City),San Francisco,$200K-$300K,Finance,Monthly,$5K-$15K,6,1,0,0,0,1,1,1,4,Yearly,52,7,64,6.4,6,Likely,768,Aspirational
+R0347,2025-10-31,18-24,Female,Tier 2 (Large City),Sydney,$300K-$500K,Entrepreneur,2-4x/year,$15K-$30K,5,0,0,0,1,1,0,1,3,2-4x/year,72,6,67,6.7,5,Likely,201,Aspirational
+R0348,2025-11-11,55-64,Female,Tier 2 (Large City),Miami,$500K-$1M,Legal,2-3x/month,$30K-$50K,7,1,0,0,0,0,1,0,2,Every 2-3mo,28,4,74,7.4,7,Very Likely,2220,Affluent Pro
+R0349,2025-10-17,45-54,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Monthly,$15K-$30K,9,0,1,1,1,1,1,0,5,Every 2-3mo,53,7,55,5.5,7,Very Likely,660,Aspirational
+R0350,2025-10-30,65+,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Legal,Rarely,<$5K,6,1,0,0,0,0,1,1,3,Yearly,48,3,11,1.1,3,Unlikely,5,Gifter
+R0351,2025-10-23,45-54,Male,Tier 2 (Large City),Toronto,$125K-$200K,Legal,Every 2-3mo,<$5K,7,1,0,1,1,1,0,1,5,Yearly,26,4,22,2.2,2,Unlikely,132,Digital-First
+R0352,2025-11-11,55-64,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Tech,Monthly,$5K-$15K,6,1,0,0,1,0,1,0,3,2-4x/year,39,7,22,2.2,3,Unlikely,264,Digital-First
+R0353,2025-10-16,55-64,Male,Tier 3 (Mid-size City),Geneva,$125K-$200K,Entrepreneur,2-4x/year,<$5K,8,1,1,0,0,1,0,1,4,Every 2-3mo,78,3,29,2.9,4,Possibly,87,Gifter
+R0354,2025-10-21,35-44,Female,Tier 1 (Metro),New York,$300K-$500K,Healthcare,Every 2-3mo,$50K-$100K,5,1,1,0,0,0,1,0,3,Every 2-3mo,39,9,110,11.0,5,Likely,660,Affluent Pro
+R0355,2025-11-10,35-44,Male,Tier 2 (Large City),Miami,$500K-$1M,Finance,Monthly,$30K-$50K,3,1,0,1,0,0,1,0,3,Multiple/mo,32,3,101,10.1,7,Very Likely,1212,Affluent Pro
+R0356,2025-11-11,35-44,Male,Tier 1 (Metro),New York,$500K-$1M,Healthcare,2-3x/month,$50K-$100K,8,1,1,1,0,1,1,0,5,Multiple/mo,79,9,107,10.7,10,Definitely,3210,Affluent Pro
+R0357,2025-10-27,35-44,Male,Tier 2 (Large City),Miami,$125K-$200K,Consulting,Monthly,$5K-$15K,5,0,1,0,0,1,1,0,3,2-4x/year,66,2,0,0.0,1,Unlikely,0,Digital-First
+R0358,2025-10-24,35-44,Female,Tier 1 (Metro),London,$200K-$300K,Tech,2-4x/year,$30K-$50K,5,0,0,0,1,0,1,0,2,Every 2-3mo,77,4,62,6.2,5,Likely,186,Aspirational
+R0359,2025-10-22,25-34,Female,Tier 1 (Metro),New York,$75K-$125K,Real Estate,Monthly,<$5K,4,0,1,0,1,1,0,0,3,Multiple/mo,82,10,92,9.2,6,Likely,1104,Digital-First
+R0360,2025-10-17,25-34,Female,Tier 2 (Large City),Toronto,$200K-$300K,Tech,Monthly,$15K-$30K,5,1,1,0,0,0,0,1,3,Multiple/mo,59,7,58,5.8,5,Likely,696,Aspirational
+R0361,2025-11-06,25-34,Male,Tier 2 (Large City),Chicago,$125K-$200K,Consulting,Rarely,$15K-$30K,4,1,1,0,0,0,0,1,3,2-4x/year,38,8,32,3.2,6,Likely,16,Gifter
+R0362,2025-10-21,45-54,Female,Tier 2 (Large City),Miami,$75K-$125K,Tech,Every 2-3mo,$5K-$15K,3,0,1,0,0,1,0,0,2,Every 2-3mo,32,6,33,3.3,5,Likely,198,Digital-First
+R0363,2025-10-27,45-54,Female,Tier 1 (Metro),Dubai,$300K-$500K,Entrepreneur,Every 2-3mo,$50K-$100K,8,1,1,1,0,0,0,1,4,Multiple/mo,30,7,97,9.7,9,Definitely,581,Affluent Pro
+R0364,2025-11-11,25-34,Male,Tier 2 (Large City),Miami,$300K-$500K,Tech,2-4x/year,$50K-$100K,5,0,0,1,1,0,0,1,3,2-4x/year,79,8,45,4.5,4,Possibly,135,Affluent Pro
+R0365,2025-10-28,45-54,Male,Tier 3 (Mid-size City),Geneva,$75K-$125K,Consulting,Every 2-3mo,<$5K,6,1,1,1,0,1,1,1,6,2-4x/year,36,5,45,4.5,6,Likely,270,Digital-First
+R0366,2025-11-11,25-34,Female,Tier 2 (Large City),Chicago,$125K-$200K,Entrepreneur,Every 2-3mo,$5K-$15K,5,0,0,0,0,0,0,1,1,Monthly,95,3,37,3.7,5,Likely,222,Digital-First
+R0367,2025-11-10,55-64,Female,Tier 1 (Metro),Dubai,$200K-$300K,Entrepreneur,Every 2-3mo,$15K-$30K,4,0,1,1,0,1,1,1,5,2-4x/year,35,4,57,5.7,7,Very Likely,342,Aspirational
+R0368,2025-11-11,35-44,Female,Tier 1 (Metro),London,$200K-$300K,Luxury Retail,Every 2-3mo,$15K-$30K,8,0,0,0,1,0,0,1,2,Every 2-3mo,36,7,76,7.6,6,Likely,456,Aspirational
+R0369,2025-11-09,25-34,Female,Tier 2 (Large City),Sydney,$200K-$300K,Entrepreneur,2-3x/month,$15K-$30K,6,1,1,0,1,0,1,1,5,Yearly,49,6,56,5.6,7,Very Likely,1679,Aspirational
+R0370,2025-10-30,65+,Male,Tier 1 (Metro),New York,$300K-$500K,Tech,Weekly,$15K-$30K,4,0,1,1,1,0,0,0,3,Yearly,20,4,57,5.7,5,Likely,2964,Aspirational
+R0371,2025-10-27,45-54,Female,Tier 2 (Large City),Sydney,Under $75K,Finance,2-4x/year,<$5K,5,0,0,0,1,0,0,0,1,Yearly,31,5,27,2.7,2,Unlikely,81,Gifter
+R0372,2025-10-19,35-44,Male,Tier 2 (Large City),Miami,$300K-$500K,Finance,Monthly,$50K-$100K,6,1,1,0,1,0,0,1,4,2-4x/year,51,8,71,7.1,5,Likely,851,Affluent Pro
+R0373,2025-10-19,55-64,Male,Tier 1 (Metro),London,$200K-$300K,Real Estate,Weekly,$5K-$15K,9,1,0,1,1,0,0,0,3,Every 2-3mo,37,4,52,5.2,7,Very Likely,2704,Aspirational
+R0374,2025-11-04,45-54,Male,Tier 2 (Large City),Toronto,$200K-$300K,Real Estate,Every 2-3mo,$5K-$15K,4,0,1,1,1,0,0,0,3,2-4x/year,17,2,48,4.8,3,Unlikely,288,Aspirational
+R0375,2025-10-23,25-34,Female,Tier 2 (Large City),Sydney,$200K-$300K,Luxury Retail,2-4x/year,$5K-$15K,8,0,0,0,1,1,1,0,3,Every 2-3mo,66,6,35,3.5,7,Very Likely,105,Aspirational
+R0376,2025-11-09,35-44,Male,Tier 1 (Metro),Los Angeles,$1M+,Consulting,Monthly,$50K-$100K,8,0,0,0,1,0,1,0,2,Multiple/mo,42,6,144,14.4,8,Definitely,1728,Affluent Pro
+R0377,2025-11-09,35-44,Male,Tier 2 (Large City),Chicago,$125K-$200K,Consulting,2-4x/year,$5K-$15K,8,1,1,1,1,0,1,0,5,Yearly,73,4,6,0.6,6,Likely,18,Gifter
+R0378,2025-11-13,35-44,Female,Tier 1 (Metro),London,$125K-$200K,Entrepreneur,Monthly,$5K-$15K,6,1,0,0,0,0,1,1,3,2-4x/year,58,7,6,0.6,5,Likely,72,Digital-First
+R0379,2025-10-19,25-34,Male,Tier 2 (Large City),Sydney,$125K-$200K,Tech,2-4x/year,$15K-$30K,5,0,0,1,0,1,0,1,3,Rarely,74,8,50,5.0,7,Very Likely,150,Gifter
+R0380,2025-11-06,35-44,Female,Tier 1 (Metro),Singapore,$1M+,Legal,Monthly,$250K+,9,0,0,0,1,1,1,0,3,Rarely,56,7,81,8.1,8,Definitely,972,Ultra-HNW
+R0381,2025-11-01,25-34,Female,Tier 1 (Metro),Los Angeles,Under $75K,Finance,Every 2-3mo,<$5K,5,1,1,1,0,0,1,0,4,Monthly,38,3,64,6.4,4,Possibly,384,Digital-First
+R0382,2025-10-30,55-64,Male,Tier 2 (Large City),Toronto,$500K-$1M,Real Estate,Every 2-3mo,$30K-$50K,7,0,1,0,1,0,1,0,3,Yearly,57,4,77,7.7,3,Unlikely,462,Affluent Pro
+R0383,2025-10-26,65+,Male,Tier 1 (Metro),Dubai,Under $75K,Consulting,Yearly,<$5K,5,0,0,1,1,0,0,0,2,Yearly,35,5,21,2.1,2,Unlikely,21,Gifter
+R0384,2025-10-29,45-54,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Luxury Retail,Rarely,<$5K,4,1,1,0,0,0,0,0,2,2-4x/year,40,5,24,2.4,2,Unlikely,12,Gifter
+R0385,2025-10-25,25-34,Female,Tier 2 (Large City),Miami,Under $75K,Finance,2-4x/year,<$5K,5,0,0,0,1,0,1,1,3,Every 2-3mo,76,7,51,5.1,7,Very Likely,153,Gifter
+R0386,2025-10-25,35-44,Male,Tier 2 (Large City),Miami,$125K-$200K,Finance,Yearly,$5K-$15K,6,0,1,0,0,0,0,0,1,Yearly,24,2,23,2.3,2,Unlikely,23,Gifter
+R0387,2025-10-28,25-34,Other,Tier 2 (Large City),Miami,$200K-$300K,Entrepreneur,2-4x/year,$5K-$15K,7,0,0,1,1,0,1,1,4,Rarely,63,4,31,3.1,4,Possibly,93,Aspirational
+R0388,2025-11-10,25-34,Female,Tier 1 (Metro),Hong Kong,$125K-$200K,Tech,Every 2-3mo,$15K-$30K,4,0,1,0,1,0,0,0,2,2-4x/year,77,6,39,3.9,7,Very Likely,234,Digital-First
+R0389,2025-10-18,25-34,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Entrepreneur,2-4x/year,$5K-$15K,8,1,1,0,1,0,0,1,4,Every 2-3mo,52,6,44,4.4,5,Likely,132,Aspirational
+R0390,2025-10-30,35-44,Male,Tier 1 (Metro),Los Angeles,$125K-$200K,Finance,2-4x/year,$5K-$15K,7,0,1,0,0,0,1,0,2,Every 2-3mo,76,8,40,4.0,5,Likely,120,Gifter
+R0391,2025-10-23,25-34,Female,Tier 1 (Metro),London,$300K-$500K,Luxury Retail,Every 2-3mo,$30K-$50K,5,1,1,1,0,0,1,1,5,2-4x/year,33,10,112,11.2,6,Likely,671,Affluent Pro
+R0392,2025-11-10,18-24,Male,Tier 1 (Metro),Dubai,$125K-$200K,Finance,Every 2-3mo,$15K-$30K,6,1,0,0,1,1,0,1,4,2-4x/year,78,3,26,2.6,2,Unlikely,156,Digital-First
+R0393,2025-11-13,45-54,Female,Tier 1 (Metro),New York,$200K-$300K,Finance,Every 2-3mo,$5K-$15K,5,0,0,0,1,0,0,0,1,2-4x/year,42,3,59,5.9,6,Likely,354,Aspirational
+R0394,2025-11-05,45-54,Male,Tier 3 (Mid-size City),Geneva,Under $75K,Finance,Every 2-3mo,<$5K,8,0,0,0,0,0,0,0,0,2-4x/year,54,2,2,0.2,4,Possibly,12,Digital-First
+R0395,2025-10-18,35-44,Male,Tier 1 (Metro),Singapore,$200K-$300K,Finance,2-3x/month,$5K-$15K,5,1,1,0,1,0,0,0,3,Rarely,37,6,62,6.2,7,Very Likely,1860,Aspirational
+R0396,2025-10-23,65+,Female,Tier 1 (Metro),New York,$125K-$200K,Media,Monthly,$5K-$15K,5,1,0,1,0,0,1,0,3,Monthly,32,3,28,2.8,4,Possibly,335,Digital-First
+R0397,2025-10-20,45-54,Male,Tier 1 (Metro),Singapore,$500K-$1M,Tech,2-3x/month,$50K-$100K,6,0,1,1,1,1,1,0,5,Every 2-3mo,26,3,114,11.4,3,Unlikely,3420,Affluent Pro
+R0398,2025-10-30,35-44,Female,Tier 1 (Metro),Dubai,$125K-$200K,Legal,Yearly,$5K-$15K,6,1,0,1,0,0,1,1,4,2-4x/year,37,4,23,2.3,4,Possibly,23,Gifter
+R0399,2025-11-02,35-44,Male,Tier 3 (Mid-size City),Geneva,$1M+,Media,2-3x/month,$250K+,8,0,1,1,0,1,0,0,3,Monthly,10,7,95,9.5,8,Definitely,2850,Ultra-HNW
+R0400,2025-11-07,55-64,Male,Tier 3 (Mid-size City),Geneva,$75K-$125K,Finance,2-4x/year,<$5K,7,1,1,0,1,1,0,0,4,Monthly,73,7,65,6.5,6,Likely,195,Gifter
+R0401,2025-11-11,45-54,Female,Tier 2 (Large City),Chicago,$125K-$200K,Legal,2-4x/year,$15K-$30K,8,1,1,0,0,1,0,0,3,Monthly,58,1,55,5.5,5,Likely,165,Gifter
+R0402,2025-10-22,35-44,Male,Tier 2 (Large City),Sydney,Under $75K,Finance,Every 2-3mo,<$5K,3,0,1,1,1,1,1,0,5,2-4x/year,50,6,0,0.0,2,Unlikely,0,Digital-First
+R0403,2025-10-26,55-64,Male,Tier 1 (Metro),New York,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,6,0,0,1,0,0,1,1,3,Every 2-3mo,59,4,54,5.4,5,Likely,162,Gifter
+R0404,2025-11-10,25-34,Female,Tier 1 (Metro),Los Angeles,$300K-$500K,Luxury Retail,2-3x/month,$30K-$50K,6,0,1,0,0,0,1,0,2,Every 2-3mo,36,8,116,11.6,5,Likely,3479,Affluent Pro
+R0405,2025-11-07,25-34,Male,Tier 2 (Large City),Toronto,$200K-$300K,Healthcare,Weekly,$5K-$15K,7,0,1,0,0,0,0,0,1,Every 2-3mo,73,7,36,3.6,7,Very Likely,1872,Aspirational
+R0406,2025-10-17,35-44,Female,Tier 2 (Large City),Sydney,$125K-$200K,Real Estate,2-4x/year,$15K-$30K,7,1,0,0,0,1,1,0,3,2-4x/year,47,1,20,2.0,4,Possibly,60,Gifter
+R0407,2025-10-16,45-54,Female,Tier 2 (Large City),Sydney,$125K-$200K,Legal,2-4x/year,$15K-$30K,9,0,1,0,0,0,1,0,2,Yearly,37,5,4,0.4,6,Likely,12,Gifter
+R0408,2025-10-16,65+,Male,Tier 1 (Metro),Los Angeles,$75K-$125K,Legal,2-3x/month,<$5K,5,0,1,0,0,1,1,1,4,Rarely,40,2,33,3.3,5,Likely,990,Digital-First
+R0409,2025-10-19,35-44,Other,Tier 3 (Mid-size City),Geneva,$125K-$200K,Finance,Every 2-3mo,$15K-$30K,4,0,0,1,0,0,0,0,1,2-4x/year,24,5,13,1.3,3,Unlikely,78,Digital-First
+R0410,2025-10-27,25-34,Female,Tier 2 (Large City),Chicago,$75K-$125K,Real Estate,Yearly,<$5K,5,0,0,0,1,1,1,0,3,Yearly,52,5,24,2.4,2,Unlikely,24,Gifter
+R0411,2025-11-12,45-54,Male,Tier 1 (Metro),Singapore,$300K-$500K,Consulting,2-3x/month,$15K-$30K,8,0,1,0,1,1,1,0,4,Every 2-3mo,16,6,81,8.1,10,Definitely,2430,Aspirational
+R0412,2025-10-18,18-24,Female,Tier 2 (Large City),Sydney,$1M+,Consulting,2-4x/year,$100K-$250K,9,1,0,0,0,0,0,0,1,Every 2-3mo,93,8,97,9.7,9,Definitely,290,Ultra-HNW
+R0413,2025-11-05,45-54,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Consulting,Every 2-3mo,$15K-$30K,6,0,0,0,1,1,1,0,3,2-4x/year,53,4,33,3.3,5,Likely,198,Aspirational
+R0414,2025-11-07,25-34,Male,Tier 1 (Metro),Los Angeles,$500K-$1M,Real Estate,Every 2-3mo,$30K-$50K,6,0,0,0,1,1,1,1,4,2-4x/year,52,6,90,9.0,6,Likely,540,Affluent Pro
+R0415,2025-11-01,18-24,Male,Tier 1 (Metro),New York,$75K-$125K,Real Estate,Yearly,<$5K,5,0,0,0,1,0,0,1,2,2-4x/year,84,8,51,5.1,3,Unlikely,51,Gifter
+R0416,2025-11-04,35-44,Female,Tier 2 (Large City),Sydney,$75K-$125K,Legal,Yearly,$5K-$15K,6,1,0,1,1,1,0,0,4,2-4x/year,21,3,17,1.7,4,Possibly,17,Gifter
+R0417,2025-11-01,35-44,Female,Tier 1 (Metro),New York,$125K-$200K,Finance,Yearly,$15K-$30K,8,1,1,1,0,0,1,0,4,2-4x/year,40,4,63,6.3,7,Very Likely,63,Gifter
+R0418,2025-10-30,35-44,Female,Tier 2 (Large City),Sydney,$200K-$300K,Tech,Monthly,$30K-$50K,7,0,0,0,0,1,1,0,2,Every 2-3mo,29,4,60,6.0,7,Very Likely,720,Aspirational
+R0419,2025-11-05,35-44,Male,Tier 1 (Metro),Los Angeles,$300K-$500K,Entrepreneur,Monthly,$30K-$50K,5,1,1,1,1,1,0,0,5,Monthly,63,6,100,10.0,8,Definitely,1200,Affluent Pro
+R0420,2025-11-11,45-54,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Legal,Rarely,<$5K,6,1,1,0,1,1,0,1,5,Every 2-3mo,44,7,31,3.1,6,Likely,15,Gifter
+R0421,2025-10-30,35-44,Male,Tier 2 (Large City),Chicago,$500K-$1M,Real Estate,Monthly,$100K-$250K,9,0,1,0,0,0,1,0,2,2-4x/year,25,4,48,4.8,7,Very Likely,576,Ultra-HNW
+R0422,2025-11-04,55-64,Female,Tier 1 (Metro),Hong Kong,$75K-$125K,Real Estate,Rarely,<$5K,7,1,1,0,0,0,1,1,4,2-4x/year,39,6,12,1.2,1,Unlikely,6,Gifter
+R0423,2025-10-31,35-44,Female,Tier 1 (Metro),Dubai,$300K-$500K,Legal,Every 2-3mo,$30K-$50K,7,1,0,0,1,1,1,0,4,Yearly,57,6,85,8.5,6,Likely,510,Affluent Pro
+R0424,2025-10-24,25-34,Female,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,2-4x/year,$30K-$50K,7,1,1,0,1,0,0,0,3,Every 2-3mo,95,3,76,7.6,5,Likely,228,Aspirational
+R0425,2025-11-08,35-44,Female,Tier 2 (Large City),Sydney,$125K-$200K,Finance,2-4x/year,$15K-$30K,5,1,0,1,0,1,1,1,5,Yearly,36,7,29,2.9,3,Unlikely,87,Gifter
+R0426,2025-11-13,55-64,Female,Tier 2 (Large City),Chicago,$1M+,Finance,Rarely,$50K-$100K,6,0,0,0,0,1,0,1,2,Monthly,60,4,92,9.2,8,Definitely,46,Affluent Pro
+R0427,2025-10-29,45-54,Male,Tier 3 (Mid-size City),San Francisco,Under $75K,Luxury Retail,Yearly,<$5K,6,0,1,0,1,1,0,0,3,Every 2-3mo,37,3,64,6.4,4,Possibly,64,Gifter
+R0428,2025-10-26,65+,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Tech,2-4x/year,$30K-$50K,3,1,1,0,0,1,1,0,4,2-4x/year,30,6,84,8.4,7,Very Likely,252,Affluent Pro
+R0429,2025-10-29,18-24,Male,Tier 1 (Metro),London,$200K-$300K,Legal,Monthly,$30K-$50K,8,0,0,0,1,1,0,1,3,Monthly,66,9,131,13.1,9,Definitely,1572,Aspirational
+R0430,2025-11-06,25-34,Male,Tier 2 (Large City),Miami,$200K-$300K,Healthcare,Monthly,$30K-$50K,5,0,0,1,1,0,1,0,3,Rarely,80,5,12,1.2,1,Unlikely,144,Aspirational
+R0431,2025-11-10,45-54,Female,Tier 1 (Metro),Hong Kong,$125K-$200K,Tech,Every 2-3mo,$5K-$15K,4,1,1,0,0,1,0,0,3,2-4x/year,40,6,42,4.2,5,Likely,252,Digital-First
+R0432,2025-11-05,45-54,Female,Tier 2 (Large City),Chicago,$200K-$300K,Legal,Monthly,$15K-$30K,4,1,0,0,0,1,1,1,4,Monthly,22,2,74,7.4,7,Very Likely,888,Aspirational
+R0433,2025-11-08,25-34,Female,Tier 1 (Metro),London,$75K-$125K,Finance,Rarely,<$5K,5,1,0,0,1,1,0,0,3,Monthly,53,6,73,7.3,5,Likely,36,Gifter
+R0434,2025-11-02,45-54,Female,Tier 2 (Large City),Toronto,$75K-$125K,Finance,Yearly,<$5K,6,1,0,1,0,0,0,0,2,2-4x/year,41,2,17,1.7,2,Unlikely,17,Gifter
+R0435,2025-11-13,35-44,Female,Tier 2 (Large City),Sydney,$500K-$1M,Finance,Monthly,$100K-$250K,7,1,0,1,0,0,1,0,3,2-4x/year,57,7,49,4.9,5,Likely,588,Ultra-HNW
+R0436,2025-10-29,45-54,Female,Tier 2 (Large City),Toronto,$125K-$200K,Legal,2-4x/year,$5K-$15K,4,1,0,0,1,0,0,0,2,Every 2-3mo,59,4,52,5.2,4,Possibly,156,Gifter
+R0437,2025-10-28,45-54,Male,Tier 1 (Metro),Dubai,$200K-$300K,Legal,Every 2-3mo,$30K-$50K,4,1,1,0,1,0,1,0,4,Multiple/mo,39,6,66,6.6,4,Possibly,396,Aspirational
+R0438,2025-11-01,35-44,Male,Tier 1 (Metro),New York,$125K-$200K,Real Estate,Every 2-3mo,$5K-$15K,9,1,1,1,0,0,0,0,3,Every 2-3mo,58,6,34,3.4,6,Likely,204,Digital-First
+R0439,2025-11-03,55-64,Female,Tier 1 (Metro),Singapore,$75K-$125K,Entrepreneur,Every 2-3mo,<$5K,5,1,1,1,0,0,1,0,4,2-4x/year,10,4,43,4.3,5,Likely,258,Digital-First
+R0440,2025-11-03,35-44,Female,Tier 1 (Metro),Hong Kong,$300K-$500K,Real Estate,2-4x/year,$15K-$30K,6,1,1,0,1,0,1,0,4,2-4x/year,64,3,73,7.3,6,Likely,219,Aspirational
+R0441,2025-10-19,35-44,Male,Tier 1 (Metro),Dubai,$300K-$500K,Other,Monthly,$30K-$50K,7,1,0,0,0,1,0,0,2,Rarely,47,6,55,5.5,5,Likely,660,Affluent Pro
+R0442,2025-10-26,45-54,Female,Tier 2 (Large City),Miami,$1M+,Healthcare,Monthly,$50K-$100K,6,0,1,0,1,1,0,0,3,Multiple/mo,52,8,124,12.4,6,Likely,1488,Affluent Pro
+R0443,2025-11-11,45-54,Female,Tier 2 (Large City),Toronto,$75K-$125K,Tech,Yearly,<$5K,6,0,0,0,0,0,1,0,1,Every 2-3mo,73,6,59,5.9,3,Unlikely,59,Gifter
+R0444,2025-11-05,45-54,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Healthcare,Yearly,<$5K,4,1,1,0,1,1,0,0,4,Yearly,36,7,13,1.3,4,Possibly,13,Gifter
+R0445,2025-11-10,45-54,Male,Tier 1 (Metro),New York,$75K-$125K,Real Estate,Weekly,$5K-$15K,5,0,0,0,0,0,1,1,2,Every 2-3mo,58,6,19,1.9,4,Possibly,988,Digital-First
+R0446,2025-10-20,25-34,Female,Tier 1 (Metro),Dubai,$125K-$200K,Media,2-4x/year,$5K-$15K,8,1,1,1,1,0,1,0,5,2-4x/year,73,6,37,3.7,6,Likely,111,Gifter
+R0447,2025-11-09,35-44,Male,Tier 2 (Large City),Sydney,$200K-$300K,Finance,2-4x/year,$15K-$30K,5,0,0,0,1,1,1,1,4,2-4x/year,49,4,46,4.6,6,Likely,138,Aspirational
+R0448,2025-11-08,45-54,Female,Tier 1 (Metro),Singapore,$125K-$200K,Tech,2-3x/month,$5K-$15K,5,1,0,1,0,0,1,0,3,2-4x/year,60,6,44,4.4,3,Unlikely,1320,Digital-First
+R0449,2025-11-05,25-34,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Real Estate,2-4x/year,$5K-$15K,4,1,0,1,1,0,1,0,4,2-4x/year,74,7,51,5.1,3,Unlikely,153,Aspirational
+R0450,2025-10-25,25-34,Male,Tier 2 (Large City),Chicago,$300K-$500K,Entrepreneur,Rarely,$30K-$50K,7,0,1,0,0,0,0,1,2,2-4x/year,63,6,49,4.9,3,Unlikely,24,Affluent Pro
+R0451,2025-11-11,35-44,Female,Tier 1 (Metro),Dubai,$300K-$500K,Healthcare,Yearly,$30K-$50K,3,1,1,0,1,1,1,0,5,Monthly,54,5,98,9.8,6,Likely,98,Affluent Pro
+R0452,2025-11-06,25-34,Female,Tier 2 (Large City),Toronto,$500K-$1M,Finance,Monthly,$30K-$50K,5,0,0,0,1,0,1,1,3,Monthly,60,6,79,7.9,7,Very Likely,948,Affluent Pro
+R0453,2025-11-02,35-44,Female,Tier 1 (Metro),New York,$300K-$500K,Luxury Retail,Every 2-3mo,$15K-$30K,8,0,0,0,1,1,1,0,3,Monthly,33,5,89,8.9,9,Definitely,534,Aspirational
+R0454,2025-10-27,35-44,Female,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,2-4x/year,$15K-$30K,6,0,0,0,1,0,0,0,1,Every 2-3mo,50,5,61,6.1,5,Likely,183,Aspirational
+R0455,2025-10-29,35-44,Male,Tier 1 (Metro),London,$200K-$300K,Consulting,Weekly,$30K-$50K,7,1,1,0,1,1,0,1,5,Every 2-3mo,56,5,64,6.4,6,Likely,3328,Aspirational
+R0456,2025-11-09,35-44,Male,Tier 2 (Large City),Toronto,$200K-$300K,Other,Monthly,$15K-$30K,7,0,1,0,0,0,0,0,1,Every 2-3mo,45,4,62,6.2,5,Likely,744,Aspirational
+R0457,2025-11-10,55-64,Female,Tier 1 (Metro),Los Angeles,$75K-$125K,Consulting,Yearly,$5K-$15K,4,1,1,0,1,0,1,0,4,2-4x/year,74,4,28,2.8,3,Unlikely,27,Gifter
+R0458,2025-10-19,35-44,Female,Tier 2 (Large City),Sydney,$500K-$1M,Entrepreneur,Every 2-3mo,$30K-$50K,6,0,1,1,1,0,1,1,5,Monthly,76,7,54,5.4,5,Likely,324,Affluent Pro
+R0459,2025-11-12,18-24,Female,Tier 1 (Metro),Los Angeles,$125K-$200K,Healthcare,2-4x/year,$15K-$30K,5,1,0,0,0,0,1,0,2,Every 2-3mo,41,3,53,5.3,6,Likely,159,Gifter
+R0460,2025-11-06,55-64,Female,Tier 1 (Metro),New York,$75K-$125K,Finance,2-4x/year,<$5K,6,0,1,0,0,0,1,1,3,2-4x/year,37,3,21,2.1,2,Unlikely,63,Gifter
+R0461,2025-11-03,45-54,Female,Tier 2 (Large City),Chicago,$200K-$300K,Luxury Retail,Monthly,$30K-$50K,7,0,0,1,0,1,0,0,2,Rarely,47,8,60,6.0,5,Likely,720,Aspirational
+R0462,2025-11-06,35-44,Male,Tier 2 (Large City),Toronto,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,6,1,1,1,1,1,0,0,5,2-4x/year,28,5,13,1.3,3,Unlikely,39,Gifter
+R0463,2025-10-18,18-24,Female,Tier 1 (Metro),Hong Kong,$300K-$500K,Consulting,Every 2-3mo,$50K-$100K,6,0,1,0,0,0,0,0,1,Multiple/mo,95,3,79,7.9,5,Likely,474,Affluent Pro
+R0464,2025-10-23,45-54,Female,Tier 2 (Large City),Chicago,$500K-$1M,Healthcare,Monthly,$50K-$100K,4,1,0,0,0,0,0,0,1,Rarely,32,6,66,6.6,6,Likely,792,Affluent Pro
+R0465,2025-11-04,35-44,Male,Tier 1 (Metro),Dubai,$200K-$300K,Entrepreneur,2-4x/year,$5K-$15K,5,0,0,0,1,0,1,0,2,Yearly,43,5,47,4.7,5,Likely,141,Aspirational
+R0466,2025-11-03,35-44,Female,Tier 1 (Metro),New York,$125K-$200K,Legal,Every 2-3mo,$5K-$15K,5,1,0,0,1,0,1,0,3,Every 2-3mo,21,7,46,4.6,5,Likely,276,Digital-First
+R0467,2025-11-09,45-54,Male,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,2-4x/year,$5K-$15K,7,0,1,0,0,0,0,0,1,2-4x/year,33,3,48,4.8,4,Possibly,144,Aspirational
+R0468,2025-11-11,25-34,Female,Tier 2 (Large City),Toronto,$1M+,Entrepreneur,Weekly,$100K-$250K,9,1,1,1,0,1,0,0,4,Monthly,68,5,97,9.7,9,Definitely,5043,Ultra-HNW
+R0469,2025-10-22,55-64,Female,Tier 2 (Large City),Sydney,$200K-$300K,Healthcare,Monthly,$30K-$50K,5,0,0,0,0,0,0,0,0,Monthly,41,5,85,8.5,7,Very Likely,1020,Aspirational
+R0470,2025-11-09,25-34,Male,Tier 1 (Metro),London,$200K-$300K,Healthcare,2-4x/year,$15K-$30K,9,1,1,0,0,0,1,1,4,Monthly,33,8,101,10.1,7,Very Likely,303,Aspirational
+R0471,2025-11-13,25-34,Male,Tier 2 (Large City),Miami,$125K-$200K,Tech,Every 2-3mo,$15K-$30K,5,1,1,0,0,1,1,0,4,2-4x/year,68,8,24,2.4,3,Unlikely,144,Digital-First
+R0472,2025-11-07,25-34,Male,Tier 1 (Metro),New York,$200K-$300K,Healthcare,Rarely,$15K-$30K,7,0,1,0,1,1,1,1,5,2-4x/year,60,4,44,4.4,5,Likely,22,Aspirational
+R0473,2025-10-20,55-64,Male,Tier 1 (Metro),New York,$75K-$125K,Finance,2-4x/year,<$5K,6,1,0,0,1,1,0,0,3,Every 2-3mo,50,6,61,6.1,6,Likely,183,Gifter
+R0474,2025-10-22,25-34,Male,Tier 2 (Large City),Sydney,$75K-$125K,Real Estate,Every 2-3mo,<$5K,6,0,1,1,1,1,0,1,5,Yearly,42,2,47,4.7,5,Likely,282,Digital-First
+R0475,2025-10-27,35-44,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Real Estate,Every 2-3mo,$5K-$15K,8,0,0,0,0,0,1,0,1,2-4x/year,49,5,41,4.1,4,Possibly,245,Aspirational
+R0476,2025-11-01,65+,Female,Tier 2 (Large City),Sydney,$200K-$300K,Media,2-4x/year,$5K-$15K,5,1,0,0,0,1,1,0,3,2-4x/year,50,3,32,3.2,4,Possibly,96,Aspirational
+R0477,2025-11-06,55-64,Male,Tier 3 (Mid-size City),Geneva,Under $75K,Finance,Rarely,<$5K,5,0,1,0,0,0,0,1,2,Every 2-3mo,43,5,32,3.2,5,Likely,16,Gifter
+R0478,2025-11-06,18-24,Female,Tier 1 (Metro),Dubai,Under $75K,Consulting,Yearly,<$5K,5,1,0,0,0,0,1,0,2,Monthly,59,6,38,3.8,5,Likely,38,Gifter
+R0479,2025-10-30,45-54,Female,Tier 1 (Metro),Los Angeles,$200K-$300K,Luxury Retail,Weekly,$15K-$30K,6,0,1,1,1,0,0,0,3,Monthly,61,4,59,5.9,7,Very Likely,3068,Aspirational
+R0480,2025-10-21,18-24,Male,Tier 1 (Metro),Singapore,$125K-$200K,Tech,2-4x/year,$5K-$15K,3,0,1,1,0,0,0,0,2,2-4x/year,55,7,27,2.7,1,Unlikely,81,Gifter
+R0481,2025-10-30,55-64,Male,Tier 1 (Metro),New York,$125K-$200K,Healthcare,Rarely,$15K-$30K,6,1,0,0,0,0,0,0,1,Multiple/mo,62,4,75,7.5,5,Likely,37,Gifter
+R0482,2025-10-22,35-44,Male,Tier 1 (Metro),New York,$125K-$200K,Tech,Every 2-3mo,$15K-$30K,6,0,1,0,0,0,0,1,2,Every 2-3mo,41,3,58,5.8,5,Likely,348,Digital-First
+R0483,2025-11-09,25-34,Female,Tier 1 (Metro),Los Angeles,$125K-$200K,Entrepreneur,Yearly,$15K-$30K,4,1,0,1,0,1,1,0,4,2-4x/year,85,5,39,3.9,3,Unlikely,39,Gifter
+R0484,2025-10-18,25-34,Female,Tier 1 (Metro),Singapore,$125K-$200K,Finance,2-3x/month,$5K-$15K,6,1,1,0,0,0,1,0,3,2-4x/year,71,4,49,4.9,5,Likely,1470,Digital-First
+R0485,2025-10-30,25-34,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Healthcare,Monthly,$15K-$30K,9,1,0,1,0,1,0,1,4,2-4x/year,42,9,55,5.5,9,Definitely,660,Aspirational
+R0486,2025-11-03,25-34,Female,Tier 1 (Metro),Singapore,$200K-$300K,Finance,Monthly,$5K-$15K,5,1,0,1,0,0,1,0,3,2-4x/year,54,10,61,6.1,8,Definitely,732,Aspirational
+R0487,2025-11-05,55-64,Male,Tier 2 (Large City),Chicago,$200K-$300K,Entrepreneur,Monthly,$30K-$50K,6,1,1,0,0,1,0,0,3,2-4x/year,15,1,18,1.8,4,Possibly,216,Aspirational
+R0488,2025-11-04,35-44,Male,Tier 1 (Metro),Singapore,$300K-$500K,Real Estate,Every 2-3mo,$50K-$100K,8,0,0,1,1,1,0,0,3,2-4x/year,37,6,72,7.2,9,Definitely,432,Affluent Pro
+R0489,2025-11-09,45-54,Male,Tier 2 (Large City),Sydney,$125K-$200K,Healthcare,Monthly,$5K-$15K,6,0,1,1,1,0,1,1,5,Rarely,60,7,23,2.3,3,Unlikely,276,Digital-First
+R0490,2025-11-11,45-54,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Legal,Every 2-3mo,$30K-$50K,5,0,0,0,0,1,1,0,2,2-4x/year,34,7,76,7.6,7,Very Likely,456,Affluent Pro
+R0491,2025-10-17,55-64,Female,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Real Estate,2-4x/year,$5K-$15K,6,1,1,0,0,1,0,1,4,Every 2-3mo,69,3,36,3.6,5,Likely,108,Gifter
+R0492,2025-10-26,45-54,Male,Tier 1 (Metro),London,$300K-$500K,Finance,Monthly,$30K-$50K,7,0,1,1,0,0,0,0,2,Every 2-3mo,28,5,86,8.6,9,Definitely,1032,Affluent Pro
+R0493,2025-11-09,45-54,Female,Tier 1 (Metro),Dubai,$300K-$500K,Consulting,Monthly,$50K-$100K,7,0,1,1,0,0,1,0,3,2-4x/year,42,4,75,7.5,6,Likely,900,Affluent Pro
+R0494,2025-10-21,25-34,Male,Tier 1 (Metro),London,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,7,1,1,0,0,1,1,0,4,Rarely,57,8,35,3.5,4,Possibly,105,Gifter
+R0495,2025-10-20,25-34,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Media,2-4x/year,$5K-$15K,6,0,1,0,1,1,0,0,3,Monthly,35,7,42,4.2,6,Likely,126,Gifter
+R0496,2025-11-06,35-44,Female,Tier 2 (Large City),Sydney,$200K-$300K,Tech,2-4x/year,$5K-$15K,4,0,1,1,1,1,1,0,5,2-4x/year,61,7,33,3.3,6,Likely,99,Aspirational
+R0497,2025-10-28,55-64,Female,Tier 2 (Large City),Chicago,$75K-$125K,Legal,2-4x/year,<$5K,3,1,0,0,0,0,1,0,2,2-4x/year,57,5,23,2.3,3,Unlikely,69,Gifter
+R0498,2025-11-09,25-34,Female,Tier 1 (Metro),London,$200K-$300K,Legal,Monthly,$5K-$15K,6,1,0,0,1,1,1,1,5,Monthly,76,4,63,6.3,6,Likely,756,Aspirational
+R0499,2025-10-19,45-54,Female,Tier 3 (Mid-size City),Geneva,$500K-$1M,Healthcare,2-3x/month,$30K-$50K,4,1,1,1,0,0,0,0,3,Every 2-3mo,19,7,92,9.2,7,Very Likely,2760,Affluent Pro
+R0500,2025-11-07,45-54,Male,Tier 3 (Mid-size City),Geneva,Under $75K,Tech,2-4x/year,<$5K,2,1,1,0,0,1,0,0,3,2-4x/year,57,4,0,0.0,5,Likely,0,Gifter
+R0501,2025-11-05,45-54,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Every 2-3mo,$5K-$15K,6,0,1,0,0,1,0,1,3,Yearly,56,1,24,2.4,4,Possibly,144,Digital-First
+R0502,2025-10-22,55-64,Female,Tier 1 (Metro),Dubai,$500K-$1M,Consulting,Monthly,$30K-$50K,9,1,0,1,1,0,1,0,4,2-4x/year,28,2,86,8.6,9,Definitely,1032,Affluent Pro
+R0503,2025-10-27,45-54,Female,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Tech,Yearly,<$5K,5,1,1,1,0,1,1,1,6,Yearly,49,4,25,2.5,2,Unlikely,25,Gifter
+R0504,2025-10-26,55-64,Male,Tier 3 (Mid-size City),San Francisco,Under $75K,Luxury Retail,Monthly,<$5K,7,1,0,0,1,0,1,1,4,2-4x/year,47,5,25,2.5,3,Unlikely,300,Digital-First
+R0505,2025-10-25,35-44,Male,Tier 1 (Metro),New York,$75K-$125K,Media,Rarely,<$5K,2,1,1,0,0,0,0,0,2,Every 2-3mo,62,5,41,4.1,5,Likely,20,Gifter
+R0506,2025-10-29,35-44,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Entrepreneur,2-4x/year,$15K-$30K,4,0,0,0,1,1,1,1,4,2-4x/year,39,5,27,2.7,3,Unlikely,81,Aspirational
+R0507,2025-10-24,25-34,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Healthcare,Yearly,<$5K,4,1,0,1,0,1,1,0,4,Yearly,78,5,20,2.0,1,Unlikely,20,Gifter
+R0508,2025-11-10,35-44,Male,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Every 2-3mo,$15K-$30K,3,0,1,0,1,0,0,0,2,Yearly,40,7,77,7.7,6,Likely,462,Aspirational
+R0509,2025-10-20,18-24,Female,Tier 2 (Large City),Toronto,$125K-$200K,Media,Yearly,$15K-$30K,7,0,0,0,0,0,1,0,1,Every 2-3mo,43,7,22,2.2,3,Unlikely,22,Gifter
+R0510,2025-10-25,25-34,Female,Tier 1 (Metro),Dubai,$300K-$500K,Legal,Monthly,$15K-$30K,7,0,1,1,1,1,0,1,5,Every 2-3mo,68,5,86,8.6,6,Likely,1032,Aspirational
+R0511,2025-11-14,55-64,Female,Tier 1 (Metro),Los Angeles,$75K-$125K,Entrepreneur,Yearly,$5K-$15K,6,0,0,1,0,1,0,0,2,Monthly,31,4,71,7.1,7,Very Likely,71,Gifter
+R0512,2025-10-18,25-34,Female,Tier 1 (Metro),London,$200K-$300K,Media,Yearly,$15K-$30K,6,1,1,0,1,0,0,1,4,Monthly,60,8,114,11.4,8,Definitely,114,Aspirational
+R0513,2025-11-12,25-34,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Entrepreneur,Every 2-3mo,$30K-$50K,7,0,1,0,1,1,1,0,4,Monthly,53,4,57,5.7,5,Likely,342,Aspirational
+R0514,2025-10-31,35-44,Male,Tier 1 (Metro),Los Angeles,$200K-$300K,Healthcare,Weekly,$15K-$30K,5,1,1,1,0,0,0,1,4,Monthly,62,7,64,6.4,7,Very Likely,3328,Aspirational
+R0515,2025-10-20,45-54,Male,Tier 1 (Metro),New York,$1M+,Healthcare,Every 2-3mo,$250K+,7,1,1,0,1,1,0,1,5,Multiple/mo,62,2,108,10.8,7,Very Likely,648,Ultra-HNW
+R0516,2025-10-30,35-44,Male,Tier 2 (Large City),Chicago,$500K-$1M,Legal,Every 2-3mo,$100K-$250K,7,0,1,0,1,0,1,0,3,Multiple/mo,46,6,87,8.7,8,Definitely,522,Ultra-HNW
+R0517,2025-10-21,55-64,Female,Tier 1 (Metro),London,$75K-$125K,Luxury Retail,2-4x/year,$5K-$15K,5,1,0,1,0,1,1,0,4,Monthly,58,1,49,4.9,5,Likely,147,Gifter
+R0518,2025-11-01,35-44,Male,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Media,Every 2-3mo,$5K-$15K,5,1,1,0,1,0,1,0,4,2-4x/year,58,4,0,0.0,4,Possibly,0,Digital-First
+R0519,2025-10-20,25-34,Female,Tier 3 (Mid-size City),Geneva,$125K-$200K,Healthcare,Yearly,<$5K,7,0,0,1,1,0,1,1,4,2-4x/year,81,6,0,0.0,2,Unlikely,0,Gifter
+R0520,2025-11-03,55-64,Male,Tier 1 (Metro),London,Under $75K,Consulting,2-4x/year,<$5K,6,0,1,0,1,0,0,0,2,Multiple/mo,67,5,87,8.7,8,Definitely,261,Gifter
+R0521,2025-10-30,25-34,Male,Tier 2 (Large City),Chicago,$125K-$200K,Entrepreneur,Rarely,$5K-$15K,8,1,1,1,1,0,1,0,5,Multiple/mo,69,9,73,7.3,7,Very Likely,36,Gifter
+R0522,2025-11-08,45-54,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Tech,Every 2-3mo,<$5K,7,1,0,0,0,1,1,0,3,Monthly,32,6,32,3.2,5,Likely,192,Digital-First
+R0523,2025-11-11,18-24,Female,Tier 1 (Metro),Hong Kong,$500K-$1M,Real Estate,Every 2-3mo,$50K-$100K,7,0,0,0,1,1,0,0,2,Every 2-3mo,60,6,105,10.5,8,Definitely,630,Affluent Pro
+R0524,2025-10-24,35-44,Male,Tier 2 (Large City),Miami,$200K-$300K,Healthcare,2-4x/year,$30K-$50K,5,1,0,0,0,0,1,1,3,Yearly,48,5,26,2.6,4,Possibly,78,Aspirational
+R0525,2025-11-07,45-54,Male,Tier 1 (Metro),Los Angeles,$300K-$500K,Tech,2-4x/year,$15K-$30K,6,1,1,0,0,0,0,1,3,Every 2-3mo,69,8,121,12.1,4,Possibly,363,Aspirational
+R0526,2025-11-02,55-64,Male,Tier 2 (Large City),Sydney,Under $75K,Healthcare,2-4x/year,<$5K,4,1,0,0,0,1,1,0,3,2-4x/year,23,3,38,3.8,6,Likely,114,Gifter
+R0527,2025-11-06,18-24,Male,Tier 2 (Large City),Chicago,$200K-$300K,Finance,Monthly,$5K-$15K,4,1,1,0,1,1,0,1,5,2-4x/year,38,8,46,4.6,5,Likely,552,Aspirational
+R0528,2025-10-22,35-44,Female,Tier 1 (Metro),Hong Kong,$500K-$1M,Consulting,2-3x/month,$100K-$250K,6,1,1,1,0,0,1,0,4,Every 2-3mo,26,8,135,13.5,5,Likely,4050,Ultra-HNW
+R0529,2025-11-09,35-44,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Legal,2-4x/year,<$5K,5,1,1,1,1,0,1,0,5,2-4x/year,42,2,14,1.4,2,Unlikely,41,Gifter
+R0530,2025-10-25,25-34,Female,Tier 1 (Metro),Hong Kong,$200K-$300K,Healthcare,2-4x/year,$15K-$30K,6,0,0,0,1,0,1,1,3,Rarely,70,7,48,4.8,4,Possibly,144,Aspirational
+R0531,2025-11-02,25-34,Male,Tier 2 (Large City),Miami,$125K-$200K,Finance,Rarely,<$5K,6,1,0,0,0,0,0,0,1,Rarely,78,6,24,2.4,1,Unlikely,12,Gifter
+R0532,2025-10-16,45-54,Female,Tier 2 (Large City),Chicago,Under $75K,Media,Yearly,<$5K,4,1,0,1,0,1,1,0,4,Every 2-3mo,28,4,17,1.7,2,Unlikely,17,Gifter
+R0533,2025-11-08,35-44,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Media,Monthly,$5K-$15K,5,1,0,1,0,1,0,0,3,Every 2-3mo,35,6,42,4.2,4,Possibly,504,Digital-First
+R0534,2025-10-31,25-34,Female,Tier 1 (Metro),Singapore,$300K-$500K,Entrepreneur,Yearly,$50K-$100K,4,0,0,0,0,1,1,0,2,Every 2-3mo,78,2,99,9.9,5,Likely,99,Affluent Pro
+R0535,2025-10-25,55-64,Male,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Legal,Rarely,$15K-$30K,5,0,0,1,0,0,0,0,1,2-4x/year,65,5,21,2.1,3,Unlikely,10,Gifter
+R0536,2025-10-24,45-54,Other,Tier 1 (Metro),Hong Kong,$200K-$300K,Finance,Monthly,$30K-$50K,7,0,0,0,0,0,1,1,2,Multiple/mo,36,5,62,6.2,5,Likely,744,Aspirational
+R0537,2025-10-18,45-54,Female,Tier 1 (Metro),London,$125K-$200K,Healthcare,Every 2-3mo,<$5K,5,1,0,0,1,0,0,0,2,2-4x/year,50,4,34,3.4,5,Likely,204,Digital-First
+R0538,2025-10-22,55-64,Female,Tier 1 (Metro),London,$500K-$1M,Other,2-3x/month,$50K-$100K,8,0,0,1,1,1,0,0,3,Monthly,49,7,130,13.0,9,Definitely,3900,Affluent Pro
+R0539,2025-10-24,45-54,Male,Tier 1 (Metro),Hong Kong,$500K-$1M,Healthcare,Weekly,$50K-$100K,6,1,1,0,1,1,1,0,5,Multiple/mo,51,6,91,9.1,7,Very Likely,4732,Affluent Pro
+R0540,2025-11-03,45-54,Female,Tier 2 (Large City),Miami,Under $75K,Finance,Monthly,<$5K,5,1,0,0,0,1,1,0,3,Monthly,30,2,29,2.9,3,Unlikely,348,Digital-First
+R0541,2025-11-08,35-44,Male,Tier 2 (Large City),Chicago,$75K-$125K,Finance,Weekly,$5K-$15K,5,0,1,1,0,0,1,1,4,Rarely,31,5,17,1.7,4,Possibly,884,Digital-First
+R0542,2025-10-28,45-54,Female,Tier 1 (Metro),New York,$125K-$200K,Consulting,2-4x/year,$15K-$30K,4,0,0,1,0,0,1,0,2,Monthly,39,5,57,5.7,5,Likely,171,Gifter
+R0543,2025-11-04,45-54,Female,Tier 1 (Metro),Singapore,$75K-$125K,Media,2-4x/year,$5K-$15K,4,0,1,0,1,1,1,0,4,Yearly,57,3,26,2.6,2,Unlikely,78,Gifter
+R0544,2025-10-27,35-44,Female,Tier 1 (Metro),Dubai,$1M+,Real Estate,2-3x/month,$250K+,10,1,1,0,0,0,1,0,3,Monthly,47,4,147,14.7,10,Definitely,4410,Ultra-HNW
+R0545,2025-11-05,18-24,Female,Tier 1 (Metro),Singapore,$200K-$300K,Luxury Retail,2-3x/month,$15K-$30K,7,1,0,1,0,0,1,1,4,Every 2-3mo,61,6,58,5.8,7,Very Likely,1739,Aspirational
+R0546,2025-10-27,35-44,Female,Tier 2 (Large City),Toronto,$75K-$125K,Entrepreneur,2-4x/year,$5K-$15K,8,1,1,0,1,1,1,1,6,Monthly,72,3,56,5.6,7,Very Likely,167,Gifter
+R0547,2025-10-16,35-44,Male,Tier 1 (Metro),Dubai,$200K-$300K,Entrepreneur,Rarely,$5K-$15K,8,1,0,0,1,0,1,0,3,2-4x/year,33,5,28,2.8,2,Unlikely,13,Aspirational
+R0548,2025-11-08,45-54,Male,Tier 1 (Metro),New York,$125K-$200K,Tech,Yearly,$5K-$15K,6,0,1,1,0,0,0,1,3,2-4x/year,55,6,24,2.4,5,Likely,24,Gifter
+R0549,2025-10-23,25-34,Female,Tier 2 (Large City),Chicago,$125K-$200K,Legal,Yearly,$5K-$15K,5,1,0,1,1,0,0,0,3,2-4x/year,49,4,0,0.0,2,Unlikely,0,Gifter
+R0550,2025-11-10,35-44,Male,Tier 1 (Metro),Singapore,$300K-$500K,Real Estate,Every 2-3mo,$50K-$100K,6,0,0,0,0,0,0,1,1,Rarely,19,7,85,8.5,7,Very Likely,510,Affluent Pro
+R0551,2025-10-21,35-44,Female,Tier 1 (Metro),New York,$125K-$200K,Real Estate,Rarely,<$5K,3,1,0,0,0,0,0,0,1,2-4x/year,60,3,39,3.9,4,Possibly,19,Gifter
+R0552,2025-10-17,35-44,Male,Tier 1 (Metro),New York,$200K-$300K,Tech,2-3x/month,$5K-$15K,6,0,1,1,1,1,1,1,6,2-4x/year,53,9,57,5.7,6,Likely,1710,Aspirational
+R0553,2025-11-14,25-34,Male,Tier 1 (Metro),New York,Under $75K,Entrepreneur,2-4x/year,<$5K,5,0,1,1,0,0,0,0,2,Every 2-3mo,87,5,53,5.3,5,Likely,159,Gifter
+R0554,2025-11-05,25-34,Female,Tier 2 (Large City),Miami,$500K-$1M,Finance,2-4x/year,$100K-$250K,8,1,1,0,0,0,1,0,3,Rarely,59,5,79,7.9,7,Very Likely,237,Ultra-HNW
+R0555,2025-10-20,45-54,Male,Tier 1 (Metro),New York,$200K-$300K,Healthcare,Rarely,$15K-$30K,6,1,0,1,1,1,1,0,5,Rarely,73,4,61,6.1,8,Definitely,30,Aspirational
+R0556,2025-10-26,45-54,Female,Tier 1 (Metro),Singapore,$200K-$300K,Healthcare,Weekly,$30K-$50K,5,1,1,0,1,0,1,0,4,Every 2-3mo,54,6,71,7.1,5,Likely,3691,Aspirational
+R0557,2025-10-26,25-34,Male,Tier 1 (Metro),London,$75K-$125K,Finance,2-4x/year,$5K-$15K,7,0,0,1,0,1,1,1,4,Yearly,58,6,38,3.8,6,Likely,114,Gifter
+R0558,2025-10-31,35-44,Female,Tier 2 (Large City),Sydney,$125K-$200K,Entrepreneur,Every 2-3mo,$15K-$30K,6,1,0,1,0,0,0,0,2,Yearly,46,6,34,3.4,7,Very Likely,204,Digital-First
+R0559,2025-11-12,35-44,Female,Tier 2 (Large City),Miami,$200K-$300K,Healthcare,Weekly,$5K-$15K,7,1,0,0,0,0,0,0,1,2-4x/year,44,5,16,1.6,3,Unlikely,832,Aspirational
+R0560,2025-10-17,45-54,Male,Tier 2 (Large City),Toronto,Under $75K,Finance,Every 2-3mo,<$5K,4,1,1,0,1,1,0,1,5,Multiple/mo,51,6,51,5.1,8,Definitely,306,Digital-First
+R0561,2025-10-23,35-44,Male,Tier 1 (Metro),London,$300K-$500K,Healthcare,Every 2-3mo,$50K-$100K,7,0,1,0,0,1,0,0,2,Every 2-3mo,25,4,69,6.9,6,Likely,414,Affluent Pro
+R0562,2025-11-12,25-34,Female,Tier 1 (Metro),Dubai,$200K-$300K,Other,2-4x/year,$15K-$30K,8,1,0,0,0,0,1,0,2,Monthly,74,7,83,8.3,10,Definitely,249,Aspirational
+R0563,2025-10-22,35-44,Male,Tier 1 (Metro),London,$200K-$300K,Entrepreneur,Every 2-3mo,$15K-$30K,4,1,0,1,1,1,1,1,6,Yearly,60,4,57,5.7,6,Likely,342,Aspirational
+R0564,2025-10-30,45-54,Female,Tier 2 (Large City),Chicago,$300K-$500K,Entrepreneur,Monthly,$30K-$50K,6,1,0,0,1,0,0,0,2,2-4x/year,28,4,68,6.8,7,Very Likely,816,Affluent Pro
+R0565,2025-10-23,65+,Female,Tier 3 (Mid-size City),San Francisco,Under $75K,Healthcare,2-4x/year,<$5K,5,0,0,0,0,0,1,1,2,Yearly,26,3,45,4.5,5,Likely,135,Gifter
+R0566,2025-10-22,18-24,Female,Tier 1 (Metro),Dubai,$1M+,Tech,Monthly,$100K-$250K,6,1,0,0,0,1,1,1,4,Monthly,58,7,144,14.4,8,Definitely,1728,Ultra-HNW
+R0567,2025-11-07,18-24,Female,Tier 1 (Metro),Hong Kong,$75K-$125K,Real Estate,2-4x/year,<$5K,7,0,1,0,1,1,0,0,3,2-4x/year,92,5,43,4.3,6,Likely,129,Gifter
+R0568,2025-10-20,25-34,Male,Tier 2 (Large City),Chicago,$125K-$200K,Finance,2-4x/year,$5K-$15K,9,1,0,0,0,0,1,1,3,Every 2-3mo,74,7,15,1.5,6,Likely,45,Gifter
+R0569,2025-10-26,45-54,Female,Tier 1 (Metro),Singapore,$200K-$300K,Legal,Every 2-3mo,$30K-$50K,2,1,0,0,0,0,0,0,1,Every 2-3mo,14,5,61,6.1,5,Likely,366,Aspirational
+R0570,2025-10-21,45-54,Female,Tier 2 (Large City),Miami,$300K-$500K,Consulting,Monthly,$30K-$50K,7,1,1,0,0,1,1,0,4,2-4x/year,37,5,44,4.4,5,Likely,528,Affluent Pro
+R0571,2025-10-27,55-64,Male,Tier 2 (Large City),Miami,$1M+,Tech,2-3x/month,$100K-$250K,5,1,1,0,0,1,1,1,5,Every 2-3mo,18,4,83,8.3,9,Definitely,2490,Ultra-HNW
+R0572,2025-10-31,45-54,Female,Tier 1 (Metro),London,$200K-$300K,Tech,2-4x/year,$5K-$15K,6,1,0,1,0,0,1,0,3,2-4x/year,33,5,43,4.3,5,Likely,129,Aspirational
+R0573,2025-11-05,35-44,Male,Tier 2 (Large City),Sydney,$300K-$500K,Real Estate,2-4x/year,$50K-$100K,9,0,1,0,0,0,1,0,2,Rarely,22,5,33,3.3,8,Very Likely,99,Affluent Pro
+R0574,2025-10-20,25-34,Female,Tier 2 (Large City),Toronto,$300K-$500K,Healthcare,Monthly,$30K-$50K,5,1,0,0,1,0,0,1,3,2-4x/year,47,8,96,9.6,7,Very Likely,1152,Affluent Pro
+R0575,2025-11-09,55-64,Female,Tier 1 (Metro),London,$125K-$200K,Legal,2-4x/year,<$5K,5,1,0,0,0,0,1,0,2,Monthly,19,4,66,6.6,6,Likely,198,Gifter
+R0576,2025-11-04,18-24,Male,Tier 2 (Large City),Chicago,$75K-$125K,Finance,2-4x/year,<$5K,5,0,0,0,0,1,0,1,2,2-4x/year,39,5,6,0.6,2,Unlikely,18,Gifter
+R0577,2025-10-29,45-54,Female,Tier 1 (Metro),Singapore,$200K-$300K,Finance,Monthly,$15K-$30K,6,1,0,0,1,1,1,0,4,Multiple/mo,46,4,80,8.0,5,Likely,960,Aspirational
+R0578,2025-11-11,25-34,Female,Tier 1 (Metro),Hong Kong,$1M+,Entrepreneur,Monthly,$250K+,5,1,1,0,1,0,0,1,4,Every 2-3mo,89,7,97,9.7,7,Very Likely,1163,Ultra-HNW
+R0579,2025-11-03,25-34,Male,Tier 1 (Metro),Hong Kong,$1M+,Tech,2-3x/month,$100K-$250K,7,1,1,0,1,0,1,0,4,Multiple/mo,47,5,112,11.2,6,Likely,3359,Ultra-HNW
+R0580,2025-11-04,45-54,Male,Tier 2 (Large City),Toronto,$75K-$125K,Tech,Yearly,$5K-$15K,3,0,0,0,0,0,1,0,1,2-4x/year,66,4,7,0.7,3,Unlikely,6,Gifter
+R0581,2025-11-03,35-44,Male,Tier 2 (Large City),Toronto,$75K-$125K,Real Estate,Yearly,<$5K,5,1,1,0,1,1,0,0,4,2-4x/year,53,4,33,3.3,7,Very Likely,33,Gifter
+R0582,2025-10-18,45-54,Male,Tier 1 (Metro),Los Angeles,$500K-$1M,Entrepreneur,Yearly,$30K-$50K,5,1,1,1,0,0,0,0,3,Monthly,44,6,104,10.4,6,Likely,104,Affluent Pro
+R0583,2025-10-17,35-44,Male,Tier 1 (Metro),Singapore,$75K-$125K,Entrepreneur,Yearly,<$5K,5,0,0,1,0,1,0,0,2,Every 2-3mo,47,4,66,6.6,7,Very Likely,66,Gifter
+R0584,2025-10-18,55-64,Male,Tier 1 (Metro),Los Angeles,$75K-$125K,Real Estate,2-4x/year,$5K-$15K,5,0,0,0,0,0,1,0,1,2-4x/year,35,5,27,2.7,2,Unlikely,81,Gifter
+R0585,2025-10-17,45-54,Female,Tier 2 (Large City),Sydney,$75K-$125K,Tech,2-4x/year,<$5K,7,1,1,0,0,0,0,0,2,Rarely,42,4,27,2.7,4,Possibly,81,Gifter
+R0586,2025-11-12,55-64,Female,Tier 1 (Metro),Hong Kong,$300K-$500K,Tech,Rarely,$30K-$50K,5,1,0,1,1,0,1,1,5,Every 2-3mo,56,5,74,7.4,5,Likely,37,Affluent Pro
+R0587,2025-11-02,55-64,Female,Tier 1 (Metro),London,$500K-$1M,Consulting,2-3x/month,$50K-$100K,6,1,0,1,0,1,1,0,4,Rarely,58,6,60,6.0,8,Definitely,1800,Affluent Pro
+R0588,2025-11-08,18-24,Male,Tier 2 (Large City),Toronto,$125K-$200K,Healthcare,Rarely,$5K-$15K,7,0,0,0,0,1,0,1,2,Yearly,70,5,17,1.7,1,Unlikely,8,Gifter
+R0589,2025-10-27,25-34,Male,Tier 2 (Large City),Sydney,$125K-$200K,Media,2-4x/year,$15K-$30K,6,1,1,0,1,0,1,0,4,Monthly,65,6,56,5.6,5,Likely,167,Gifter
+R0590,2025-11-11,45-54,Male,Tier 1 (Metro),Dubai,$300K-$500K,Healthcare,Monthly,$15K-$30K,6,1,0,0,0,0,0,0,1,2-4x/year,60,5,67,6.7,4,Possibly,804,Aspirational
+R0591,2025-10-30,35-44,Other,Tier 1 (Metro),London,$500K-$1M,Consulting,2-3x/month,$100K-$250K,8,1,1,0,0,1,1,0,4,2-4x/year,36,5,83,8.3,8,Definitely,2490,Ultra-HNW
+R0592,2025-11-11,35-44,Male,Tier 1 (Metro),Los Angeles,$500K-$1M,Entrepreneur,Monthly,$30K-$50K,8,0,1,0,0,1,1,0,3,Multiple/mo,74,3,74,7.4,8,Definitely,888,Affluent Pro
+R0593,2025-11-04,45-54,Female,Tier 3 (Mid-size City),San Francisco,Under $75K,Finance,2-4x/year,<$5K,3,0,1,0,0,1,1,1,4,Every 2-3mo,38,6,52,5.2,7,Very Likely,156,Gifter
+R0594,2025-10-20,25-34,Female,Tier 1 (Metro),Singapore,$200K-$300K,Legal,Every 2-3mo,$15K-$30K,5,1,0,0,1,1,1,0,4,Every 2-3mo,66,4,80,8.0,10,Definitely,480,Aspirational
+R0595,2025-10-29,35-44,Female,Tier 2 (Large City),Miami,$75K-$125K,Legal,2-4x/year,<$5K,7,0,0,1,1,0,1,0,3,Monthly,52,6,16,1.6,2,Unlikely,48,Gifter
+R0596,2025-10-26,55-64,Female,Tier 3 (Mid-size City),San Francisco,$125K-$200K,Tech,2-4x/year,<$5K,5,1,0,0,0,1,1,1,4,2-4x/year,64,5,32,3.2,5,Likely,96,Gifter
+R0597,2025-11-03,25-34,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Finance,Monthly,$15K-$30K,6,1,0,0,1,0,0,0,2,Yearly,57,3,29,2.9,4,Possibly,348,Aspirational
+R0598,2025-10-24,35-44,Female,Tier 2 (Large City),Miami,$300K-$500K,Finance,Every 2-3mo,$15K-$30K,5,1,1,0,0,0,1,0,3,Every 2-3mo,33,2,51,5.1,6,Likely,306,Aspirational
+R0599,2025-10-22,35-44,Female,Tier 1 (Metro),London,$200K-$300K,Tech,Monthly,$30K-$50K,5,1,0,1,0,0,1,0,3,Multiple/mo,43,4,77,7.7,5,Likely,924,Aspirational
+R0600,2025-11-06,35-44,Female,Tier 3 (Mid-size City),Geneva,$200K-$300K,Healthcare,2-4x/year,$30K-$50K,5,1,1,0,0,0,0,1,3,2-4x/year,39,7,26,2.6,3,Unlikely,78,Aspirational
+R0601,2025-11-13,25-34,Other,Tier 2 (Large City),Sydney,$125K-$200K,Legal,2-4x/year,$5K-$15K,7,0,0,0,0,0,0,1,1,2-4x/year,67,7,3,0.3,1,Unlikely,9,Gifter
+R0602,2025-11-13,25-34,Male,Tier 2 (Large City),Sydney,$200K-$300K,Tech,Every 2-3mo,$5K-$15K,6,1,1,0,1,0,0,0,3,2-4x/year,60,6,31,3.1,6,Likely,186,Aspirational
+R0603,2025-10-18,55-64,Male,Tier 1 (Metro),Dubai,$200K-$300K,Healthcare,Every 2-3mo,$5K-$15K,6,0,1,0,0,1,0,1,3,Rarely,10,4,60,6.0,5,Likely,360,Aspirational
+R0604,2025-10-19,55-64,Male,Tier 3 (Mid-size City),Geneva,$75K-$125K,Entrepreneur,Yearly,<$5K,3,0,1,0,0,0,1,0,2,Monthly,50,1,35,3.5,5,Likely,35,Gifter
+R0605,2025-10-21,35-44,Male,Tier 2 (Large City),Sydney,$200K-$300K,Real Estate,2-4x/year,$30K-$50K,4,0,1,1,0,0,1,1,4,Rarely,34,2,56,5.6,4,Possibly,167,Aspirational
+R0606,2025-10-28,45-54,Female,Tier 3 (Mid-size City),San Francisco,$300K-$500K,Finance,Monthly,$15K-$30K,6,1,1,1,0,0,0,0,3,Every 2-3mo,59,4,79,7.9,5,Likely,948,Aspirational
+R0607,2025-10-25,45-54,Male,Tier 2 (Large City),Toronto,$200K-$300K,Legal,Monthly,$30K-$50K,6,1,0,1,0,0,0,0,2,2-4x/year,17,5,39,3.9,5,Likely,468,Aspirational
+R0608,2025-11-13,55-64,Male,Tier 2 (Large City),Sydney,$300K-$500K,Legal,Yearly,$15K-$30K,6,1,0,1,1,0,1,0,4,Monthly,64,4,88,8.8,9,Definitely,88,Aspirational
+R0609,2025-11-08,35-44,Male,Tier 1 (Metro),Singapore,$200K-$300K,Other,Every 2-3mo,$15K-$30K,5,1,0,0,0,0,1,0,2,Monthly,44,8,100,10.0,7,Very Likely,600,Aspirational
+R0610,2025-11-09,35-44,Female,Tier 2 (Large City),Toronto,$200K-$300K,Tech,Yearly,$15K-$30K,4,0,0,0,1,0,1,0,2,2-4x/year,52,5,18,1.8,4,Possibly,18,Aspirational
+R0611,2025-10-20,35-44,Female,Tier 2 (Large City),Chicago,$75K-$125K,Legal,Monthly,$5K-$15K,7,1,0,1,1,0,1,1,5,Rarely,60,4,34,3.4,3,Unlikely,408,Digital-First
+R0612,2025-11-05,35-44,Female,Tier 1 (Metro),New York,$300K-$500K,Consulting,2-4x/year,$50K-$100K,5,0,0,1,1,0,0,0,2,Monthly,49,4,84,8.4,7,Very Likely,252,Affluent Pro
+R0613,2025-10-31,25-34,Male,Tier 2 (Large City),Miami,$200K-$300K,Entrepreneur,Yearly,$30K-$50K,7,0,1,1,0,0,0,0,2,Every 2-3mo,64,7,49,4.9,4,Possibly,49,Aspirational
+R0614,2025-11-14,35-44,Female,Tier 3 (Mid-size City),Geneva,Under $75K,Consulting,Every 2-3mo,<$5K,6,1,0,0,0,1,1,1,4,2-4x/year,20,7,22,2.2,2,Unlikely,132,Digital-First
+R0615,2025-11-08,25-34,Female,Tier 1 (Metro),New York,$75K-$125K,Tech,2-4x/year,<$5K,6,1,0,0,0,0,0,0,1,Every 2-3mo,59,5,45,4.5,6,Likely,135,Gifter
+R0616,2025-10-18,35-44,Female,Tier 1 (Metro),Dubai,$1M+,Finance,2-3x/month,$50K-$100K,7,0,0,0,0,0,1,1,2,Every 2-3mo,43,4,74,7.4,6,Likely,2220,Affluent Pro
+R0617,2025-10-17,45-54,Female,Tier 2 (Large City),Miami,$200K-$300K,Luxury Retail,Monthly,$5K-$15K,6,1,1,1,1,0,1,0,5,2-4x/year,46,6,33,3.3,3,Unlikely,396,Aspirational
+R0618,2025-10-31,45-54,Female,Tier 3 (Mid-size City),San Francisco,Under $75K,Tech,Rarely,<$5K,4,1,0,1,0,0,0,1,3,2-4x/year,28,3,1,0.1,1,Unlikely,0,Gifter
+R0619,2025-11-02,35-44,Male,Tier 2 (Large City),Miami,$200K-$300K,Healthcare,Every 2-3mo,$15K-$30K,4,1,0,0,0,0,0,1,2,2-4x/year,33,4,54,5.4,6,Likely,324,Aspirational
+R0620,2025-10-16,35-44,Male,Tier 1 (Metro),London,$500K-$1M,Tech,Weekly,$50K-$100K,6,1,0,0,1,0,0,1,3,Every 2-3mo,33,6,96,9.6,8,Definitely,4992,Affluent Pro
+R0621,2025-10-28,45-54,Female,Tier 1 (Metro),Dubai,$125K-$200K,Healthcare,Monthly,$15K-$30K,5,1,0,1,1,0,0,0,3,Every 2-3mo,41,4,44,4.4,4,Possibly,528,Digital-First
+R0622,2025-11-14,25-34,Female,Tier 1 (Metro),London,$75K-$125K,Healthcare,2-3x/month,$5K-$15K,4,0,1,0,1,0,1,1,4,2-4x/year,74,2,30,3.0,6,Likely,900,Digital-First
+R0623,2025-10-24,55-64,Female,Tier 1 (Metro),Dubai,$300K-$500K,Media,Rarely,$30K-$50K,5,0,0,0,0,0,0,1,1,Yearly,29,6,50,5.0,5,Likely,25,Affluent Pro
+R0624,2025-11-05,55-64,Female,Tier 3 (Mid-size City),San Francisco,Under $75K,Finance,2-4x/year,<$5K,4,1,1,1,1,1,0,1,6,Every 2-3mo,49,2,22,2.2,1,Unlikely,66,Gifter
+R0625,2025-10-21,25-34,Female,Tier 2 (Large City),Sydney,$125K-$200K,Luxury Retail,2-4x/year,$15K-$30K,6,1,1,0,1,1,0,0,4,Every 2-3mo,40,7,36,3.6,5,Likely,108,Gifter
+R0626,2025-11-11,18-24,Other,Tier 3 (Mid-size City),Geneva,$75K-$125K,Healthcare,Monthly,<$5K,7,1,1,0,0,0,1,0,3,2-4x/year,58,5,21,2.1,1,Unlikely,252,Digital-First
+R0627,2025-10-23,35-44,Male,Tier 1 (Metro),Los Angeles,$500K-$1M,Media,Every 2-3mo,$30K-$50K,6,0,1,0,0,1,1,0,3,Monthly,40,4,80,8.0,7,Very Likely,480,Affluent Pro
+R0628,2025-10-22,45-54,Female,Tier 1 (Metro),New York,Under $75K,Tech,2-4x/year,<$5K,3,1,0,0,0,0,1,0,2,Every 2-3mo,28,4,50,5.0,5,Likely,150,Gifter
+R0629,2025-10-30,55-64,Female,Tier 1 (Metro),Los Angeles,$125K-$200K,Media,2-3x/month,<$5K,7,1,0,0,0,0,1,1,3,Multiple/mo,47,3,53,5.3,4,Possibly,1590,Digital-First
+R0630,2025-11-02,45-54,Male,Tier 2 (Large City),Miami,$125K-$200K,Consulting,Monthly,$5K-$15K,6,1,0,1,0,1,0,0,3,Every 2-3mo,42,5,53,5.3,7,Very Likely,636,Digital-First
+R0631,2025-11-11,25-34,Male,Tier 2 (Large City),Chicago,$500K-$1M,Media,Weekly,$30K-$50K,6,1,1,0,1,0,0,1,4,2-4x/year,68,4,66,6.6,8,Definitely,3432,Affluent Pro
+R0632,2025-11-11,45-54,Female,Tier 1 (Metro),New York,$75K-$125K,Entrepreneur,Monthly,$5K-$15K,6,0,1,1,0,1,1,1,5,Monthly,26,5,74,7.4,6,Likely,888,Digital-First
+R0633,2025-11-10,55-64,Female,Tier 1 (Metro),Dubai,$500K-$1M,Legal,2-3x/month,$50K-$100K,9,0,1,0,0,0,0,0,1,Monthly,44,4,118,11.8,9,Definitely,3540,Affluent Pro
+R0634,2025-11-05,25-34,Female,Tier 2 (Large City),Miami,$125K-$200K,Real Estate,2-3x/month,$15K-$30K,5,1,0,0,1,1,1,0,4,2-4x/year,63,6,19,1.9,2,Unlikely,570,Digital-First
+R0635,2025-10-22,25-34,Female,Tier 1 (Metro),Singapore,$75K-$125K,Consulting,Monthly,<$5K,4,1,0,1,0,0,0,0,2,Rarely,88,1,59,5.9,7,Very Likely,708,Digital-First
+R0636,2025-10-16,25-34,Male,Tier 1 (Metro),Hong Kong,$75K-$125K,Tech,Rarely,<$5K,6,0,1,1,1,0,0,0,3,Monthly,77,4,45,4.5,5,Likely,22,Gifter
+R0637,2025-11-11,35-44,Female,Tier 1 (Metro),Los Angeles,$200K-$300K,Finance,Every 2-3mo,$30K-$50K,7,1,0,0,0,1,1,0,3,Every 2-3mo,45,2,70,7.0,6,Likely,420,Aspirational
+R0638,2025-11-01,25-34,Female,Tier 1 (Metro),Hong Kong,$125K-$200K,Finance,Rarely,$5K-$15K,7,1,1,0,0,1,0,1,4,2-4x/year,64,3,37,3.7,7,Very Likely,18,Gifter
+R0639,2025-11-11,35-44,Male,Tier 2 (Large City),Miami,$125K-$200K,Finance,Every 2-3mo,$15K-$30K,8,0,1,0,0,0,1,1,3,Monthly,30,6,50,5.0,6,Likely,300,Digital-First
+R0640,2025-10-22,35-44,Female,Tier 2 (Large City),Miami,$300K-$500K,Finance,2-3x/month,$15K-$30K,6,0,1,0,1,1,0,1,4,Every 2-3mo,60,6,77,7.7,4,Possibly,2310,Aspirational
+R0641,2025-10-22,18-24,Other,Tier 2 (Large City),Sydney,$500K-$1M,Tech,Monthly,$100K-$250K,6,0,0,1,1,0,0,0,2,Multiple/mo,75,9,133,13.3,7,Very Likely,1596,Ultra-HNW
+R0642,2025-10-18,35-44,Female,Tier 2 (Large City),Toronto,$75K-$125K,Tech,Every 2-3mo,$5K-$15K,3,0,0,1,1,0,1,0,3,Every 2-3mo,37,3,63,6.3,6,Likely,378,Digital-First
+R0643,2025-11-07,55-64,Other,Tier 2 (Large City),Toronto,$125K-$200K,Legal,Weekly,<$5K,4,0,0,1,1,0,0,1,3,Yearly,62,4,35,3.5,5,Likely,1820,Digital-First
+R0644,2025-10-30,25-34,Male,Tier 2 (Large City),Toronto,$200K-$300K,Healthcare,Yearly,$15K-$30K,7,0,0,0,0,1,0,1,2,Monthly,83,6,79,7.9,6,Likely,79,Aspirational
+R0645,2025-11-02,25-34,Male,Tier 2 (Large City),Chicago,$500K-$1M,Tech,Monthly,$50K-$100K,7,0,0,0,0,0,1,1,2,Yearly,73,10,92,9.2,4,Possibly,1104,Affluent Pro
+R0646,2025-10-24,45-54,Male,Tier 2 (Large City),Miami,$75K-$125K,Tech,Every 2-3mo,$5K-$15K,6,1,1,0,0,1,0,1,4,Every 2-3mo,43,1,36,3.6,5,Likely,216,Digital-First
+R0647,2025-10-20,25-34,Male,Tier 1 (Metro),Hong Kong,$200K-$300K,Legal,2-4x/year,$30K-$50K,5,1,0,1,1,1,0,0,4,Rarely,70,6,64,6.4,4,Possibly,192,Aspirational
+R0648,2025-11-08,25-34,Male,Tier 1 (Metro),New York,$500K-$1M,Entrepreneur,Every 2-3mo,$50K-$100K,5,0,1,0,1,1,1,0,4,Rarely,45,6,66,6.6,6,Likely,396,Affluent Pro
+R0649,2025-11-02,45-54,Male,Tier 1 (Metro),New York,$200K-$300K,Legal,Every 2-3mo,$30K-$50K,7,0,1,0,0,0,0,0,1,Yearly,61,6,61,6.1,7,Very Likely,366,Aspirational
+R0650,2025-11-02,55-64,Female,Tier 1 (Metro),New York,$75K-$125K,Real Estate,2-4x/year,<$5K,5,1,0,0,0,0,1,1,3,Multiple/mo,46,9,91,9.1,7,Very Likely,273,Gifter
+R0651,2025-10-21,65+,Male,Tier 2 (Large City),Chicago,$125K-$200K,Finance,Yearly,$5K-$15K,5,1,1,0,1,0,1,0,4,Every 2-3mo,20,5,24,2.4,4,Possibly,24,Gifter
+R0652,2025-10-28,35-44,Female,Tier 1 (Metro),Hong Kong,$125K-$200K,Finance,Every 2-3mo,$5K-$15K,9,1,1,0,0,1,0,0,3,Every 2-3mo,38,8,50,5.0,9,Definitely,300,Digital-First
+R0653,2025-10-17,55-64,Male,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,Yearly,$15K-$30K,5,0,1,1,0,0,0,0,2,2-4x/year,41,3,17,1.7,3,Unlikely,17,Gifter
+R0654,2025-11-10,55-64,Female,Tier 1 (Metro),New York,$200K-$300K,Finance,Every 2-3mo,$15K-$30K,6,1,1,0,1,1,0,0,4,Every 2-3mo,46,4,56,5.6,6,Likely,335,Aspirational
+R0655,2025-11-06,35-44,Female,Tier 2 (Large City),Sydney,$75K-$125K,Real Estate,Every 2-3mo,<$5K,5,1,0,0,0,1,1,1,4,2-4x/year,67,4,32,3.2,5,Likely,192,Digital-First
+R0656,2025-10-25,55-64,Male,Tier 1 (Metro),Dubai,$125K-$200K,Finance,2-4x/year,$15K-$30K,7,0,0,1,0,1,1,0,3,Every 2-3mo,80,5,77,7.7,6,Likely,231,Gifter
+R0657,2025-10-16,35-44,Other,Tier 1 (Metro),New York,$300K-$500K,Legal,Monthly,$15K-$30K,7,0,1,0,0,1,0,0,2,Yearly,41,6,46,4.6,3,Unlikely,552,Aspirational
+R0658,2025-11-14,35-44,Female,Tier 1 (Metro),Hong Kong,$500K-$1M,Entrepreneur,Monthly,$50K-$100K,10,1,1,0,1,0,1,0,4,2-4x/year,29,8,83,8.3,8,Definitely,996,Affluent Pro
+R0659,2025-11-07,25-34,Male,Tier 1 (Metro),Singapore,$75K-$125K,Real Estate,Rarely,<$5K,5,0,1,0,0,0,0,0,1,2-4x/year,56,5,31,3.1,3,Unlikely,15,Gifter
+R0660,2025-10-27,25-34,Male,Tier 1 (Metro),New York,$300K-$500K,Entrepreneur,2-4x/year,$30K-$50K,6,0,1,0,1,0,0,1,3,Every 2-3mo,76,4,67,6.7,7,Very Likely,201,Affluent Pro
+R0661,2025-11-07,35-44,Female,Tier 1 (Metro),New York,$75K-$125K,Real Estate,Every 2-3mo,<$5K,4,1,0,1,1,1,0,0,4,2-4x/year,53,6,46,4.6,7,Very Likely,276,Digital-First
+R0662,2025-11-14,45-54,Female,Tier 2 (Large City),Miami,$125K-$200K,Tech,2-4x/year,$5K-$15K,6,1,0,0,1,1,1,0,4,Every 2-3mo,43,1,17,1.7,2,Unlikely,51,Gifter
+R0663,2025-10-27,45-54,Female,Tier 1 (Metro),Los Angeles,$500K-$1M,Tech,Monthly,$100K-$250K,7,1,0,0,1,0,1,0,3,Monthly,34,8,114,11.4,7,Very Likely,1368,Ultra-HNW
+R0664,2025-11-09,25-34,Male,Tier 2 (Large City),Toronto,$75K-$125K,Tech,Monthly,$5K-$15K,6,1,0,1,0,0,1,0,3,2-4x/year,43,5,38,3.8,5,Likely,456,Digital-First
+R0665,2025-11-02,35-44,Male,Tier 2 (Large City),Chicago,$200K-$300K,Other,Every 2-3mo,$5K-$15K,8,1,1,1,0,0,0,0,3,Rarely,21,5,64,6.4,8,Definitely,384,Aspirational
+R0666,2025-10-29,45-54,Female,Tier 1 (Metro),London,$200K-$300K,Healthcare,Every 2-3mo,$30K-$50K,5,0,0,0,0,0,1,1,2,Monthly,52,6,48,4.8,5,Likely,288,Aspirational
+R0667,2025-10-24,55-64,Male,Tier 1 (Metro),Hong Kong,$1M+,Legal,Monthly,$250K+,9,0,0,1,1,0,0,0,2,Yearly,10,6,109,10.9,10,Definitely,1308,Ultra-HNW
+R0668,2025-11-14,55-64,Female,Tier 2 (Large City),Chicago,$125K-$200K,Tech,2-4x/year,$15K-$30K,5,1,0,1,0,1,0,1,4,Monthly,64,5,22,2.2,3,Unlikely,66,Gifter
+R0669,2025-10-20,35-44,Female,Tier 2 (Large City),Sydney,$200K-$300K,Finance,2-3x/month,$30K-$50K,7,1,0,0,1,0,1,1,4,Every 2-3mo,23,3,27,2.7,3,Unlikely,810,Aspirational
+R0670,2025-10-30,55-64,Male,Tier 3 (Mid-size City),Geneva,$125K-$200K,Entrepreneur,2-4x/year,<$5K,4,0,1,0,0,0,0,0,1,2-4x/year,36,2,30,3.0,5,Likely,90,Gifter
+R0671,2025-10-18,65+,Female,Tier 1 (Metro),London,$200K-$300K,Media,Monthly,$15K-$30K,9,1,0,0,1,1,1,1,5,Every 2-3mo,45,3,81,8.1,7,Very Likely,972,Aspirational
+R0672,2025-10-17,45-54,Female,Tier 2 (Large City),Sydney,$125K-$200K,Finance,Yearly,<$5K,6,0,1,0,1,1,0,0,3,Monthly,39,8,46,4.6,5,Likely,46,Gifter
+R0673,2025-11-03,55-64,Male,Tier 1 (Metro),Singapore,Under $75K,Tech,Yearly,<$5K,6,1,1,1,0,1,0,0,4,Yearly,17,6,17,1.7,3,Unlikely,17,Gifter
+R0674,2025-10-31,45-54,Female,Tier 3 (Mid-size City),Geneva,$75K-$125K,Legal,2-3x/month,<$5K,2,1,1,0,1,0,1,0,4,Monthly,38,6,43,4.3,7,Very Likely,1290,Digital-First
+R0675,2025-10-27,65+,Female,Tier 2 (Large City),Sydney,$1M+,Finance,Monthly,$100K-$250K,4,1,0,0,1,0,1,1,4,2-4x/year,19,3,91,9.1,4,Possibly,1092,Ultra-HNW
+R0676,2025-10-16,25-34,Male,Tier 2 (Large City),Toronto,$500K-$1M,Real Estate,Every 2-3mo,$30K-$50K,8,0,0,0,1,0,0,0,1,Monthly,58,5,116,11.6,6,Likely,696,Affluent Pro
+R0677,2025-10-23,35-44,Female,Tier 1 (Metro),London,$500K-$1M,Real Estate,2-4x/year,$30K-$50K,10,1,0,0,0,1,0,0,2,Monthly,26,5,110,11.0,8,Definitely,330,Affluent Pro
+R0678,2025-11-05,25-34,Male,Tier 2 (Large City),Chicago,$1M+,Entrepreneur,Monthly,$250K+,8,1,1,1,0,0,0,0,3,Every 2-3mo,47,6,66,6.6,8,Definitely,792,Ultra-HNW
+R0679,2025-10-26,45-54,Female,Tier 1 (Metro),New York,$200K-$300K,Real Estate,2-4x/year,$15K-$30K,8,1,0,0,1,0,1,1,4,2-4x/year,51,6,74,7.4,7,Very Likely,222,Aspirational
+R0680,2025-11-06,45-54,Male,Tier 2 (Large City),Sydney,Under $75K,Consulting,2-4x/year,<$5K,3,1,1,0,1,1,1,0,5,2-4x/year,53,4,32,3.2,6,Likely,96,Gifter
+R0681,2025-11-12,25-34,Female,Tier 3 (Mid-size City),San Francisco,$75K-$125K,Media,2-4x/year,<$5K,4,1,1,0,0,0,1,1,4,Every 2-3mo,65,6,19,1.9,1,Unlikely,57,Gifter
+R0682,2025-11-12,25-34,Female,Tier 1 (Metro),London,$125K-$200K,Legal,2-4x/year,$5K-$15K,5,1,1,1,0,0,0,1,4,Every 2-3mo,48,6,61,6.1,7,Very Likely,183,Gifter
+R0683,2025-10-24,35-44,Male,Tier 3 (Mid-size City),Geneva,$200K-$300K,Consulting,2-3x/month,$15K-$30K,5,1,1,0,1,0,0,1,4,2-4x/year,26,4,60,6.0,8,Definitely,1800,Aspirational
+R0684,2025-11-14,18-24,Male,Tier 1 (Metro),London,$300K-$500K,Finance,2-3x/month,$30K-$50K,4,1,0,0,0,0,0,1,2,2-4x/year,65,4,48,4.8,6,Likely,1440,Affluent Pro
+R0685,2025-10-21,35-44,Female,Tier 2 (Large City),Miami,$125K-$200K,Healthcare,2-4x/year,$5K-$15K,8,1,0,0,1,0,1,0,3,Yearly,42,6,8,0.8,6,Likely,24,Gifter
+R0686,2025-11-08,25-34,Female,Tier 2 (Large City),Chicago,$125K-$200K,Finance,Every 2-3mo,$5K-$15K,8,1,0,0,1,1,1,1,5,Every 2-3mo,68,3,40,4.0,9,Very Likely,240,Digital-First
+R0687,2025-10-26,35-44,Male,Tier 1 (Metro),New York,$500K-$1M,Entrepreneur,2-3x/month,$30K-$50K,8,1,0,1,1,1,1,0,5,Every 2-3mo,39,6,93,9.3,9,Definitely,2790,Affluent Pro
+R0688,2025-10-26,25-34,Male,Tier 2 (Large City),Toronto,$125K-$200K,Legal,2-4x/year,$15K-$30K,6,0,0,0,0,0,0,0,0,Every 2-3mo,55,9,52,5.2,7,Very Likely,156,Gifter
+R0689,2025-10-24,18-24,Female,Tier 1 (Metro),New York,$200K-$300K,Luxury Retail,Every 2-3mo,$30K-$50K,7,1,0,0,0,0,0,1,2,Monthly,57,4,83,8.3,5,Likely,498,Aspirational
+R0690,2025-11-14,25-34,Female,Tier 2 (Large City),Miami,$200K-$300K,Tech,Rarely,$15K-$30K,8,1,1,0,0,1,0,0,3,2-4x/year,64,6,17,1.7,6,Likely,8,Aspirational
+R0691,2025-11-08,45-54,Male,Tier 2 (Large City),Chicago,Under $75K,Luxury Retail,Every 2-3mo,<$5K,5,1,1,0,1,0,0,0,3,Monthly,49,5,39,3.9,6,Likely,234,Digital-First
+R0692,2025-11-12,45-54,Male,Tier 1 (Metro),London,$125K-$200K,Legal,2-4x/year,<$5K,8,1,1,1,0,1,0,0,4,Every 2-3mo,16,3,31,3.1,5,Likely,93,Gifter
+R0693,2025-10-28,35-44,Male,Tier 2 (Large City),Sydney,Under $75K,Finance,Rarely,<$5K,8,0,1,0,0,0,0,1,2,Yearly,42,4,19,1.9,3,Unlikely,9,Gifter
+R0694,2025-11-07,45-54,Male,Tier 2 (Large City),Sydney,$200K-$300K,Entrepreneur,2-4x/year,$30K-$50K,5,1,0,0,0,0,0,0,1,Yearly,66,2,5,0.5,3,Unlikely,15,Aspirational
+R0695,2025-11-07,55-64,Female,Tier 1 (Metro),Singapore,$125K-$200K,Entrepreneur,2-4x/year,$15K-$30K,4,0,1,0,1,0,1,1,4,Every 2-3mo,50,5,74,7.4,6,Likely,222,Gifter
+R0696,2025-10-30,25-34,Male,Tier 1 (Metro),Singapore,$200K-$300K,Tech,Monthly,$30K-$50K,7,0,1,1,0,1,1,0,4,Yearly,56,6,45,4.5,6,Likely,540,Aspirational
+R0697,2025-10-21,45-54,Male,Tier 2 (Large City),Chicago,$125K-$200K,Media,2-4x/year,$5K-$15K,4,1,1,1,1,1,0,1,6,Rarely,79,2,20,2.0,4,Possibly,60,Gifter
+R0698,2025-11-09,25-34,Female,Tier 2 (Large City),Sydney,$300K-$500K,Tech,Monthly,$50K-$100K,6,0,0,0,0,0,0,0,0,Monthly,70,10,97,9.7,7,Very Likely,1163,Affluent Pro
+R0699,2025-10-25,35-44,Female,Tier 1 (Metro),Los Angeles,$75K-$125K,Healthcare,Monthly,<$5K,7,0,1,1,0,0,1,0,3,Every 2-3mo,53,7,43,4.3,5,Likely,516,Digital-First
+R0700,2025-11-04,35-44,Female,Tier 1 (Metro),Singapore,$200K-$300K,Consulting,Every 2-3mo,$5K-$15K,6,1,1,0,0,0,1,0,3,2-4x/year,17,5,41,4.1,6,Likely,245,Aspirational
